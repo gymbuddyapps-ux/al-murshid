@@ -1,0 +1,32 @@
+{
+  "scenario": "pharmacy",
+  "note": "Chosen in Phase 0 from KArSL-502 only. See docs/vocab_audit.md for the reasons. The list may shrink in Phase 3 if classes are too confusable; any change is recorded in docs/PROCESS_LOG.md.",
+  "source_dataset": {
+    "name": "KArSL-502",
+    "citation": "Sidig, Luqman, Mahmoud, Mohandes. KArSL: Arabic Sign Language Database. ACM TALLIP 20(1), 2021.",
+    "official_page": "https://hamzah-luqman.github.io/KArSL/",
+    "downloaded_from": "https://www.kaggle.com/datasets/yousefdotpy/karsl-502"
+  },
+  "classes": [
+    {"id": 0,  "arabic": "السلام عليكم", "english": "greeting",        "source": "KArSL-502", "karsl_sign_id": 290},
+    {"id": 1,  "arabic": "شكراً",        "english": "thanks",          "source": "KArSL-502", "karsl_sign_id": 293},
+    {"id": 2,  "arabic": "صيدلية",       "english": "pharmacy",        "source": "KArSL-502", "karsl_sign_id": 100},
+    {"id": 3,  "arabic": "مستشفى",       "english": "hospital",        "source": "KArSL-502", "karsl_sign_id": 92},
+    {"id": 4,  "arabic": "طبيب",         "english": "doctor",          "source": "KArSL-502", "karsl_sign_id": 497},
+    {"id": 5,  "arabic": "دواء",         "english": "medicine",        "source": "KArSL-502", "karsl_sign_id": 132},
+    {"id": 6,  "arabic": "كبسولة",       "english": "capsule",         "source": "KArSL-502", "karsl_sign_id": 135},
+    {"id": 7,  "arabic": "دواء شراب",    "english": "liquid medicine", "source": "KArSL-502", "karsl_sign_id": 136},
+    {"id": 8,  "arabic": "مرهم",         "english": "ointment",        "source": "KArSL-502", "karsl_sign_id": 137},
+    {"id": 9,  "arabic": "قطارة",        "english": "dropper",         "source": "KArSL-502", "karsl_sign_id": 138},
+    {"id": 10, "arabic": "صداع",         "english": "headache",        "source": "KArSL-502", "karsl_sign_id": 115},
+    {"id": 11, "arabic": "ألم",          "english": "pain",            "source": "KArSL-502", "karsl_sign_id": 116},
+    {"id": 12, "arabic": "حمى",          "english": "fever",           "source": "KArSL-502", "karsl_sign_id": 117},
+    {"id": 13, "arabic": "زكام",         "english": "cold",            "source": "KArSL-502", "karsl_sign_id": 113},
+    {"id": 14, "arabic": "حساسية",       "english": "allergy",         "source": "KArSL-502", "karsl_sign_id": 130},
+    {"id": 15, "arabic": "مغص",          "english": "colic",           "source": "KArSL-502", "karsl_sign_id": 120},
+    {"id": 16, "arabic": "التهاب",       "english": "inflammation",    "source": "KArSL-502", "karsl_sign_id": 111},
+    {"id": 17, "arabic": "يأكل",         "english": "eat",             "source": "KArSL-502", "karsl_sign_id": 160},
+    {"id": 18, "arabic": "يشرب",         "english": "drink",           "source": "KArSL-502", "karsl_sign_id": 161},
+    {"id": 19, "arabic": "يساعد",        "english": "help",            "source": "KArSL-502", "karsl_sign_id": 182}
+  ]
+}

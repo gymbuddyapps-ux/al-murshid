@@ -1,0 +1,7043 @@
+{
+ "summary": {
+  "total_signs": 502,
+  "total_videos": 75515,
+  "signer_ids": [
+   1,
+   2,
+   3
+  ],
+  "min_videos_per_sign": 117,
+  "signs_without_all_3_signers": []
+ },
+ "signs": [
+  {
+   "sign_id": 1,
+   "arabic": "0",
+   "english": "0",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 2,
+   "arabic": "1",
+   "english": "1",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 23
+  },
+  {
+   "sign_id": 3,
+   "arabic": "2",
+   "english": "2",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 4,
+   "arabic": "3",
+   "english": "3",
+   "chapter": "Numbers",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 5,
+   "arabic": "4",
+   "english": "4",
+   "chapter": "Numbers",
+   "videos": 183,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 83,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 6,
+   "arabic": "5",
+   "english": "5",
+   "chapter": "Numbers",
+   "videos": 117,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 17,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 24
+  },
+  {
+   "sign_id": 7,
+   "arabic": "6",
+   "english": "6",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 8,
+   "arabic": "7",
+   "english": "7",
+   "chapter": "Numbers",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 9,
+   "arabic": "8",
+   "english": "8",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 10,
+   "arabic": "9",
+   "english": "9",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 11,
+   "arabic": "10",
+   "english": "10",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 12,
+   "arabic": "20",
+   "english": "20",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 26
+  },
+  {
+   "sign_id": 13,
+   "arabic": "30",
+   "english": "30",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 14,
+   "arabic": "40",
+   "english": "40",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 15,
+   "arabic": "50",
+   "english": "50",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 16,
+   "arabic": "60",
+   "english": "60",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 17,
+   "arabic": "70",
+   "english": "70",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 18,
+   "arabic": "80",
+   "english": "80",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 19,
+   "arabic": "90",
+   "english": "90",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 20,
+   "arabic": "100",
+   "english": "100",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 28
+  },
+  {
+   "sign_id": 21,
+   "arabic": "200",
+   "english": "200",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 24
+  },
+  {
+   "sign_id": 22,
+   "arabic": "300",
+   "english": "300",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 24
+  },
+  {
+   "sign_id": 23,
+   "arabic": "400",
+   "english": "400",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 24,
+   "arabic": "500",
+   "english": "500",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 27
+  },
+  {
+   "sign_id": 25,
+   "arabic": "600",
+   "english": "600",
+   "chapter": "Numbers",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 26,
+   "arabic": "700",
+   "english": "700",
+   "chapter": "Numbers",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 27
+  },
+  {
+   "sign_id": 27,
+   "arabic": "800",
+   "english": "800",
+   "chapter": "Numbers",
+   "videos": 200,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 100,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 27
+  },
+  {
+   "sign_id": 28,
+   "arabic": "900",
+   "english": "900",
+   "chapter": "Numbers",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 26
+  },
+  {
+   "sign_id": 29,
+   "arabic": "1000",
+   "english": "1000",
+   "chapter": "Numbers",
+   "videos": 155,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 54,
+    "3": 51
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 30,
+   "arabic": "1000000",
+   "english": "1000000",
+   "chapter": "Numbers",
+   "videos": 146,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 46,
+    "3": 50
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 31,
+   "arabic": "10000000",
+   "english": "10000000",
+   "chapter": "Numbers",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 32,
+   "arabic": "ا",
+   "english": "alif",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 25
+  },
+  {
+   "sign_id": 33,
+   "arabic": "ب",
+   "english": "baa",
+   "chapter": "Letters",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 52,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 34,
+   "arabic": "ت",
+   "english": "ta",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 19
+  },
+  {
+   "sign_id": 35,
+   "arabic": "ث",
+   "english": "tha",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 19
+  },
+  {
+   "sign_id": 36,
+   "arabic": "ج",
+   "english": "Jiim",
+   "chapter": "Letters",
+   "videos": 158,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 57
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 37,
+   "arabic": "ح",
+   "english": "Haa",
+   "chapter": "Letters",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 38,
+   "arabic": "خ",
+   "english": "kha",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 39,
+   "arabic": "د",
+   "english": "daal",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 40,
+   "arabic": "ذ",
+   "english": "thal",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 19
+  },
+  {
+   "sign_id": 41,
+   "arabic": "ر",
+   "english": "raa",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 19
+  },
+  {
+   "sign_id": 42,
+   "arabic": "ز",
+   "english": "zay",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 43,
+   "arabic": "س",
+   "english": "siin",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 44,
+   "arabic": "ش",
+   "english": "shiin",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 19
+  },
+  {
+   "sign_id": 45,
+   "arabic": "ص",
+   "english": "Saad",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 46,
+   "arabic": "ض",
+   "english": "Daad",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 47,
+   "arabic": "ط",
+   "english": "Taa",
+   "chapter": "Letters",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 48,
+   "arabic": "ظ",
+   "english": "Zaa",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 49,
+   "arabic": "ع",
+   "english": "Ayn",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 50,
+   "arabic": "غ",
+   "english": "ghayn",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 51,
+   "arabic": "ف",
+   "english": "faa",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 52,
+   "arabic": "ق",
+   "english": "qaaf",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 53,
+   "arabic": "ك",
+   "english": "kaaf",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 54,
+   "arabic": "ل",
+   "english": "laam",
+   "chapter": "Letters",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 55,
+   "arabic": "م",
+   "english": "miim",
+   "chapter": "Letters",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 56,
+   "arabic": "ن",
+   "english": "noon",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 57,
+   "arabic": "ه",
+   "english": "haa",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 58,
+   "arabic": "و",
+   "english": "waaw",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 59,
+   "arabic": "ي",
+   "english": "yaa",
+   "chapter": "Letters",
+   "videos": 160,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 60
+   },
+   "median_frames": 21
+  },
+  {
+   "sign_id": 60,
+   "arabic": "ة",
+   "english": "taa marbuuTa",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 23
+  },
+  {
+   "sign_id": 61,
+   "arabic": "أ",
+   "english": "alif with hamza above",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 24
+  },
+  {
+   "sign_id": 62,
+   "arabic": "ؤ",
+   "english": "Waaw with hamza",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 27
+  },
+  {
+   "sign_id": 63,
+   "arabic": "ئ",
+   "english": "Alif maqsoura with hamza",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 27
+  },
+  {
+   "sign_id": 64,
+   "arabic": "ئـ",
+   "english": "hamza on line",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 25
+  },
+  {
+   "sign_id": 65,
+   "arabic": "ء",
+   "english": "hamza",
+   "chapter": "Letters",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "median_frames": 25
+  },
+  {
+   "sign_id": 66,
+   "arabic": "إ",
+   "english": "alif with hamza below",
+   "chapter": "Letters",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "median_frames": 22
+  },
+  {
+   "sign_id": 67,
+   "arabic": "آ",
+   "english": "ALif with maad",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 68,
+   "arabic": "ى",
+   "english": "Alif maqsoura",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 23
+  },
+  {
+   "sign_id": 69,
+   "arabic": "لا",
+   "english": "laam Alif",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 20
+  },
+  {
+   "sign_id": 70,
+   "arabic": "ال",
+   "english": "Al",
+   "chapter": "Letters",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 16
+  },
+  {
+   "sign_id": 71,
+   "arabic": "هيكل عظمي",
+   "english": "Skeleton",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 72,
+   "arabic": "جمجة",
+   "english": "skull",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 73,
+   "arabic": "عمود فقري",
+   "english": "Backbone",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 74,
+   "arabic": "قفص صدري",
+   "english": "Chest",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 75,
+   "arabic": "جهاز تنفسي",
+   "english": "Respiratory device",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 76,
+   "arabic": "قصبة هوائية",
+   "english": "Trachea",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 77,
+   "arabic": "رئتان",
+   "english": "lungs",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 78,
+   "arabic": "شهيق - زفير",
+   "english": "Ins and Outs",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 79,
+   "arabic": "جهاز هضمي",
+   "english": "digestive system",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 80,
+   "arabic": "وجه",
+   "english": "Face",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 81,
+   "arabic": "بلعوم",
+   "english": "pharynx",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 82,
+   "arabic": "كبد",
+   "english": "liver",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 83,
+   "arabic": "البنكرياس",
+   "english": "pancreas",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 84,
+   "arabic": "الأمعاء الدقيقة",
+   "english": "Small intestine",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 85,
+   "arabic": "الأمعاء الغليظة",
+   "english": "Large intestine",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 86,
+   "arabic": "الزائدة الدودية",
+   "english": "Appendix",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 87,
+   "arabic": "جهاز عصبي",
+   "english": "nervous system",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 88,
+   "arabic": "قلب",
+   "english": "heart",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 89,
+   "arabic": "حواس خمس",
+   "english": "five senses",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 90,
+   "arabic": "عضلة",
+   "english": "muscle",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 91,
+   "arabic": "أنسجة",
+   "english": "tissue",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 92,
+   "arabic": "مستشفى",
+   "english": "hospital",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 93,
+   "arabic": "إسعافات أولية",
+   "english": "first aid",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 57
+  },
+  {
+   "sign_id": 94,
+   "arabic": "جرح نازف",
+   "english": "wound",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 95,
+   "arabic": "حروق",
+   "english": "burning",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 96,
+   "arabic": "مخدر/ بنج",
+   "english": "anesthetist",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 57
+  },
+  {
+   "sign_id": 97,
+   "arabic": "عملية جراحية",
+   "english": "surgery",
+   "chapter": "Health",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 54,
+    "3": 50
+   },
+   "median_frames": 66
+  },
+  {
+   "sign_id": 98,
+   "arabic": "شاش / ضمادة",
+   "english": "gauze",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 99,
+   "arabic": "شريط لاصق / بلاستر",
+   "english": "adhesive tape",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 100,
+   "arabic": "صيدلية",
+   "english": "pharmacy",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 101,
+   "arabic": "تحليل دم",
+   "english": "blood analysis",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 102,
+   "arabic": "فحص سريري",
+   "english": "physical examination",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 74
+  },
+  {
+   "sign_id": 103,
+   "arabic": "فحص النظر",
+   "english": "sight examination",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 58
+  },
+  {
+   "sign_id": 104,
+   "arabic": "ميزان حرارة",
+   "english": "thermometer",
+   "chapter": "Health",
+   "videos": 159,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 59,
+    "3": 50
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 105,
+   "arabic": "سماعة أذن",
+   "english": "stethoscope",
+   "chapter": "Health",
+   "videos": 145,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 45,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 106,
+   "arabic": "جهاز قياس الضغط",
+   "english": "sphygmometroscope",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 53
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 107,
+   "arabic": "نبض القلب",
+   "english": "pulse",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 108,
+   "arabic": "تحليل طبي",
+   "english": "analysis",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 78
+  },
+  {
+   "sign_id": 109,
+   "arabic": "معمل التحاليل / مختبر",
+   "english": "analysis laboratory",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 110,
+   "arabic": "صورة اشعة",
+   "english": "ray photo",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 77
+  },
+  {
+   "sign_id": 111,
+   "arabic": "التهاب",
+   "english": "inflammation",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 112,
+   "arabic": "تورم",
+   "english": "swelling",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 113,
+   "arabic": "زكام",
+   "english": "cold",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 114,
+   "arabic": "عدوى",
+   "english": "infection",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 115,
+   "arabic": "صداع",
+   "english": "headache",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 116,
+   "arabic": "ألم",
+   "english": "pain",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 117,
+   "arabic": "حمى",
+   "english": "fever",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 118,
+   "arabic": "إسهال",
+   "english": "diarrhea",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 119,
+   "arabic": "إمساك",
+   "english": "constipation",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 120,
+   "arabic": "مغص",
+   "english": "colic",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 121,
+   "arabic": "مرض السكر / سكري",
+   "english": "diabetes",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 76
+  },
+  {
+   "sign_id": 122,
+   "arabic": "أزمة قلبية",
+   "english": "heart attack",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 66
+  },
+  {
+   "sign_id": 123,
+   "arabic": "سرطان",
+   "english": "cancer",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 124,
+   "arabic": "مرض فقدان المناعة / الإيدز",
+   "english": "Aids",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 61
+  },
+  {
+   "sign_id": 125,
+   "arabic": "تساقط الشعر",
+   "english": "Loss of hair",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 126,
+   "arabic": "سكتة قلبية",
+   "english": "Heart failure",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 127,
+   "arabic": "شلل نصفي",
+   "english": "hemiplegia",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 128,
+   "arabic": "شلل دماغي",
+   "english": "Cerebral paralysis",
+   "chapter": "Health",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 52
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 129,
+   "arabic": "ضغط الدم",
+   "english": "blood pressure",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 130,
+   "arabic": "حساسية",
+   "english": "allergy",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 131,
+   "arabic": "حكة / هرش",
+   "english": "itch",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 132,
+   "arabic": "دواء",
+   "english": "medicine",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 133,
+   "arabic": "دورة شهرية",
+   "english": "monthly circulation",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 134,
+   "arabic": "مريض / مرض",
+   "english": "sick",
+   "chapter": "Health",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 135,
+   "arabic": "كبسولة",
+   "english": "capsule",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 136,
+   "arabic": "دواء شراب",
+   "english": "liquid medicine",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 137,
+   "arabic": "مرهم",
+   "english": "ointment",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 138,
+   "arabic": "قطارة",
+   "english": "dropper",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 139,
+   "arabic": "أخذ إبرة",
+   "english": "acupuncture",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 140,
+   "arabic": "تلقيح",
+   "english": "pollination",
+   "chapter": "Health",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 52
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 141,
+   "arabic": "تطعيم",
+   "english": "inoculation",
+   "chapter": "Health",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 142,
+   "arabic": "أشعة ليزر",
+   "english": "laser ray",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 143,
+   "arabic": "مخدرات",
+   "english": "drug's",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 144,
+   "arabic": "إدمان",
+   "english": "addiction",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 75
+  },
+  {
+   "sign_id": 145,
+   "arabic": "توحد / أوتيزم",
+   "english": "oneness",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 146,
+   "arabic": "منغولي",
+   "english": "mongoloid",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 147,
+   "arabic": "بكتريا",
+   "english": "bacterium",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 56
+  },
+  {
+   "sign_id": 148,
+   "arabic": "جرثومة",
+   "english": "microbe",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 149,
+   "arabic": "فيروس",
+   "english": "virus",
+   "chapter": "Health",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 150,
+   "arabic": "إنتشار",
+   "english": "spread",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 151,
+   "arabic": "إعاقة",
+   "english": "hindrance",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 152,
+   "arabic": "إعاقة ذهنية",
+   "english": "mentality hindrance",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 153,
+   "arabic": "اعاقة جسدية",
+   "english": "physical disability",
+   "chapter": "Health",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 154,
+   "arabic": "اعاقة بصرية",
+   "english": "visual impairment",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 155,
+   "arabic": "إعاقة سمعية",
+   "english": "hearing hindrance",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 156,
+   "arabic": "وباء",
+   "english": "epidemic",
+   "chapter": "Health",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 52
+   },
+   "median_frames": 56
+  },
+  {
+   "sign_id": 157,
+   "arabic": "مناعة",
+   "english": "immunity",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 158,
+   "arabic": "عصب",
+   "english": "nerve",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 159,
+   "arabic": "معافى",
+   "english": "healthy",
+   "chapter": "Health",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 160,
+   "arabic": "يأكل",
+   "english": "eat",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 161,
+   "arabic": "يشرب",
+   "english": "drink",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 162,
+   "arabic": "ينام",
+   "english": "sleep",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 163,
+   "arabic": "يستيقظ",
+   "english": "wake up",
+   "chapter": "Common verbs",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 25
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 164,
+   "arabic": "يسمع",
+   "english": "hear",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 165,
+   "arabic": "يسكت",
+   "english": "silence",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 166,
+   "arabic": "يشم",
+   "english": "inhale",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 167,
+   "arabic": "يصعد",
+   "english": "rise",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 168,
+   "arabic": "ينزل",
+   "english": "descend",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 169,
+   "arabic": "يفتح",
+   "english": "open",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 170,
+   "arabic": "يقفل ( يغلق )",
+   "english": "close",
+   "chapter": "Common verbs",
+   "videos": 155,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 55
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 171,
+   "arabic": "يبني",
+   "english": "build",
+   "chapter": "Common verbs",
+   "videos": 156,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 55,
+    "3": 51
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 172,
+   "arabic": "يكسر",
+   "english": "break",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 173,
+   "arabic": "يمشي",
+   "english": "walk",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 174,
+   "arabic": "يحب",
+   "english": "love",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 175,
+   "arabic": "يكره",
+   "english": "hate",
+   "chapter": "Common verbs",
+   "videos": 124,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 48,
+    "3": 25
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 176,
+   "arabic": "يشوي",
+   "english": "grill",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 177,
+   "arabic": "يحرث",
+   "english": "plow",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 52,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 178,
+   "arabic": "يزرع",
+   "english": "plant",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 90
+  },
+  {
+   "sign_id": 179,
+   "arabic": "يسقي",
+   "english": "irrigate",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 75
+  },
+  {
+   "sign_id": 180,
+   "arabic": "يحصد",
+   "english": "harvest",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 181,
+   "arabic": "يفكر",
+   "english": "think",
+   "chapter": "Common verbs",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 182,
+   "arabic": "يساعد",
+   "english": "help",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 183,
+   "arabic": "يدخن",
+   "english": "smoke",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 184,
+   "arabic": "يدعم",
+   "english": "support",
+   "chapter": "Common verbs",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 25
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 185,
+   "arabic": "يختار",
+   "english": "choose",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 186,
+   "arabic": "ينادي",
+   "english": "call",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 187,
+   "arabic": "يتنامى",
+   "english": "grow",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 188,
+   "arabic": "يصبغ",
+   "english": "dye",
+   "chapter": "Common verbs",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 189,
+   "arabic": "يقف",
+   "english": "stand",
+   "chapter": "Common verbs",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 51
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 190,
+   "arabic": "يستحم",
+   "english": "bathe",
+   "chapter": "Common verbs",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 191,
+   "arabic": "يدخل",
+   "english": "enter",
+   "chapter": "Common verbs",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 192,
+   "arabic": "أسرة",
+   "english": "family",
+   "chapter": "Family",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 193,
+   "arabic": "جدة",
+   "english": "grandmother",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 67
+  },
+  {
+   "sign_id": 194,
+   "arabic": "جد",
+   "english": "grandfather",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 195,
+   "arabic": "أب",
+   "english": "father",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 196,
+   "arabic": "أم",
+   "english": "mother",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 197,
+   "arabic": "أخت",
+   "english": "sister",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 198,
+   "arabic": "أخ",
+   "english": "brother",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 199,
+   "arabic": "بنت",
+   "english": "girl",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 200,
+   "arabic": "رضيع",
+   "english": "baby",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 201,
+   "arabic": "توأم",
+   "english": "twin",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 202,
+   "arabic": "رجل",
+   "english": "man",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 203,
+   "arabic": "شاب",
+   "english": "young man",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 204,
+   "arabic": "شابة",
+   "english": "young woman",
+   "chapter": "Family",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 53,
+    "3": 50
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 205,
+   "arabic": "حفيد",
+   "english": "grandchild",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 206,
+   "arabic": "زواج",
+   "english": "wedding",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 207,
+   "arabic": "حمل",
+   "english": "pregnant",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 208,
+   "arabic": "ولادة",
+   "english": "childbirth",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 209,
+   "arabic": "عم",
+   "english": "uncle",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 210,
+   "arabic": "عمة",
+   "english": "aunt",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 59
+  },
+  {
+   "sign_id": 211,
+   "arabic": "خال",
+   "english": "maternal uncle",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 212,
+   "arabic": "خالة",
+   "english": "maternal aunt",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 57
+  },
+  {
+   "sign_id": 213,
+   "arabic": "ابن الأخ",
+   "english": "nephew",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 214,
+   "arabic": "ابن الأخت",
+   "english": "nephew",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 78
+  },
+  {
+   "sign_id": 215,
+   "arabic": "ابن العم",
+   "english": "cousin",
+   "chapter": "Family",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 53,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 216,
+   "arabic": "ابن",
+   "english": "son",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 217,
+   "arabic": "ابنة",
+   "english": "daughter",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 218,
+   "arabic": "ناس",
+   "english": "people",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 219,
+   "arabic": "طلاق",
+   "english": "divorce",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 220,
+   "arabic": "خطوبة",
+   "english": "engagement",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 221,
+   "arabic": "حفلة",
+   "english": "party",
+   "chapter": "Family",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 222,
+   "arabic": "وفاة",
+   "english": "death",
+   "chapter": "Family",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 223,
+   "arabic": "طفل",
+   "english": "child",
+   "chapter": "Family",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 224,
+   "arabic": "جميل",
+   "english": "beautiful",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 225,
+   "arabic": "قبيح",
+   "english": "ugly",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 226,
+   "arabic": "طويل",
+   "english": "long",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 227,
+   "arabic": "قصير",
+   "english": "short",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 228,
+   "arabic": "نحيف",
+   "english": "thin",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 229,
+   "arabic": "سمين",
+   "english": "fat",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 230,
+   "arabic": "غني",
+   "english": "rich",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 231,
+   "arabic": "فقير",
+   "english": "poor",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 232,
+   "arabic": "محبط",
+   "english": "offended",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 233,
+   "arabic": "مشمئز",
+   "english": "disgusted",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 234,
+   "arabic": "مرتبك",
+   "english": "confused",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 235,
+   "arabic": "قلق",
+   "english": "worried",
+   "chapter": "Characteristics",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 236,
+   "arabic": "مشوش",
+   "english": "deranged",
+   "chapter": "Characteristics",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 237,
+   "arabic": "خائف",
+   "english": "afraid",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 238,
+   "arabic": "سعيد (مسرور)",
+   "english": "happy",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 239,
+   "arabic": "حزين",
+   "english": "sad",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 240,
+   "arabic": "شجاع",
+   "english": "courageous",
+   "chapter": "Characteristics",
+   "videos": 159,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 56,
+    "2": 51,
+    "3": 52
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 241,
+   "arabic": "جبان",
+   "english": "coward",
+   "chapter": "Characteristics",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 242,
+   "arabic": "طموح",
+   "english": "ambitious",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 49
+  },
+  {
+   "sign_id": 243,
+   "arabic": "معجب",
+   "english": "admirable",
+   "chapter": "Characteristics",
+   "videos": 156,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 56,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 244,
+   "arabic": "غائر من",
+   "english": "to be jealous of",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 245,
+   "arabic": "غائر على",
+   "english": "to protect jealously",
+   "chapter": "Characteristics",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 246,
+   "arabic": "ودود",
+   "english": "affectionate",
+   "chapter": "Characteristics",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 247,
+   "arabic": "كريم",
+   "english": "generous",
+   "chapter": "Characteristics",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 248,
+   "arabic": "بخيل",
+   "english": "miserly",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 249,
+   "arabic": "طماع",
+   "english": "greedy",
+   "chapter": "Characteristics",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 58
+  },
+  {
+   "sign_id": 250,
+   "arabic": "كذاب",
+   "english": "liar",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 251,
+   "arabic": "أناني",
+   "english": "selfish",
+   "chapter": "Characteristics",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 252,
+   "arabic": "متكبر",
+   "english": "proud",
+   "chapter": "Characteristics",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 53
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 253,
+   "arabic": "متواضع",
+   "english": "humble",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 254,
+   "arabic": "شعور",
+   "english": "feeling",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 255,
+   "arabic": "تعب",
+   "english": "tired",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 256,
+   "arabic": "بكاء",
+   "english": "crying",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 257,
+   "arabic": "احتقار",
+   "english": "contempt",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 258,
+   "arabic": "اعتماد على الذات",
+   "english": "self-dependence",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 61
+  },
+  {
+   "sign_id": 259,
+   "arabic": "خفيف",
+   "english": "light",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 260,
+   "arabic": "ثقيل",
+   "english": "heavy",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 261,
+   "arabic": "قديم",
+   "english": "old",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 262,
+   "arabic": "حسد",
+   "english": "envy",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 263,
+   "arabic": "صدق",
+   "english": "believe",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 264,
+   "arabic": "غدر",
+   "english": "betrayal",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 265,
+   "arabic": "صبر",
+   "english": "patient",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 266,
+   "arabic": "لوم",
+   "english": "blame",
+   "chapter": "Characteristics",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 52,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 267,
+   "arabic": "الحق",
+   "english": "truth",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 268,
+   "arabic": "خيانة",
+   "english": "treason",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 269,
+   "arabic": "إيثار",
+   "english": "preference",
+   "chapter": "Characteristics",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 270,
+   "arabic": "تضحية",
+   "english": "self sacrifice",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 271,
+   "arabic": "شفقة",
+   "english": "pity",
+   "chapter": "Characteristics",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 272,
+   "arabic": "ذكي",
+   "english": "intelligent",
+   "chapter": "Characteristics",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 273,
+   "arabic": "أمام",
+   "english": "in front of",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 274,
+   "arabic": "بجانب",
+   "english": "side",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 275,
+   "arabic": "بعيد",
+   "english": "far",
+   "chapter": "Directions and places",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 276,
+   "arabic": "بين",
+   "english": "between",
+   "chapter": "Directions and places",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 277,
+   "arabic": "تحت",
+   "english": "under",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 278,
+   "arabic": "حول",
+   "english": "around",
+   "chapter": "Directions and places",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 48
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 279,
+   "arabic": "خارج",
+   "english": "outside",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 280,
+   "arabic": "خلف",
+   "english": "back",
+   "chapter": "Directions and places",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 281,
+   "arabic": "داخل",
+   "english": "inside",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 282,
+   "arabic": "فوق",
+   "english": "up",
+   "chapter": "Directions and places",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 283,
+   "arabic": "قريب",
+   "english": "near",
+   "chapter": "Directions and places",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 284,
+   "arabic": "من خلال",
+   "english": "through",
+   "chapter": "Directions and places",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 285,
+   "arabic": "هنا",
+   "english": "here",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 286,
+   "arabic": "هناك",
+   "english": "there",
+   "chapter": "Directions and places",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 287,
+   "arabic": "يسار",
+   "english": "left",
+   "chapter": "Directions and places",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 288,
+   "arabic": "يمين",
+   "english": "right",
+   "chapter": "Directions and places",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 289,
+   "arabic": "أهلا وسهلاً",
+   "english": "welcome",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 290,
+   "arabic": "السلام عليكم",
+   "english": "greeting",
+   "chapter": "Social relationships",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 291,
+   "arabic": "تفضل",
+   "english": "here you are",
+   "chapter": "Social relationships",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 292,
+   "arabic": "جار",
+   "english": "neighbor",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 293,
+   "arabic": "شكراً",
+   "english": "thanks",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 294,
+   "arabic": "صديق",
+   "english": "friend",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 295,
+   "arabic": "ضيف",
+   "english": "guest",
+   "chapter": "Social relationships",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 296,
+   "arabic": "عدو",
+   "english": "enemy",
+   "chapter": "Social relationships",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 297,
+   "arabic": "عيب",
+   "english": "fault",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 298,
+   "arabic": "هدية",
+   "english": "gift",
+   "chapter": "Social relationships",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 299,
+   "arabic": "بيت",
+   "english": "house",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 300,
+   "arabic": "جدار",
+   "english": "wall",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 301,
+   "arabic": "سقف",
+   "english": "roof",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 302,
+   "arabic": "باب",
+   "english": "door",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 303,
+   "arabic": "شباك",
+   "english": "window",
+   "chapter": "In house",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 52,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 304,
+   "arabic": "غرفة",
+   "english": "room",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 305,
+   "arabic": "غرفة نوم",
+   "english": "bedroom",
+   "chapter": "In house",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 306,
+   "arabic": "سرير",
+   "english": "bed",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 307,
+   "arabic": "مرتبة سرير ( حشية)",
+   "english": "mattress",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 308,
+   "arabic": "شرشف ( غطاء سرير)",
+   "english": "bedsheet",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 309,
+   "arabic": "وسادة ( مخدة)",
+   "english": "pillow",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 310,
+   "arabic": "شماعة ( مشجب)",
+   "english": "clothes rail",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 311,
+   "arabic": "خزانة ملابس",
+   "english": "wardrobe",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 59
+  },
+  {
+   "sign_id": 312,
+   "arabic": "مطبخ",
+   "english": "kitchen",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 67
+  },
+  {
+   "sign_id": 313,
+   "arabic": "فرن غازي",
+   "english": "Oven",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 314,
+   "arabic": "بوتاغاز (طابخ)",
+   "english": "cooker",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 315,
+   "arabic": "طبق ( صحن)",
+   "english": "dish",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 316,
+   "arabic": "سكين",
+   "english": "knife",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 317,
+   "arabic": "شوكة",
+   "english": "fork",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 318,
+   "arabic": "ملعقة",
+   "english": "spoon",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 319,
+   "arabic": "فنجان",
+   "english": "cupful",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 320,
+   "arabic": "مجمد (فريزر)",
+   "english": "freezer",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 48,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 321,
+   "arabic": "كأس ( كوب)",
+   "english": "cup",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 322,
+   "arabic": "حافظ حرارة ( ترمس)",
+   "english": "thermos",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 323,
+   "arabic": "غرفة طعام",
+   "english": "food room",
+   "chapter": "In house",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 54,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 49
+  },
+  {
+   "sign_id": 324,
+   "arabic": "إبريق",
+   "english": "pitcher",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 325,
+   "arabic": "طاولة",
+   "english": "table",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 326,
+   "arabic": "كنكة ( دلة)",
+   "english": "dalah",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 327,
+   "arabic": "دورة مياه (حمام)",
+   "english": "bathroom",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 328,
+   "arabic": "كرسي",
+   "english": "chair",
+   "chapter": "In house",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 54,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 329,
+   "arabic": "غسالة",
+   "english": "washing machine",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 330,
+   "arabic": "منشفة",
+   "english": "towel carpet",
+   "chapter": "In house",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 331,
+   "arabic": "سجادة (زربية)",
+   "english": "carpet",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 58
+  },
+  {
+   "sign_id": 332,
+   "arabic": "موكيت ( فرش أرضي) moquette",
+   "english": "moquette",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 333,
+   "arabic": "ثريا (نجفة)",
+   "english": "chandelier",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 334,
+   "arabic": "مسجل",
+   "english": "cassette",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 335,
+   "arabic": "شريط كاست",
+   "english": "cassette tape",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 336,
+   "arabic": "تلفزيون (تلفاز)",
+   "english": "television",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 337,
+   "arabic": "طبق هوائي (دش)",
+   "english": "satellite",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 338,
+   "arabic": "شريط فيديو",
+   "english": "video tape",
+   "chapter": "In house",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 339,
+   "arabic": "كاميرا فيديو",
+   "english": "video camera",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 340,
+   "arabic": "كاميرا فوتوغرافية",
+   "english": "photo camera",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 341,
+   "arabic": "هاتف ( تلفون)",
+   "english": "telephone",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 342,
+   "arabic": "غرفة ضيوف",
+   "english": "guests room",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 343,
+   "arabic": "فيديو",
+   "english": "video",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 344,
+   "arabic": "مبخرة",
+   "english": "censer",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 345,
+   "arabic": "مدفأة",
+   "english": "heater",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 346,
+   "arabic": "مفتاح",
+   "english": "key",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 347,
+   "arabic": "مروحة",
+   "english": "fan",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 348,
+   "arabic": "تدفئة مركزية",
+   "english": "central heater",
+   "chapter": "In house",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 25,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 66
+  },
+  {
+   "sign_id": 349,
+   "arabic": "كهرباء",
+   "english": "electrics",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 350,
+   "arabic": "مكيف",
+   "english": "air conditioner",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 351,
+   "arabic": "سلك كهربائي",
+   "english": "wire",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 352,
+   "arabic": "قابس كهربائي ( فيش)",
+   "english": "plug",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 353,
+   "arabic": "حقيبة سفر",
+   "english": "bag",
+   "chapter": "In house",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 354,
+   "arabic": "مكواة",
+   "english": "iron",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 355,
+   "arabic": "ميزان حرارة جوي",
+   "english": "thermometer",
+   "chapter": "In house",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 356,
+   "arabic": "الله تعالى",
+   "english": "God",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 357,
+   "arabic": "محمد رسول الله",
+   "english": "Muhammad is the Messenger of Allah",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 358,
+   "arabic": "عيسى المسيح",
+   "english": "Essa Christ",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 359,
+   "arabic": "القرآن الكريم",
+   "english": "The Holy Quran",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 360,
+   "arabic": "الخلفاء الراشدون",
+   "english": "Rightly Guided Caliphs",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 361,
+   "arabic": "السنة النبوية",
+   "english": "Sunnah",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 362,
+   "arabic": "أركان الإسلام",
+   "english": "Pillars of Islam",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 75
+  },
+  {
+   "sign_id": 363,
+   "arabic": "أركان الإيمان",
+   "english": "Pillars of Faith",
+   "chapter": "Religion",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 25,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 69
+  },
+  {
+   "sign_id": 364,
+   "arabic": "الشهادتين",
+   "english": "The two certificates",
+   "chapter": "Religion",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 25,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 365,
+   "arabic": "يصلي / الصلاة",
+   "english": "pray",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 366,
+   "arabic": "الزكاة",
+   "english": "zakat",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 367,
+   "arabic": "الصوم",
+   "english": "Fasting",
+   "chapter": "Religion",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 368,
+   "arabic": "العمرة",
+   "english": "Umrah",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 369,
+   "arabic": "الحج",
+   "english": "Pilgrimage",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 370,
+   "arabic": "ملائكة",
+   "english": "Angels",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 371,
+   "arabic": "رسول",
+   "english": "messenger",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 372,
+   "arabic": "يوم القيامة",
+   "english": "Doomsday",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 71
+  },
+  {
+   "sign_id": 373,
+   "arabic": "القضاء والقدر",
+   "english": "Fate and destiny",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 61
+  },
+  {
+   "sign_id": 374,
+   "arabic": "أركان الصلاة",
+   "english": "Pillars of prayer",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 375,
+   "arabic": "خير",
+   "english": "Good",
+   "chapter": "Religion",
+   "videos": 157,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 57,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 376,
+   "arabic": "النية",
+   "english": "Intention",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 377,
+   "arabic": "شر",
+   "english": "Evil",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 378,
+   "arabic": "طهارة",
+   "english": "purity",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 49
+  },
+  {
+   "sign_id": 379,
+   "arabic": "مبطلات الصلاة",
+   "english": "Prayer invalidators",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 380,
+   "arabic": "تيمم",
+   "english": "tayammum",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 381,
+   "arabic": "يتوضأ / وضوء",
+   "english": "ablution",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 382,
+   "arabic": "يؤذن",
+   "english": "authorized",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 383,
+   "arabic": "مسح على الخفين",
+   "english": "Wipe on the slippers",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 384,
+   "arabic": "صلاة الفجر",
+   "english": "Al-fajr prayer",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 385,
+   "arabic": "صلاة الظهر",
+   "english": "Salat Aduher",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 386,
+   "arabic": "صلاة العصر",
+   "english": "Asr prayer",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 387,
+   "arabic": "صلاة المغرب",
+   "english": "Maghreb's prayer",
+   "chapter": "Religion",
+   "videos": 126,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 25
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 388,
+   "arabic": "صلاة العشاء",
+   "english": "eshaa pray",
+   "chapter": "Religion",
+   "videos": 125,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 25
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 389,
+   "arabic": "خطبة",
+   "english": "speech",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 390,
+   "arabic": "خطبة الجمعة",
+   "english": "Friday sermon",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 391,
+   "arabic": "خطيب",
+   "english": "Fiance",
+   "chapter": "Religion",
+   "videos": 154,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 54,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 392,
+   "arabic": "خطبة العيد",
+   "english": "Eid sermon",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 393,
+   "arabic": "مسجد",
+   "english": "Mosque",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 394,
+   "arabic": "سورة",
+   "english": "surah",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 395,
+   "arabic": "إمام",
+   "english": "Before",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 396,
+   "arabic": "سورة الفاتحة",
+   "english": "Al-Fatihah",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 397,
+   "arabic": "آية",
+   "english": "any",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 398,
+   "arabic": "ليلة القدر",
+   "english": "Night of Power",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 63
+  },
+  {
+   "sign_id": 399,
+   "arabic": "عيد",
+   "english": "Feast",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 400,
+   "arabic": "عيد الفطر",
+   "english": "Eid al-Fitr",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 401,
+   "arabic": "عيد الأضحى",
+   "english": "Eid al-Adha",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 402,
+   "arabic": "إحرام",
+   "english": "Ihram",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 403,
+   "arabic": "مكة",
+   "english": "Mecca",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 40
+  },
+  {
+   "sign_id": 404,
+   "arabic": "الكعبة",
+   "english": "Kaaba",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 405,
+   "arabic": "المدينة المنورة",
+   "english": "Medina",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 406,
+   "arabic": "منى",
+   "english": "Mona",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 407,
+   "arabic": "جبل عرفات",
+   "english": "Arafat Mountain",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 408,
+   "arabic": "الصفا والمروة",
+   "english": "Safa and Marwa",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 409,
+   "arabic": "مزدلفة",
+   "english": "Muzdalifah",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 410,
+   "arabic": "رمي الجمرات",
+   "english": "Throwing pebbles",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 411,
+   "arabic": "طواف",
+   "english": "circumambulation",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 48
+  },
+  {
+   "sign_id": 412,
+   "arabic": "ماء زمزم",
+   "english": "Zamzam water",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 413,
+   "arabic": "الأضحية",
+   "english": "the sacrifice",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 414,
+   "arabic": "فك الإحرام",
+   "english": "break the ihram",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 415,
+   "arabic": "طواف الوداع",
+   "english": "farewell circumambulation",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 57
+  },
+  {
+   "sign_id": 416,
+   "arabic": "المسجد الأقصى",
+   "english": "Al-Aqsa Mosque",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 417,
+   "arabic": "يسبح",
+   "english": "swim",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 418,
+   "arabic": "الحمد لله",
+   "english": "Thank God",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 419,
+   "arabic": "سبحان الله",
+   "english": "How great is our God",
+   "chapter": "Religion",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 53,
+    "3": 50
+   },
+   "median_frames": 51
+  },
+  {
+   "sign_id": 420,
+   "arabic": "إيمان",
+   "english": "Faith",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 46
+  },
+  {
+   "sign_id": 421,
+   "arabic": "الشرك بالله",
+   "english": "Polytheism",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 422,
+   "arabic": "أعوذ بالله",
+   "english": "I seek refuge in God",
+   "chapter": "Religion",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 50,
+    "3": 49
+   },
+   "median_frames": 50
+  },
+  {
+   "sign_id": 423,
+   "arabic": "شيطان",
+   "english": "Satan",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 424,
+   "arabic": "جن",
+   "english": "genie",
+   "chapter": "Religion",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 425,
+   "arabic": "الضالون",
+   "english": "the lost",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 426,
+   "arabic": "المغضوب عليهم",
+   "english": "angered them",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 427,
+   "arabic": "صنم",
+   "english": "fetish",
+   "chapter": "Religion",
+   "videos": 157,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 57,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 428,
+   "arabic": "زنى",
+   "english": "fornication",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 429,
+   "arabic": "الجنة",
+   "english": "the Paradise",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 430,
+   "arabic": "النار",
+   "english": "fire",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 431,
+   "arabic": "روح",
+   "english": "spirit",
+   "chapter": "Religion",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 38
+  },
+  {
+   "sign_id": 432,
+   "arabic": "حقوق",
+   "english": "rights",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 433,
+   "arabic": "واجبات",
+   "english": "Duties",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 434,
+   "arabic": "حسنات",
+   "english": "Deeds",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 435,
+   "arabic": "سيئات",
+   "english": "sins",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 436,
+   "arabic": "حلال",
+   "english": "halal",
+   "chapter": "Religion",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 48,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 437,
+   "arabic": "حرام",
+   "english": "forbidden",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 438,
+   "arabic": "مغفرة",
+   "english": "forgiveness",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 439,
+   "arabic": "دين",
+   "english": "religion",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 440,
+   "arabic": "مسيحي",
+   "english": "Christian",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 441,
+   "arabic": "يهودي",
+   "english": "Jewish",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 442,
+   "arabic": "كنيسة",
+   "english": "church",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 443,
+   "arabic": "إسراء ومعراج",
+   "english": "Isra and Miraj",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 444,
+   "arabic": "حواء",
+   "english": "Eve",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 445,
+   "arabic": "آدم",
+   "english": "Adam",
+   "chapter": "Religion",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 48
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 446,
+   "arabic": "صدقة",
+   "english": "charity",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 447,
+   "arabic": "نبي",
+   "english": "Prophet",
+   "chapter": "Religion",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 48,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 448,
+   "arabic": "هداية",
+   "english": "guidance",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 45
+  },
+  {
+   "sign_id": 449,
+   "arabic": "أمانة",
+   "english": "honesty",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 450,
+   "arabic": "شهيد",
+   "english": "martyr",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 55
+  },
+  {
+   "sign_id": 451,
+   "arabic": "حقوق الوالدين",
+   "english": "Parental rights",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 61
+  },
+  {
+   "sign_id": 452,
+   "arabic": "عقوق الوالدين",
+   "english": "Disobedience to parents",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 62
+  },
+  {
+   "sign_id": 453,
+   "arabic": "مسلم",
+   "english": "Muslim",
+   "chapter": "Religion",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 454,
+   "arabic": "رحمة",
+   "english": "Mercy",
+   "chapter": "Religion",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 455,
+   "arabic": "عيد رأس السنة",
+   "english": "New Year's Holiday",
+   "chapter": "Religion",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 49
+  },
+  {
+   "sign_id": 456,
+   "arabic": "فروض",
+   "english": "homework",
+   "chapter": "Religion",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 58
+  },
+  {
+   "sign_id": 457,
+   "arabic": "قبة الصخرة",
+   "english": "Dome of the Rock",
+   "chapter": "Religion",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 53,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 458,
+   "arabic": "خلق",
+   "english": "Create",
+   "chapter": "Religion",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 459,
+   "arabic": "مهندس",
+   "english": "engineer",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 460,
+   "arabic": "مصور فوتوغرافي",
+   "english": "photographer",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 35
+  },
+  {
+   "sign_id": 461,
+   "arabic": "جزار / قصاب",
+   "english": "Meat man",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 462,
+   "arabic": "سائق",
+   "english": "driver",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 463,
+   "arabic": "صائغ",
+   "english": "jeweler",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "median_frames": 60
+  },
+  {
+   "sign_id": 464,
+   "arabic": "خادم",
+   "english": "servant",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 465,
+   "arabic": "رئيس قسم",
+   "english": "chairman",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 466,
+   "arabic": "حداد",
+   "english": "blacksmith",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 467,
+   "arabic": "لحام كهربائي",
+   "english": "weld",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 65
+  },
+  {
+   "sign_id": 468,
+   "arabic": "مترجم لغة الإشارة",
+   "english": "Sign language translator",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 469,
+   "arabic": "مذيع",
+   "english": "announcer",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 470,
+   "arabic": "مترجم لغات",
+   "english": "translator",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 471,
+   "arabic": "مدير",
+   "english": "manager",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 472,
+   "arabic": "سفير",
+   "english": "ambassador",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 473,
+   "arabic": "وزير",
+   "english": "minister",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 51
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 474,
+   "arabic": "ملك / سلطان",
+   "english": "King",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 475,
+   "arabic": "أمير البلاد / رئيس الجمهورية",
+   "english": "Premier Minister",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 476,
+   "arabic": "شيخ",
+   "english": "sheikh",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 33
+  },
+  {
+   "sign_id": 477,
+   "arabic": "محافظ / وال",
+   "english": "governor",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 30
+  },
+  {
+   "sign_id": 478,
+   "arabic": "ولي عهد / وكيل وزارة",
+   "english": "under secretary of state",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 31
+  },
+  {
+   "sign_id": 479,
+   "arabic": "رئيس مجلس الشعب (النواب)",
+   "english": "speaker",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 52,
+    "3": 50
+   },
+   "median_frames": 64
+  },
+  {
+   "sign_id": 480,
+   "arabic": "أمين عام",
+   "english": "general secretary",
+   "chapter": "Jobs and professions",
+   "videos": 153,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 53,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 481,
+   "arabic": "صحفي",
+   "english": "journalist",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 66
+  },
+  {
+   "sign_id": 482,
+   "arabic": "رسام",
+   "english": "draftsman",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 71
+  },
+  {
+   "sign_id": 483,
+   "arabic": "خياط / تارزي",
+   "english": "tailor",
+   "chapter": "Jobs and professions",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 52
+  },
+  {
+   "sign_id": 484,
+   "arabic": "ضابط",
+   "english": "policeman",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 485,
+   "arabic": "طيار",
+   "english": "pilot",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 49,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 42
+  },
+  {
+   "sign_id": 486,
+   "arabic": "جندي",
+   "english": "soldier",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 487,
+   "arabic": "حلاق",
+   "english": "barber",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 39
+  },
+  {
+   "sign_id": 488,
+   "arabic": "صباغ",
+   "english": "dyer",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 34
+  },
+  {
+   "sign_id": 489,
+   "arabic": "رجل إطفاء / دفاع مدني",
+   "english": "fireman",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 54
+  },
+  {
+   "sign_id": 490,
+   "arabic": "نجار",
+   "english": "carpenter",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 491,
+   "arabic": "معلم / مدرس",
+   "english": "teacher",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 36
+  },
+  {
+   "sign_id": 492,
+   "arabic": "طباخ",
+   "english": "chef",
+   "chapter": "Jobs and professions",
+   "videos": 152,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 51,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 493,
+   "arabic": "فلاح",
+   "english": "farmer",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 41
+  },
+  {
+   "sign_id": 494,
+   "arabic": "موظف",
+   "english": "agent",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 37
+  },
+  {
+   "sign_id": 495,
+   "arabic": "أمين صندوق",
+   "english": "treasurer",
+   "chapter": "Jobs and professions",
+   "videos": 148,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 49
+   },
+   "median_frames": 70
+  },
+  {
+   "sign_id": 496,
+   "arabic": "صيدلي",
+   "english": "pharmacist",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "median_frames": 47
+  },
+  {
+   "sign_id": 497,
+   "arabic": "طبيب",
+   "english": "doctor",
+   "chapter": "Jobs and professions",
+   "videos": 151,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "median_frames": 44
+  },
+  {
+   "sign_id": 498,
+   "arabic": "ممرضة",
+   "english": "nurse",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 32
+  },
+  {
+   "sign_id": 499,
+   "arabic": "ممرض",
+   "english": "orderly",
+   "chapter": "Jobs and professions",
+   "videos": 168,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 68,
+    "3": 50
+   },
+   "median_frames": 43
+  },
+  {
+   "sign_id": 500,
+   "arabic": "محام",
+   "english": "lawyer",
+   "chapter": "Jobs and professions",
+   "videos": 147,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 48,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 53
+  },
+  {
+   "sign_id": 501,
+   "arabic": "انتقال",
+   "english": "traveling",
+   "chapter": "Jobs and professions",
+   "videos": 149,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 49,
+    "3": 50
+   },
+   "median_frames": 29
+  },
+  {
+   "sign_id": 502,
+   "arabic": "تعيين",
+   "english": "appointment",
+   "chapter": "Jobs and professions",
+   "videos": 150,
+   "signers": 3,
+   "videos_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "median_frames": 50
+  }
+ ]
+}

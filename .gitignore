@@ -1,0 +1,31 @@
+# Secrets (never commit)
+kaggle/
+kaggle.json
+access_token
+.env
+.env.*
+
+# Raw data, videos, extracted features
+data/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.rar
+*.zip
+*.npz
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,35 @@
+{
+  "_comment": "Rules that turn confirmed sign words into a correct Arabic sentence. Read by web/src/composer.js. Rules are tried in order at each position, so longer patterns come first. A pattern item is either an exact word or a group name in angle brackets. In the output, {0} is the first matched word, {1} the second, and {1.for} uses the 'for' form of that word.",
+
+  "joiner": "، ",
+
+  "groups": {
+    "medicine": ["دواء", "كبسولة", "دواء شراب", "مرهم", "قطارة"],
+    "symptom": ["صداع", "ألم", "حمى", "زكام", "حساسية", "مغص", "التهاب"],
+    "place": ["صيدلية", "مستشفى"]
+  },
+
+  "forms": {
+    "صداع": { "for": "للصداع" },
+    "ألم": { "for": "للألم" },
+    "حمى": { "for": "للحمى" },
+    "زكام": { "for": "للزكام" },
+    "حساسية": { "for": "للحساسية" },
+    "مغص": { "for": "للمغص" },
+    "التهاب": { "for": "للالتهاب" },
+    "صيدلية": { "definite": "الصيدلية" },
+    "مستشفى": { "definite": "المستشفى" }
+  },
+
+  "rules": [
+    { "pattern": ["<medicine>", "<symptom>"], "output": "أحتاج إلى {0} {1.for}" },
+    { "pattern": ["<symptom>", "<symptom>"], "output": "عندي {0} و{1}" },
+    { "pattern": ["<symptom>"], "output": "عندي {0}" },
+    { "pattern": ["<medicine>"], "output": "أحتاج إلى {0}" },
+    { "pattern": ["<place>"], "output": "أين {0.definite}؟" },
+    { "pattern": ["طبيب"], "output": "أحتاج إلى طبيب" },
+    { "pattern": ["يساعد"], "output": "أحتاج إلى مساعدة" },
+    { "pattern": ["يأكل"], "output": "أريد أن آكل" },
+    { "pattern": ["يشرب"], "output": "أريد أن أشرب" }
+  ]
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8E1B1F" />
+    <meta name="description" content="جسر: من لغة الإشارة العربية إلى نص وصوت، يعمل كله داخل هاتفك." />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icons/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <title>جسر</title>
+  </head>
+  <body>
+    <!-- Screen 1: welcome and tips -->
+    <main id="welcome" class="welcome">
+      <div class="welcome__arch">
+        <svg class="logo logo--large" viewBox="0 0 64 64" aria-hidden="true">
+          <use href="/icons/logo.svg#bridge" />
+        </svg>
+        <h1 class="welcome__name">جسر</h1>
+        <p class="welcome__tagline">إشارتك تصير كلاماً مسموعاً</p>
+      </div>
+
+      <ul class="tips">
+        <li>أظهر يديك وكتفيك ووجهك داخل الصورة</li>
+        <li>قف على بُعد ذراع من الهاتف</li>
+        <li>اختر مكاناً جيد الإضاءة</li>
+      </ul>
+
+      <button id="start-button" class="button button--primary button--wide" type="button">
+        افتح الكاميرا
+      </button>
+      <p id="start-error" class="notice notice--error" role="alert" hidden></p>
+
+      <p class="privacy">
+        كل شيء يعمل داخل هاتفك. لا تُرسل أي صورة أو بيانات إلى الإنترنت.
+      </p>
+    </main>
+
+    <!-- Screen 2: camera, candidates, sentence and speech -->
+    <main id="app" class="app" hidden>
+      <header class="topbar">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+          <use href="/icons/logo.svg#bridge" />
+        </svg>
+        <span class="topbar__name">جسر</span>
+        <label class="toggle">
+          <input id="skeleton-toggle" type="checkbox" checked />
+          <span>إظهار الهيكل</span>
+        </label>
+      </header>
+
+      <section class="stage" aria-label="الكاميرا">
+        <div class="camera">
+          <video id="video" playsinline muted></video>
+          <canvas id="overlay"></canvas>
+        </div>
+        <p id="status" class="status" data-state="loading" role="status">جارٍ التحميل</p>
+      </section>
+
+      <section class="panel">
+        <!-- Top 3 candidates appear here after each sign -->
+        <div id="candidates" class="candidates" hidden>
+          <p id="candidates-title" class="candidates__title">اختر الكلمة الصحيحة</p>
+          <div id="candidate-list" class="candidates__list"></div>
+          <button id="retry-button" class="button button--quiet button--wide" type="button">
+            أعد الإشارة
+          </button>
+        </div>
+
+        <!-- Confirmed words -->
+        <div class="strip">
+          <ul id="chips" class="chips" aria-label="الكلمات المؤكدة"></ul>
+          <button id="clear-button" class="button button--text" type="button" hidden>امسح الكل</button>
+        </div>
+
+        <!-- The sentence, always in large text so the other person can read it -->
+        <p id="sentence" class="sentence sentence--empty" aria-live="polite">
+          الكلمات التي تؤكدها تظهر هنا
+        </p>
+        <p id="voice-notice" class="notice" hidden>
+          لا يوجد صوت عربي في هذا الجهاز. اعرض الجملة على الشخص الآخر ليقرأها.
+        </p>
+
+        <div class="speech">
+          <button id="speak-button" class="button button--speak" type="button" disabled>انطق</button>
+          <button id="replay-button" class="button button--quiet" type="button" disabled>
+            أعد النطق
+          </button>
+          <fieldset class="speed">
+            <legend>السرعة</legend>
+            <label><input type="radio" name="speed" value="0.7" /><span>بطيء</span></label>
+            <label><input type="radio" name="speed" value="1" checked /><span>عادي</span></label>
+            <label><input type="radio" name="speed" value="1.3" /><span>سريع</span></label>
+          </fieldset>
+        </div>
+
+        <p class="privacy privacy--small">
+          كل شيء يعمل داخل هاتفك. لا تُرسل أي صورة أو بيانات إلى الإنترنت.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

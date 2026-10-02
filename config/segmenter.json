@@ -1,0 +1,10 @@
+{
+  "_comment": "Settings for finding where one sign starts and ends. Used by the browser (web/src/segmenter.js, web/src/features.js) and by the Python training code (jisr/features.py), so both cut clips the same way. raise_line: a hand counts as raised when its wrist is above a line this many shoulder-widths below the shoulders. start_frames: raised frames in a row needed to start a sign. end_ms: hands-down time that ends a sign. min_ms / max_ms: shortest and longest sign. trim_speed (shoulder-widths per second) and trim_max_ms: see step 3 in docs/features.md.",
+  "raise_line": 1.15,
+  "start_frames": 3,
+  "end_ms": 400,
+  "min_ms": 300,
+  "max_ms": 6000,
+  "trim_speed": 2.0,
+  "trim_max_ms": 500
+}

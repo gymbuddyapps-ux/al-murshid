@@ -24,6 +24,16 @@ __pycache__/
 node_modules/
 dist/
 
+# Copies made by web/scripts/copy-assets.mjs (the originals are in models/ and node_modules/)
+web/public/mediapipe/
+web/public/ort/
+web/public/model/
+
+# Test output
+web/test-results/
+web/playwright-report/
+.pytest_cache/
+
 # Editor / OS
 .vscode/
 .idea/

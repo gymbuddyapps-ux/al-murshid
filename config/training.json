@@ -1,0 +1,22 @@
+{
+  "_comment": "Training settings. test_signer is never used for any choice. The two dev_signers take turns: train on one, validate on the other. See docs/REPORT.md.",
+  "seed": 1,
+  "dev_signers": [1, 2],
+  "test_signer": 3,
+  "max_epochs": 80,
+  "batch_size": 64,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "dropout": 0.3,
+  "hidden": [64, 96, 128],
+  "augmentation": {
+    "mirror_chance": 0.5,
+    "max_rotation_degrees": 12,
+    "max_scale_change": 0.15,
+    "max_time_cut": 0.15,
+    "drop_frame_chance": 0.1,
+    "drop_hand_chance": 0.05,
+    "jitter": 0.02
+  }
+}

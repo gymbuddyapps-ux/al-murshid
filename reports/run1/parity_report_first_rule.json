@@ -4,8 +4,6 @@
  "clips_within_limit": 0.9285714285714286,
  "mean_difference_over_all_clips": 0.00634235999691317,
  "largest_difference_over_all_clips": 1.470524,
- "median_clip_mean_difference": 0.0018066837071270742,
- "clips_with_a_hand_detection_flip": 7,
  "same_answer": 1,
  "same_top_word": 1,
  "page_errors": [],

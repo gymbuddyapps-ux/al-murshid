@@ -19,9 +19,10 @@ Jisr is a student demo. Read this before using it with real people.
 
 ## Three words work badly for a new signer
 
-On the held-out test signer, the model answered "other sign" for every clip of **كبسولة** (capsule), for
-90% of the clips of **شكراً** (thanks) and for 41% of the clips of **دواء** (medicine). For that signer the app
-says "unclear" instead of offering these words. The other 17 words were accepted in 96% to 100% of clips
+On the held-out test signer, the app accepted **كبسولة** (capsule) in 0% of clips (the model answered
+"other sign" every time), **شكراً** (thanks) in 10% (the rest were answered "other sign" or confused with
+ألم, pain) and **دواء** (medicine) in 59% (the rest "other sign"). For that signer the app says "unclear"
+instead of offering these words. The other 17 words were accepted in 96% to 100% of clips
 (`reports/metrics.json`, per-class table in `docs/REPORT.md`). Expect these three words to be unreliable.
 
 ## Where the accuracy numbers come from, and what they do not cover

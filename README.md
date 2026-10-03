@@ -58,6 +58,8 @@ cd web && npm run test:e2e
 ```
 
 Results of the browser tests are written to `reports/parity_report.json` and `reports/e2e_report.json`.
+The camera and offline tests open a visible Edge window (Edge's invisible mode has no service worker and is
+much slower); leave it alone, it closes by itself. The full run takes about 35 minutes.
 The manual checklist for desktop and Android is `docs/manual_test_checklist.md`.
 
 ## Reproduce the training from scratch

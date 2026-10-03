@@ -1,0 +1,2112 @@
+{
+ "clips": 210,
+ "agreement_top_word": 0.8142857142857143,
+ "agreement_ok_or_unclear": 0.8523809523809524,
+ "clips_not_detected": 26,
+ "extra_detections": 0,
+ "browser_top_word_is_true_label": 0.7380952380952381,
+ "python_top_word_is_true_label": 0.9,
+ "page_errors": [],
+ "rows": [
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_19)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_38)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_12)_c",
+   "true_label": "قطارة",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_29)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 11,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_34)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_33_51)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_29)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_43)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_07)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_47)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_23)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_03)_c",
+   "true_label": "قطارة",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_34)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_15)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_30)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_23)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_32)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_15)_c",
+   "true_label": "قطارة",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_00)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": "قطارة",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_53)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_26)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_58)_c",
+   "true_label": "شكراً",
+   "python_word": "شكراً",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_40_06)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_28)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_41_57)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": "قطارة",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_20)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_00)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_55_47)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_01)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_10)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0040_(05_12_16_15_48_21)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "زكام",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0073_(13_12_16_17_48_00)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_25)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_15)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_35)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_33)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_25)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_34)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": "مستشفى",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_21)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_19)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_38)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_43)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_27)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_37)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_23)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_16)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_39)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_59)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_43)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_08)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_36)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_49)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0040_(05_12_16_15_48_22)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "زكام",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_34)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_38)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "unclear",
+   "browser_word": "ألم",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_18)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_40_14)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_46)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_47)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_15)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_09)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_27)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_06)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_13)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_41_51)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_30)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_38)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_41)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_55_28)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_27)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_41_54)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": "قطارة",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_26)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0046_(05_12_16_15_55_29)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "يشرب",
+   "python_kind": "unclear",
+   "browser_word": "يشرب",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_41)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_36)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_39)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_46)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0046_(05_12_16_15_55_34)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "يشرب",
+   "python_kind": "unclear",
+   "browser_word": "يشرب",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_30)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_31)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_29)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_44)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_18)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": "قطارة",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_07_00)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_40)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_35)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 10,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_55_59)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_13)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_55)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "unclear",
+   "browser_word": "ألم",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_42)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_29)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_08)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_26)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_32)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_04)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_31)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_45)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_35_48)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": "مستشفى",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_40)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_16)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_28_57)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0046_(05_12_16_15_55_31)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "يشرب",
+   "python_kind": "unclear",
+   "browser_word": "يشرب",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_32)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_03)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_08)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_07)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_22)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_28)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_06)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_41)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_30)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_14)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 14,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_45)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_25)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": "مستشفى",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_35)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_16)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_52)_c",
+   "true_label": "شكراً",
+   "python_word": "شكراً",
+   "python_kind": "unclear",
+   "browser_word": "ألم",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_40_10)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_24)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_17)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_46)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_19)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 10,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_31)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_30)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_25_57)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 11,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_28)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_28_53)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_47)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_00)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_10)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_38)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_19)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_55)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_20)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_51)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 10,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_18)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_11)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_07_03)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_04)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_41)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_44)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_13)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_19)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_41)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_50)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_39_57)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_10)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_55)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_26)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_09)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "حمى",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_55_54)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_36)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_24)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0130_(16_03_17_16_14_35)_c",
+   "true_label": "حساسية",
+   "python_word": "حساسية",
+   "python_kind": "ok",
+   "browser_word": "حساسية",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0113_(18_12_16_18_20_24)_c",
+   "true_label": "زكام",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 10,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_12)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0120_(18_12_16_18_56_17)_c",
+   "true_label": "مغص",
+   "python_word": "مغص",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_22)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0040_(05_12_16_15_48_24)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "زكام",
+   "python_kind": "unclear",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_05)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_35)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_55)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_33_57)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_35)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0137_(16_03_17_16_40_01)_c",
+   "true_label": "مرهم",
+   "python_word": "مرهم",
+   "python_kind": "ok",
+   "browser_word": "مرهم",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_00)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_43)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_33)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_31)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_03)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 10,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_48)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_12)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "02_03_0046_(05_12_16_15_55_32)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "يشرب",
+   "python_kind": "unclear",
+   "browser_word": "يشرب",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_59)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_09)_c",
+   "true_label": "قطارة",
+   "python_word": "زكام",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_36)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_33_54)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "حمى",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_43)_c",
+   "true_label": "شكراً",
+   "python_word": "ألم",
+   "python_kind": "unclear",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_35_59)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_51)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0497_(17_12_17_17_41_39)_c",
+   "true_label": "طبيب",
+   "python_word": "طبيب",
+   "python_kind": "ok",
+   "browser_word": "طبيب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_25_59)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 9,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0293_(14_02_18_16_06_49)_c",
+   "true_label": "شكراً",
+   "python_word": "شكراً",
+   "python_kind": "unclear",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_32)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_14_51)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_27)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_46)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_22)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_35_54)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": null,
+   "browser_kind": "not detected",
+   "browser_frames": 0,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0115_(18_12_16_18_26_19)_c",
+   "true_label": "صداع",
+   "python_word": "صداع",
+   "python_kind": "ok",
+   "browser_word": "صداع",
+   "browser_kind": "ok",
+   "browser_frames": 11,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0160_(18_04_17_17_01_25)_c",
+   "true_label": "يأكل",
+   "python_word": "يأكل",
+   "python_kind": "ok",
+   "browser_word": "يأكل",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_44)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_41)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0290_(14_02_18_16_01_22)_c",
+   "true_label": "السلام عليكم",
+   "python_word": "السلام عليكم",
+   "python_kind": "ok",
+   "browser_word": "السلام عليكم",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0182_(18_12_17_15_18_21)_c",
+   "true_label": "يساعد",
+   "python_word": "يساعد",
+   "python_kind": "ok",
+   "browser_word": "يساعد",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0073_(13_12_16_17_48_05)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 8,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0135_(16_03_17_16_34_18)_c",
+   "true_label": "كبسولة",
+   "python_word": "كبسولة",
+   "python_kind": "unclear",
+   "browser_word": "زكام",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": false
+  },
+  {
+   "sample": "03_03_0116_(18_12_16_18_29_04)_c",
+   "true_label": "ألم",
+   "python_word": "ألم",
+   "python_kind": "ok",
+   "browser_word": "ألم",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_51)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_28)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0136_(16_03_17_16_37_47)_c",
+   "true_label": "دواء شراب",
+   "python_word": "دواء شراب",
+   "python_kind": "ok",
+   "browser_word": "دواء شراب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0117_(18_12_16_18_46_25)_c",
+   "true_label": "حمى",
+   "python_word": "حمى",
+   "python_kind": "ok",
+   "browser_word": "حمى",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0132_(16_03_17_16_26_02)_c",
+   "true_label": "دواء",
+   "python_word": "دواء",
+   "python_kind": "ok",
+   "browser_word": "دواء",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_15)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0100_(18_12_16_17_35_51)_c",
+   "true_label": "صيدلية",
+   "python_word": "صيدلية",
+   "python_kind": "ok",
+   "browser_word": "صيدلية",
+   "browser_kind": "ok",
+   "browser_frames": 5,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0111_(18_12_16_18_15_04)_c",
+   "true_label": "التهاب",
+   "python_word": "التهاب",
+   "python_kind": "ok",
+   "browser_word": "التهاب",
+   "browser_kind": "ok",
+   "browser_frames": 6,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0161_(18_04_17_17_05_21)_c",
+   "true_label": "يشرب",
+   "python_word": "يشرب",
+   "python_kind": "ok",
+   "browser_word": "يشرب",
+   "browser_kind": "ok",
+   "browser_frames": 4,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0092_(15_12_16_17_36_04)_c",
+   "true_label": "مستشفى",
+   "python_word": "مستشفى",
+   "python_kind": "ok",
+   "browser_word": "مغص",
+   "browser_kind": "unclear",
+   "browser_frames": 4,
+   "same_word": false
+  },
+  {
+   "sample": "02_03_0046_(05_12_16_15_55_36)_c",
+   "true_label": "إشارة أخرى",
+   "python_word": "يشرب",
+   "python_kind": "unclear",
+   "browser_word": "يشرب",
+   "browser_kind": "unclear",
+   "browser_frames": 3,
+   "same_word": true
+  },
+  {
+   "sample": "03_03_0138_(16_03_17_16_42_06)_c",
+   "true_label": "قطارة",
+   "python_word": "قطارة",
+   "python_kind": "ok",
+   "browser_word": "زكام",
+   "browser_kind": "ok",
+   "browser_frames": 7,
+   "same_word": false
+  }
+ ]
+}

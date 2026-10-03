@@ -18,8 +18,11 @@ import { Segmenter, isHandRaised } from './segmenter.js';
 import { findArabicVoice, speak, waitForVoices } from './speech.js';
 
 // Automatic tests open the app with "?e2e=1". In that mode the app does not wait
-// for a tap after each sign, and it uses the CPU so results match the Python code.
-const TEST_MODE = new URLSearchParams(location.search).has('e2e');
+// for a tap after each sign, and it uses the CPU so results match the Python code
+// (unless "&gpu=1" is added, for tests that need real-time speed).
+const QUERY = new URLSearchParams(location.search);
+const TEST_MODE = QUERY.has('e2e');
+const PREFER_GPU = !TEST_MODE || QUERY.has('gpu');
 
 const $ = (id) => document.getElementById(id);
 const el = {
@@ -58,7 +61,7 @@ let mode = 'watching';
 let lastVideoTime = -1;
 
 // Results of every classified sign, readable by the automatic tests.
-window.__jisr = { results: [], ready: false };
+window.__jisr = { results: [], ready: false, framesProcessed: 0, delegate: null, trace: [] };
 
 // ---------- Small display helpers ----------
 
@@ -176,10 +179,21 @@ function onFrame() {
 
   const now = performance.now();
   const frame = { ...detector.detect(video, now), time: now };
+  window.__jisr.framesProcessed += 1;
   const aspect = video.videoWidth / video.videoHeight;
   drawSkeleton(el.overlay, frame, el.skeletonToggle.checked);
 
   const raised = isHandRaised(frame, aspect, segmenterConfig.raise_line);
+  if (TEST_MODE) {
+    // Per-frame trace for the automatic tests (what the app saw, frame by frame).
+    window.__jisr.trace.push({
+      t: Math.round(now - window.__jisr.streamStartedAt),
+      pose: frame.pose !== null,
+      hands: frame.hands.length,
+      raised,
+      mode,
+    });
+  }
 
   if (mode === 'handsDown') {
     if (raised) return setStatus('ready', 'أنزل يديك');
@@ -206,7 +220,7 @@ async function start() {
 
   // The models start loading right away (from this site, and from the device's own
   // storage after the first visit), while the user answers the camera question.
-  const modelsLoading = Promise.all([LandmarkDetector.create(!TEST_MODE), SignClassifier.create()]);
+  const modelsLoading = Promise.all([LandmarkDetector.create(PREFER_GPU), SignClassifier.create()]);
   modelsLoading.catch(() => {}); // a failure is reported below, after the camera opens
 
   // Tests wait for the models first, so that no part of the test video is missed.
@@ -260,6 +274,7 @@ async function start() {
     };
   }
   window.__jisr.ready = true;
+  window.__jisr.delegate = detector.delegate;
   onFrame();
 }
 

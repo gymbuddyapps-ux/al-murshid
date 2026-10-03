@@ -20,10 +20,14 @@ const MIN_AGREEMENT = 0.95;
 test('browser predictions agree with Python on fake-camera clips', async () => {
   const rows = [];
   const pageErrors = [];
+  const framesPerSecond = [];
+  let delegate = null;
   let extraDetections = 0;
 
   for (const batch of batches) {
-    const { browser, page, errors } = await openApp(batch.video);
+    // Visible window with the GPU allowed: the video plays in real time, so the app must
+    // run as fast as it does for a real user, not in the slow CPU-only test mode.
+    const { browser, page, errors } = await openApp(batch.video, false, true);
     // Wait until the video has played once (it would start again from the beginning).
     await page.waitForFunction(
       (duration) => performance.now() - window.__jisr.streamStartedAt >= duration,
@@ -31,6 +35,13 @@ test('browser predictions agree with Python on fake-camera clips', async () => {
       { timeout: batch.duration_ms + 120000, polling: 250 },
     );
     const results = await page.evaluate(() => window.__jisr.results);
+    const speed = await page.evaluate(() => ({
+      framesProcessed: window.__jisr.framesProcessed,
+      seconds: (performance.now() - window.__jisr.streamStartedAt) / 1000,
+      delegate: window.__jisr.delegate,
+    }));
+    framesPerSecond.push(speed.framesProcessed / speed.seconds);
+    delegate = speed.delegate;
     await browser.close();
     pageErrors.push(...errors);
 
@@ -70,6 +81,8 @@ test('browser predictions agree with Python on fake-camera clips', async () => {
     extra_detections: extraDetections,
     browser_top_word_is_true_label: share((r) => r.browser_word === r.true_label),
     python_top_word_is_true_label: share((r) => r.python_word === r.true_label),
+    browser_frames_per_second: framesPerSecond.reduce((a, b) => a + b, 0) / framesPerSecond.length,
+    mediapipe_delegate: delegate,
     page_errors: pageErrors,
     rows,
   };

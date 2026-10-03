@@ -34,7 +34,9 @@ export class LandmarkDetector {
           minPosePresenceConfidence: extraction.min_pose_presence_confidence,
           minTrackingConfidence: extraction.min_tracking_confidence,
         });
-        return new LandmarkDetector(hand, pose, delegate);
+        const detector = new LandmarkDetector(hand, pose, delegate);
+        detector.warmUp();
+        return detector;
       } catch (error) {
         lastError = error;
       }
@@ -46,6 +48,14 @@ export class LandmarkDetector {
     this.hand = hand;
     this.pose = pose;
     this.delegate = delegate;
+  }
+
+  // Run the models a few times on an empty picture. The first runs are slow (on the GPU the
+  // programs are compiled on first use), so doing them here keeps the camera smooth from the start.
+  warmUp() {
+    const canvas = new OffscreenCanvas(640, 480);
+    canvas.getContext('2d').fillRect(0, 0, 640, 480);
+    for (let i = 1; i <= 5; i++) this.detect(canvas, i); // tiny times, before any camera time
   }
 
   // Free the memory used by the two models.

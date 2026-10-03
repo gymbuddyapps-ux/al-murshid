@@ -203,21 +203,37 @@ def main():
         add(f"**Feature parity** (`reports/parity_report.json`): {parity['clips']} held-out clips went through the "
             "Python feature code and the browser feature code, frame by frame, with the same pictures. "
             f"Mean difference between the two feature tables: **{parity['mean_difference_over_all_clips']:.5f}** "
-            f"(features are measured in shoulder widths); clips within the limit of "
-            f"{parity['limit_mean_difference']}: **{pct(parity['clips_within_limit'])}**; "
-            f"same model answer: **{pct(parity['same_answer'])}**.")
+            f"(features are measured in shoulder widths; limit {parity['limit_mean_difference']}), "
+            f"median per clip {parity.get('median_clip_mean_difference', float('nan')):.5f}; clips within the limit: "
+            f"**{pct(parity['clips_within_limit'])}**; same model answer: **{pct(parity['same_answer'])}**. "
+            f"In {parity.get('clips_with_a_hand_detection_flip', '?')} clips the two MediaPipe builds disagreed about "
+            "whether a hand was visible in at least one frame; this is where the larger differences come from.")
         add("")
     if e2e:
         add(f"**End to end with a fake camera** (`reports/e2e_report.json`): {e2e['clips']} held-out clips were played "
             "to the real app as a camera stream, with a grey pause between clips. The app found the start and end of "
             "each sign, built the features and ran the model on its own.")
         add("")
-        add(f"- Browser top word agrees with Python: **{pct(e2e['agreement_top_word'])}** (target 95%).")
+        rows = e2e["rows"]
+        same_response = sum(
+            1 for r in rows if r["browser_kind"] == r["python_kind"]
+            and (r["python_kind"] == "unclear" or r["same_word"])) / len(rows)
+        detected = [r for r in rows if r["browser_kind"] != "not detected"]
+        add(f"- Browser top word agrees with Python: **{pct(e2e['agreement_top_word'])}** "
+            f"(target 95%: **{'met' if e2e['agreement_top_word'] >= 0.95 else 'not met'}**).")
+        add(f"- Same answer shown to the user (same word, or both say \"unclear\"): **{pct(same_response)}**.")
         add(f"- Same accept/unclear decision: **{pct(e2e['agreement_ok_or_unclear'])}**.")
+        add(f"- Among the {len(detected)} clips the app did detect: same top word "
+            f"**{pct(sum(r['same_word'] for r in detected) / len(detected))}**, same decision "
+            f"**{pct(sum(r['browser_kind'] == r['python_kind'] for r in detected) / len(detected))}**.")
         add(f"- Clips the app did not detect at all: **{e2e['clips_not_detected']}**; extra detections: "
             f"**{e2e['extra_detections']}**.")
         add(f"- Browser top word is the true word: **{pct(e2e['browser_top_word_is_true_label'])}** "
             f"(Python on the same video: {pct(e2e['python_top_word_is_true_label'])}).")
+        if "browser_frames_per_second" in e2e:
+            add(f"- The browser processed **{e2e['browser_frames_per_second']:.1f} frames per second** on the test "
+                f"laptop (MediaPipe on the {e2e.get('mediapipe_delegate')}), while the video plays at 25; "
+                "so the app saw about every second frame, unlike Python, which saw them all.")
         add("")
     if lighthouse:
         scores = {k: v["score"] for k, v in lighthouse["categories"].items()}

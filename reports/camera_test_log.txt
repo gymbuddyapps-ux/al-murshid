@@ -1,0 +1,27 @@
+10 clips played, 3 agree
+20 clips played, 6 agree
+30 clips played, 12 agree
+40 clips played, 19 agree
+50 clips played, 25 agree
+60 clips played, 31 agree
+70 clips played, 39 agree
+80 clips played, 42 agree
+90 clips played, 49 agree
+100 clips played, 55 agree
+110 clips played, 62 agree
+120 clips played, 68 agree
+130 clips played, 75 agree
+140 clips played, 78 agree
+150 clips played, 84 agree
+160 clips played, 90 agree
+170 clips played, 96 agree
+180 clips played, 100 agree
+190 clips played, 107 agree
+200 clips played, 113 agree
+210 clips played, 120 agree
+e2e: 210 clips, top-word agreement 57.1%, not detected 78, extra 6
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+     [90m 95 |[39m   expect(pageErrors)[33m.[39mtoEqual([])[33m;[39m
+[2m    Error Context: test-results\camera-browser-predictions-56964-Python-on-fake-camera-clips\error-context.md[22m
+[31m  1 failed[39m
+CAMERA DONE

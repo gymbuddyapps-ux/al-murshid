@@ -5,7 +5,9 @@ import { chromium } from '@playwright/test';
 // Without it, Chromium shows its built-in test pattern.
 // `headless = false` opens a visible window; Edge's invisible mode has no service worker,
 // so the offline test needs a visible one.
-export async function openApp(videoFile = null, headless = true) {
+// `gpu = true` lets the app use the graphics chip like it does for real users (the parity
+// test keeps the CPU so that its numbers can be compared with Python exactly).
+export async function openApp(videoFile = null, headless = true, gpu = false) {
   const args = ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'];
   if (videoFile) args.push(`--use-file-for-fake-video-capture=${videoFile}`);
 
@@ -15,7 +17,7 @@ export async function openApp(videoFile = null, headless = true) {
   page.on('pageerror', (error) => errors.push(error.message));
 
   // "?e2e=1" starts the camera without a tap and does not wait for confirmations.
-  await page.goto('http://localhost:4173/?e2e=1');
+  await page.goto(`http://localhost:4173/?e2e=1${gpu ? '&gpu=1' : ''}`);
   await page.waitForFunction(() => window.__jisr?.ready, null, { timeout: 120000 });
   return { browser, page, errors };
 }

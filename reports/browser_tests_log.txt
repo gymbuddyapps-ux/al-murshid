@@ -1,0 +1,9 @@
+e2e: 210 clips, top-word agreement 86.2%, not detected 15, extra 5
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+     [90m 95 |[39m   expect(pageErrors)[33m.[39mtoEqual([])[33m;[39m
+[2m    Error Context: test-results\camera-browser-predictions-56964-Python-on-fake-camera-clips\error-context.md[22m
+[31m  1 failed[39m
+CAMERA DONE
+parity: 42 clips, within limit 92.9%, mean difference 0.00634, same answer 100.0%
+[32m  2 passed[39m[2m (8.0m)[22m
+ALL BROWSER TESTS DONE

@@ -86,7 +86,14 @@ def train_model(X_train, y_train, num_classes, config, epochs, seed, X_val=None,
     steps_per_epoch = int(np.ceil(len(X_train) / config["batch_size"]))
     scheduler = torch.optim.lr_scheduler.OneCycleLR(
         optimizer, max_lr=config["learning_rate"], total_steps=epochs * steps_per_epoch)
-    loss_function = nn.CrossEntropyLoss(label_smoothing=config["label_smoothing"])
+    # Class balancing: the "other sign" class has about six times more clips than a word.
+    # Without this, the model learns to answer "other" far too often for a new signer
+    # (seen on validation in the first training run, see docs/PROCESS_LOG.md, Phase 2).
+    weights = None
+    if config.get("balance_classes", False):
+        counts = np.bincount(y_train, minlength=num_classes).astype(np.float32)
+        weights = torch.from_numpy(counts.sum() / (num_classes * np.maximum(counts, 1)))
+    loss_function = nn.CrossEntropyLoss(weight=weights, label_smoothing=config["label_smoothing"])
 
     history = []
     for _ in range(epochs):

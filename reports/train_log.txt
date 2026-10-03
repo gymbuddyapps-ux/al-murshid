@@ -1,0 +1,4 @@
+validate on signer 1: CNN top-1 0.887 top-3 0.962 | kNN-DTW top-1 0.769
+validate on signer 2: CNN top-1 0.919 top-3 0.996 | kNN-DTW top-1 0.652
+validation mean: {'cnn_top1': 0.9030660749506904, 'cnn_top3': 0.9790276134122288, 'knn_dtw_top1': 0.7104368836291913} -> chosen: cnn
+saved models/jisr_model.onnx (353296 bytes), 2414 training clips, 529 s

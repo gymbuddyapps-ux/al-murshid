@@ -37,6 +37,22 @@ def load_clip(path):
     return frames, aspect
 
 
+def clip_files(sign_id, is_other, vocab):
+    """The landmark files of one sign. For "other" signs only the first few clips per signer
+    are used (the same rule as scripts/extract_landmarks.py), so the class stays balanced."""
+    files = sorted((LANDMARKS_DIR / f"{sign_id:04d}").glob("*.npz"))
+    if not is_other:
+        return files
+    limit = vocab["other_class"]["clips_per_sign_per_signer"]
+    taken, chosen = {}, []
+    for path in files:
+        signer = path.stem.split("_")[1]
+        if taken.get(signer, 0) < limit:
+            taken[signer] = taken.get(signer, 0) + 1
+            chosen.append(path)
+    return chosen
+
+
 def drop_reason(frames):
     """Explain why features.py returned None for this clip."""
     if all(f["pose"] is None for f in frames):
@@ -81,7 +97,7 @@ def main():
             "label": name, "clips": 0, "kept": 0, "dropped_no_hands": 0, "dropped_no_pose": 0,
             "kept_per_signer": {}, "frames": 0, "frames_with_a_hand": 0, "frames_trimmed": 0})
 
-        for path in sorted((LANDMARKS_DIR / f"{sign_id:04d}").glob("*.npz")):
+        for path in clip_files(sign_id, class_id == other_id, vocab):
             frames, aspect = load_clip(path)
             stats["clips"] += 1
             stats["frames"] += len(frames)

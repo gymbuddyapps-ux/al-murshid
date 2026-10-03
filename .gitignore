@@ -39,3 +39,4 @@ web/playwright-report/
 .idea/
 Thumbs.db
 .DS_Store
+reports/lighthouse.report.html

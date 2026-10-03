@@ -1,0 +1,159 @@
+{
+ "clips": 21,
+ "limit_mean_difference": 0.02,
+ "clips_within_limit": 0.9523809523809523,
+ "mean_difference_over_all_clips": 0.0034818194824697305,
+ "largest_difference_over_all_clips": 1,
+ "same_answer": 1,
+ "same_top_word": 1,
+ "page_errors": [],
+ "rows": [
+  {
+   "sample": "03_02_0290_(14_11_17_20_59_58)_c",
+   "mean_difference": 0.0024004373671031786,
+   "largest_difference": 0.06014169473648068,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0293_(14_11_17_21_05_28)_c",
+   "mean_difference": 0.0010524058121383058,
+   "largest_difference": 0.15260276322174082,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0100_(12_12_16_17_23_25)_c",
+   "mean_difference": 0.029080349073089738,
+   "largest_difference": 1,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0092_(12_12_16_16_47_10)_c",
+   "mean_difference": 0.004036330177222957,
+   "largest_difference": 0.0960317074432373,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0497_(15_11_17_18_27_41)_c",
+   "mean_difference": 0.0014327065075080115,
+   "largest_difference": 0.025864073818206768,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0132_(15_03_17_16_36_08)_c",
+   "mean_difference": 0.0007804895432979063,
+   "largest_difference": 0.11835871153259281,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0135_(15_03_17_16_47_13)_c",
+   "mean_difference": 0.0004767438812782178,
+   "largest_difference": 0.04967455477905269,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0136_(15_03_17_16_50_30)_c",
+   "mean_difference": 0.0061341053469345505,
+   "largest_difference": 0.2898052243728637,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0137_(11_04_17_15_56_23)_c",
+   "mean_difference": 0.0011006334378790685,
+   "largest_difference": 0.03433277627849579,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0138_(11_04_17_15_59_21)_c",
+   "mean_difference": 0.0016928627053271598,
+   "largest_difference": 0.015971072773098945,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0115_(14_12_16_16_15_48)_c",
+   "mean_difference": 0.0004272088966563737,
+   "largest_difference": 0.014018616859436062,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0116_(14_12_16_16_17_46)_c",
+   "mean_difference": 0.0003511274184744762,
+   "largest_difference": 0.011185975318908747,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0117_(14_12_16_16_19_37)_c",
+   "mean_difference": 0.0072353795849866755,
+   "largest_difference": 1,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0113_(14_12_16_16_10_50)_c",
+   "mean_difference": 0.003027139443826588,
+   "largest_difference": 0.2492595206375121,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0130_(15_03_17_16_29_12)_c",
+   "mean_difference": 0.0006785198780699738,
+   "largest_difference": 0.04396879291915895,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0120_(14_12_16_16_26_21)_c",
+   "mean_difference": 0.001970321935811821,
+   "largest_difference": 0.41635021907901765,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0111_(14_12_16_16_04_53)_c",
+   "mean_difference": 0.002237285979893962,
+   "largest_difference": 0.31691453941345205,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0160_(01_05_17_14_46_45)_c",
+   "mean_difference": 0.0011966992294268467,
+   "largest_difference": 0.053203077102661034,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0161_(01_05_17_14_49_11)_c",
+   "mean_difference": 0.0017963959602596395,
+   "largest_difference": 0.1827747910308839,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "03_02_0182_(16_11_17_01_17_08)_c",
+   "mean_difference": 0.003434968998889551,
+   "largest_difference": 0.19896779668426512,
+   "same_answer": true,
+   "same_top_word": true
+  },
+  {
+   "sample": "02_02_0040_(15_11_16_17_51_32)_c",
+   "mean_difference": 0.0025760979537893225,
+   "largest_difference": 0.24348442133331294,
+   "same_answer": true,
+   "same_top_word": true
+  }
+ ]
+}

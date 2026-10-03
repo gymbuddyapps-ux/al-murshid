@@ -128,7 +128,7 @@ def main():
             "mean_when_correct": float(confidence[is_word & correct].mean()),
             "mean_when_wrong": float(confidence[is_word & ~correct].mean()) if (is_word & ~correct).any() else None,
         },
-        "per_class": per_class_report(scores, y_test, other_id, labels),
+        "per_class": per_class_report(scores, y_test, other_id, labels, probabilities, threshold),
         "confusion_matrix": confusion_matrix(scores, y_test, num_classes).tolist(),
         "labels": labels,
     }
@@ -150,7 +150,7 @@ def main():
           f"on {words['clips']} vocabulary clips (targets met: {metrics['test']['targets_met']})")
     print(f"temperature {temperature}, threshold {threshold:.2f}: acceptance {app['acceptance_rate']:.3f}, "
           f"accuracy on accepted {app['accuracy_on_accepted']:.3f}, "
-          f"unknown signs rejected {app['unknown_sign_rejection_rate']:.3f}")
+          f"unknown signs rejected {app['unknown_sign_rejection_rate']}")
 
 
 if __name__ == "__main__":

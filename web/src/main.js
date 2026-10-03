@@ -254,7 +254,10 @@ async function start() {
 
   if (TEST_MODE) {
     const { runClip } = await import('./testhooks.js');
-    window.__jisr.runClip = (frames, frameMs) => runClip(classifier, frames, frameMs);
+    window.__jisr.runClip = (frames, frameMs) => {
+      mode = 'choosing'; // stop the camera loop so the detector is used by the test only
+      return runClip(detector, classifier, frames, frameMs);
+    };
   }
   window.__jisr.ready = true;
   onFrame();

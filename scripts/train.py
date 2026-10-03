@@ -35,6 +35,18 @@ from jisr.training import (knn_dtw_predict, load_config, load_data, predict_scor
 from jisr.vocab import class_labels, load_vocab  # noqa: E402
 
 
+def onnx_check(model, clips):
+    """Run the saved ONNX file with ONNX Runtime and compare with PyTorch on a few clips.
+    Returns the largest difference between the two sets of scores (should be about 0)."""
+    import onnxruntime
+
+    session = onnxruntime.InferenceSession("models/jisr_model.onnx")
+    # The ONNX model takes one clip at a time, exactly like the browser.
+    from_onnx = np.concatenate([session.run(None, {"features": clip[None]})[0] for clip in clips])
+    from_torch = predict_scores(model, clips)
+    return float(np.abs(from_onnx - from_torch).max())
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-baseline", action="store_true",
@@ -122,6 +134,7 @@ def main():
     torch.save(model.state_dict(), "models/jisr_model.pt")
     export_onnx(model, "models/jisr_model.onnx")
     report["final_model"]["onnx_bytes"] = Path("models/jisr_model.onnx").stat().st_size
+    report["final_model"]["onnx_max_difference"] = onnx_check(model, data["X"][train_mask][:64])
     report["seconds"] = round(time.time() - started)
     Path("reports/training_report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")

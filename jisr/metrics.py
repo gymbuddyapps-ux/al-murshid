@@ -104,25 +104,36 @@ def choose_threshold(probabilities, y, other_id):
     return best["threshold"], table
 
 
-def per_class_report(scores, y, other_id, labels):
+def per_class_report(scores, y, other_id, labels, probabilities=None, threshold=None):
     """Precision and recall for each class, using the model's single best guess over all classes.
 
     recall:    of all clips that really are this class, how many did the model find?
     precision: of all clips the model called this class, how many really are?
+    If probabilities and a threshold are given, two app-level numbers are added for each word:
+    in_top3:   how often the word was among the 3 candidates (what the user can tap),
+    accepted:  how often the app showed candidates instead of "unclear".
     """
     predicted = scores.argmax(axis=1)
+    if probabilities is not None:
+        accepted_all, _, _ = app_decisions(probabilities, other_id, threshold)
+        ranking = word_ranking(scores, other_id)
     rows = []
     for class_id, label in enumerate(labels):
         truth = y == class_id
         guess = predicted == class_id
         hit = int((truth & guess).sum())
-        rows.append({
+        row = {
             "class_id": class_id,
             "label": label,
             "clips": int(truth.sum()),
             "precision": hit / int(guess.sum()) if guess.any() else None,
             "recall": hit / int(truth.sum()) if truth.any() else None,
-        })
+        }
+        if probabilities is not None and class_id != other_id and truth.any():
+            row["accepted"] = float(accepted_all[truth].mean())
+            row["in_top3"] = float((ranking[truth, :3] == class_id).any(axis=1).mean())
+            row["accepted_and_in_top3"] = float((accepted_all[truth] & (ranking[truth, :3] == class_id).any(axis=1)).mean())
+        rows.append(row)
     return rows
 
 

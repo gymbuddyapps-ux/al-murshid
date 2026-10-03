@@ -785,3 +785,16 @@ body {
   font-size: 0.85rem;
   text-align: center;
 }
+
+.voice-test {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.voice-test__list {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}

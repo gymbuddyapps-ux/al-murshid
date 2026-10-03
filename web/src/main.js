@@ -20,7 +20,7 @@ import { LandmarkDetector } from './landmarks.js';
 import { fillLearnPage } from './learn.js';
 import { drawSkeleton } from './overlay.js';
 import { Segmenter, isHandRaised } from './segmenter.js';
-import { speak, waitForVoices } from './speech.js';
+import { arabicVoices, speak, speechStatus, waitForVoices } from './speech.js';
 
 // Automatic tests open the app with "?e2e=1". In that mode the app never waits for a tap,
 // never speaks, and uses the CPU so results match the Python code (unless "&gpu=1" is
@@ -58,6 +58,8 @@ const el = {
   speakWordToggle: $('speak-word-toggle'),
   skeletonToggle: $('skeleton-toggle'),
   signGrid: $('sign-grid'),
+  testVoiceButton: $('test-voice-button'),
+  voiceList: $('voice-list'),
 };
 
 // ---------- What the app remembers ----------
@@ -118,17 +120,27 @@ function currentRate() {
   return Number(document.querySelector('input[name="speed"]:checked').value);
 }
 
+// What to tell the user about the voice, for each speech status.
+const VOICE_NOTICES = {
+  device: '',
+  browser: 'يُستخدم صوت المتصفح، وقد يحتاج إلى الإنترنت.',
+  unknown:
+    'لم يُعثر على صوت عربي في هذا الجهاز. إن لم تسمع شيئاً: على أندرويد افتح الإعدادات ← النظام ← اللغات والإدخال ← ' +
+    'تحويل النص إلى كلام ← تثبيت بيانات الصوت ← العربية، ثم أعد فتح التطبيق. وفي كل الأحوال تظهر الجملة بخط كبير ليقرأها الشخص الآخر.',
+  unsupported: 'هذا المتصفح لا يدعم النطق. اعرض الجملة على الشخص الآخر ليقرأها.',
+};
+
+function showVoiceNotice(status) {
+  el.voiceNotice.textContent = VOICE_NOTICES[status];
+  el.voiceNotice.hidden = status === 'device';
+}
+
 // Say something and tell the user if the voice may need internet or does not exist.
 function say(text) {
   if (TEST_MODE) return;
   const how = speak(text, currentRate());
-  if (how === 'none') {
-    el.voiceNotice.textContent = 'لا يوجد صوت عربي في هذا الجهاز. اعرض الجملة على الشخص الآخر ليقرأها.';
-  } else if (how === 'browser') {
-    el.voiceNotice.textContent = 'يُستخدم صوت المتصفح، وقد يحتاج إلى الإنترنت.';
-  }
-  el.voiceNotice.hidden = how === 'device';
-  if (how !== 'none') {
+  showVoiceNotice(how);
+  if (how !== 'unsupported') {
     lastSpoken = text;
     el.replayButton.disabled = false;
   }
@@ -400,8 +412,9 @@ async function start() {
     return;
   }
 
-  // 3. Voices load a moment after the page opens; wait for them once.
+  // 3. Voices load a moment after the page opens; wait for them once and show the voice status.
   await waitForVoices();
+  showVoiceNotice(speechStatus());
 
   if (TEST_MODE) {
     const { runClip } = await import('./testhooks.js');
@@ -428,6 +441,14 @@ el.clearButton.addEventListener('click', () => {
 });
 el.speakButton.addEventListener('click', sendSentence);
 el.replayButton.addEventListener('click', () => say(lastSpoken));
+// "جرّب الصوت": say a test sentence and list what the browser offers.
+el.testVoiceButton.addEventListener('click', () => {
+  say('مرحباً، أنا جسر');
+  const voices = arabicVoices();
+  el.voiceList.textContent = voices.length
+    ? `الأصوات العربية المتاحة: ${voices.map((v) => v.name).join('، ')}`
+    : 'لا يذكر المتصفح أي صوت عربي.';
+});
 el.clearChatButton.addEventListener('click', () => {
   chat.clear();
   renderChat();

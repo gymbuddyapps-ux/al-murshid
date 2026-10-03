@@ -29,10 +29,27 @@ export function waitForVoices() {
   });
 }
 
+// Keep the voice list fresh: browsers add voices a little after the page opens.
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.addEventListener('voiceschanged', () => window.speechSynthesis.getVoices());
+}
+
+// How speech is available right now.
+//   'device'      an Arabic voice installed on the device (works offline)
+//   'browser'     the browser's own Arabic voice (may need internet)
+//   'unknown'     no Arabic voice is listed; the browser may still speak with its default voice
+//   'unsupported' this browser cannot speak at all
+export function speechStatus() {
+  if (!('speechSynthesis' in window)) return 'unsupported';
+  const [voice] = arabicVoices();
+  if (!voice) return 'unknown';
+  return voice.localService ? 'device' : 'browser';
+}
+
 // Say the text. `rate` is the speed: 1 is normal, below 1 is slower.
-// Returns 'device' (offline voice), 'browser' (may need internet), or 'none' (no speech possible).
+// Returns the speechStatus() value that applied.
 export function speak(text, rate = 1) {
-  if (!('speechSynthesis' in window) || !text) return 'none';
+  if (!('speechSynthesis' in window) || !text) return 'unsupported';
 
   window.speechSynthesis.cancel(); // stop anything still being said
   const utterance = new SpeechSynthesisUtterance(text);
@@ -45,5 +62,5 @@ export function speak(text, rate = 1) {
     utterance.lang = voice.lang;
   }
   window.speechSynthesis.speak(utterance);
-  return voice ? (voice.localService ? 'device' : 'browser') : 'none';
+  return speechStatus();
 }

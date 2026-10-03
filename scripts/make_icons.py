@@ -7,7 +7,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 OUT = Path("web/public/icons")
-RED = (142, 27, 31)       # #8E1B1F
+RED = (200, 16, 46)       # #c8102e, Omani red
 WHITE = (255, 255, 255)
 
 

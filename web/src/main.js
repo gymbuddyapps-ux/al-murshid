@@ -3,7 +3,7 @@
 // The path of one sign through the app:
 //   camera picture -> landmarks (landmarks.js) -> start/end of the sign (segmenter.js)
 //   -> 32 x 140 numbers (features.js) -> 3 most likely words (classifier.js)
-//   -> the user confirms one -> sentence (composer.js) -> speech (speech.js)
+//   -> the best word is added (or the user picks one) -> sentence (composer.js) -> speech (speech.js)
 //
 // Everything runs on this device. No picture or data is sent anywhere.
 import './style.css';
@@ -15,28 +15,27 @@ import { clipToFeatures } from './features.js';
 import { LandmarkDetector } from './landmarks.js';
 import { drawSkeleton } from './overlay.js';
 import { Segmenter, isHandRaised } from './segmenter.js';
-import { findArabicVoice, speak, waitForVoices } from './speech.js';
+import { speak, waitForVoices } from './speech.js';
 
-// Automatic tests open the app with "?e2e=1". In that mode the app does not wait
-// for a tap after each sign, and it uses the CPU so results match the Python code
-// (unless "&gpu=1" is added, for tests that need real-time speed).
+// Automatic tests open the app with "?e2e=1". In that mode the app never waits for a tap,
+// never speaks, and uses the CPU so results match the Python code (unless "&gpu=1" is
+// added, for tests that need real-time speed).
 const QUERY = new URLSearchParams(location.search);
 const TEST_MODE = QUERY.has('e2e');
 const PREFER_GPU = !TEST_MODE || QUERY.has('gpu');
 
 const $ = (id) => document.getElementById(id);
 const el = {
-  welcome: $('welcome'),
-  app: $('app'),
+  cameraHelp: $('camera-help'),
   startButton: $('start-button'),
   startError: $('start-error'),
   video: $('video'),
   overlay: $('overlay'),
   status: $('status'),
-  skeletonToggle: $('skeleton-toggle'),
   candidates: $('candidates'),
   candidatesTitle: $('candidates-title'),
   candidateList: $('candidate-list'),
+  undoButton: $('undo-button'),
   retryButton: $('retry-button'),
   chips: $('chips'),
   clearButton: $('clear-button'),
@@ -44,21 +43,25 @@ const el = {
   voiceNotice: $('voice-notice'),
   speakButton: $('speak-button'),
   replayButton: $('replay-button'),
+  autoToggle: $('auto-toggle'),
+  speakWordToggle: $('speak-word-toggle'),
+  skeletonToggle: $('skeleton-toggle'),
 };
 
 // ---------- What the app remembers ----------
 
-const words = []; // the confirmed words, in order
-let lastSpoken = ''; // the last sentence that was spoken (for "replay")
+const words = []; // the recognized words, in order
+let lastSpoken = ''; // the last text that was spoken (for "replay")
 let detector = null; // finds hands and body
 let classifier = null; // recognizes the sign
 const segmenter = new Segmenter(segmenterConfig);
 
 // 'watching'  : looking for a sign
-// 'choosing'  : candidates are shown, waiting for a tap
-// 'handsDown' : after a tap, wait until the hands are lowered before watching again
+// 'choosing'  : the model is working, or candidates wait for a tap (manual mode)
+// 'handsDown' : after a sign, wait until the hands are lowered before watching again
 let mode = 'watching';
 let lastVideoTime = -1;
+let hideCandidatesTimer = null;
 
 // Results of every classified sign, readable by the automatic tests.
 window.__jisr = { results: [], ready: false, framesProcessed: 0, delegate: null, trace: [] };
@@ -74,7 +77,27 @@ function vibrate() {
   if ('vibrate' in navigator) navigator.vibrate(40);
 }
 
-// Show the sentence strip (chips) and the composed sentence.
+function currentRate() {
+  return Number(document.querySelector('input[name="speed"]:checked').value);
+}
+
+// Say something and tell the user if the voice may need internet or does not exist.
+function say(text) {
+  if (TEST_MODE) return;
+  const how = speak(text, currentRate());
+  if (how === 'none') {
+    el.voiceNotice.textContent = 'لا يوجد صوت عربي في هذا الجهاز. اعرض الجملة على الشخص الآخر ليقرأها.';
+  } else if (how === 'browser') {
+    el.voiceNotice.textContent = 'يُستخدم صوت المتصفح، وقد يحتاج إلى الإنترنت.';
+  }
+  el.voiceNotice.hidden = how === 'device';
+  if (how !== 'none') {
+    lastSpoken = text;
+    el.replayButton.disabled = false;
+  }
+}
+
+// Show the word chips and the composed sentence.
 function renderSentence() {
   el.chips.replaceChildren(
     ...words.map((word, index) => {
@@ -96,55 +119,86 @@ function renderSentence() {
 
   const sentence = composeSentence(words, templates);
   const empty = words.length === 0;
-  el.sentence.textContent = empty ? 'الكلمات التي تؤكدها تظهر هنا' : sentence;
+  el.sentence.textContent = empty ? 'الكلمات التي تُتعرَّف تظهر هنا' : sentence;
   el.sentence.classList.toggle('sentence--empty', empty);
   el.clearButton.hidden = empty;
   el.speakButton.disabled = empty;
 }
 
-// Show the top 3 candidates as large buttons, or the "unclear" message.
-function showCandidates(result) {
-  el.candidateList.replaceChildren();
-
-  if (result.kind === 'unclear') {
-    el.candidatesTitle.textContent = 'غير واضح، أعد الإشارة';
-  } else {
-    el.candidatesTitle.textContent = 'اختر الكلمة الصحيحة';
-    for (const candidate of result.candidates) {
-      const percent = Math.round(candidate.confidence * 100);
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'candidate';
-      button.innerHTML = `
-        <span class="candidate__label"></span>
-        <span class="candidate__confidence">${percent}٪</span>
-        <span class="candidate__bar" style="width: ${Math.max(percent, 4)}%"></span>`;
-      button.querySelector('.candidate__label').textContent = candidate.label;
-      button.addEventListener('click', () => confirmWord(candidate.label));
-      el.candidateList.append(button);
-    }
-  }
-  el.candidates.hidden = false;
-  mode = 'choosing';
-  setStatus('choose', result.kind === 'unclear' ? 'غير واضح' : 'اختر الكلمة الصحيحة');
+// One large button per candidate word, with its confidence.
+function candidateButton(candidate, onTap) {
+  const percent = Math.round(candidate.confidence * 100);
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'candidate';
+  button.innerHTML = `
+    <span class="candidate__label"></span>
+    <span class="candidate__confidence">${percent}٪</span>
+    <span class="candidate__bar" style="width: ${Math.max(percent, 4)}%"></span>`;
+  button.querySelector('.candidate__label').textContent = candidate.label;
+  button.addEventListener('click', onTap);
+  return button;
 }
 
 function hideCandidates() {
+  clearTimeout(hideCandidatesTimer);
   el.candidates.hidden = true;
   segmenter.reset();
-  mode = 'handsDown';
+  if (mode === 'choosing') mode = 'handsDown';
 }
 
-function confirmWord(word) {
+// Add a word to the sentence (and say it, if that setting is on).
+function addWord(word) {
   words.push(word);
   vibrate();
   renderSentence();
-  hideCandidates();
+  if (el.speakWordToggle.checked) say(word);
+}
+
+// Automatic mode: the best word is added at once. The other candidates stay on screen
+// for a few seconds so the user can swap the word if the model was wrong.
+function autoChoose(result) {
+  addWord(result.candidates[0].label);
+  el.candidatesTitle.textContent = `أُضيفت «${result.candidates[0].label}». ليست هي؟ اختر البديل:`;
+  el.candidateList.replaceChildren(
+    ...result.candidates.slice(1).map((candidate) =>
+      candidateButton(candidate, () => {
+        words[words.length - 1] = candidate.label; // swap the word that was just added
+        renderSentence();
+        if (el.speakWordToggle.checked) say(candidate.label);
+        hideCandidates();
+      }),
+    ),
+  );
+  el.undoButton.hidden = false;
+  el.retryButton.hidden = true;
+  el.candidates.hidden = false;
+  mode = 'handsDown'; // keep watching; no tap needed
+  clearTimeout(hideCandidatesTimer);
+  hideCandidatesTimer = setTimeout(hideCandidates, 5000);
+}
+
+// Manual mode: show the 3 candidates and wait for a tap.
+function manualChoose(result) {
+  el.candidatesTitle.textContent = 'اختر الكلمة الصحيحة';
+  el.candidateList.replaceChildren(
+    ...result.candidates.map((candidate) =>
+      candidateButton(candidate, () => {
+        addWord(candidate.label);
+        hideCandidates();
+      }),
+    ),
+  );
+  el.undoButton.hidden = true;
+  el.retryButton.hidden = false;
+  el.candidates.hidden = false;
+  mode = 'choosing';
+  setStatus('choose', 'اختر الكلمة الصحيحة');
 }
 
 // ---------- The camera loop ----------
 
-// A finished clip: turn it into features, classify it, and show the result.
+// A finished clip: turn it into features, classify it, and act on the result.
 async function handleClip(frames, aspect) {
   setStatus('choose', 'جارٍ التعرّف');
   mode = 'choosing'; // stop watching while the model works
@@ -161,12 +215,23 @@ async function handleClip(frames, aspect) {
   });
 
   if (TEST_MODE) {
-    // A test is running: do not wait for a tap, go straight back to watching.
     segmenter.reset();
     mode = 'watching';
     return;
   }
-  showCandidates(result);
+  if (result.kind === 'unclear') {
+    el.candidatesTitle.textContent = 'غير واضح، أعد الإشارة';
+    el.candidateList.replaceChildren();
+    el.undoButton.hidden = true;
+    el.retryButton.hidden = true;
+    el.candidates.hidden = false;
+    mode = 'handsDown';
+    clearTimeout(hideCandidatesTimer);
+    hideCandidatesTimer = setTimeout(hideCandidates, 2500);
+    return;
+  }
+  if (el.autoToggle.checked) autoChoose(result);
+  else manualChoose(result);
 }
 
 // Runs once for every new camera picture.
@@ -216,17 +281,18 @@ function onFrame() {
 
 async function start() {
   el.startButton.disabled = true;
-  el.startError.hidden = true;
+  el.cameraHelp.hidden = true;
+  setStatus('loading', 'جارٍ فتح الكاميرا');
 
   // The models start loading right away (from this site, and from the device's own
-  // storage after the first visit), while the user answers the camera question.
+  // storage after the first visit), while the camera opens.
   const modelsLoading = Promise.all([LandmarkDetector.create(PREFER_GPU), SignClassifier.create()]);
-  modelsLoading.catch(() => {}); // a failure is reported below, after the camera opens
+  modelsLoading.catch(() => {}); // a failure is reported below
 
   // Tests wait for the models first, so that no part of the test video is missed.
   if (TEST_MODE) await modelsLoading.catch(() => {});
 
-  // 1. Ask for the camera.
+  // 1. Open the front camera.
   let stream;
   try {
     stream = await navigator.mediaDevices.getUserMedia({
@@ -235,15 +301,14 @@ async function start() {
     });
   } catch {
     el.startError.textContent =
-      'لم يُسمح باستخدام الكاميرا. اسمح بها من إعدادات المتصفح ثم اضغط «افتح الكاميرا» مرة أخرى.';
-    el.startError.hidden = false;
+      'لم يُسمح باستخدام الكاميرا. اسمح بها من إعدادات المتصفح ثم اضغط «افتح الكاميرا».';
+    el.cameraHelp.hidden = false;
     el.startButton.disabled = false;
+    setStatus('warning', 'الكاميرا مغلقة');
     return;
   }
 
   window.__jisr.streamStartedAt = performance.now();
-  el.welcome.hidden = true;
-  el.app.hidden = false;
   setStatus('loading', 'جارٍ التحميل');
 
   el.video.srcObject = stream;
@@ -262,9 +327,8 @@ async function start() {
     return;
   }
 
-  // 3. Check for an Arabic voice. Without one, the large text is the way to communicate.
+  // 3. Voices load a moment after the page opens; wait for them once.
   await waitForVoices();
-  el.voiceNotice.hidden = findArabicVoice() !== null;
 
   if (TEST_MODE) {
     const { runClip } = await import('./testhooks.js');
@@ -278,21 +342,13 @@ async function start() {
   onFrame();
 }
 
-function currentRate() {
-  return Number(document.querySelector('input[name="speed"]:checked').value);
-}
-
-function say(sentence) {
-  const spoken = speak(sentence, currentRate());
-  el.voiceNotice.hidden = spoken;
-  if (spoken) {
-    lastSpoken = sentence;
-    el.replayButton.disabled = false;
-  }
-}
-
 el.startButton.addEventListener('click', start);
 el.retryButton.addEventListener('click', hideCandidates);
+el.undoButton.addEventListener('click', () => {
+  words.pop();
+  renderSentence();
+  hideCandidates();
+});
 el.clearButton.addEventListener('click', () => {
   words.length = 0;
   renderSentence();
@@ -307,5 +363,5 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
   navigator.serviceWorker.register('/sw.js');
 }
 
-// Tests start the camera without a tap.
-if (TEST_MODE) start();
+// The camera opens as soon as the page opens.
+start();

@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import basicSsl from '@vitejs/plugin-basic-ssl';
 import { defineConfig } from 'vite';
 
 // List every file inside a folder (and its sub-folders).
@@ -38,8 +39,14 @@ function offlineFileList() {
   };
 }
 
+// `npm run preview:phone` serves the built app over HTTPS on the local network, so a phone
+// on the same Wi-Fi can open it (the camera only works on HTTPS). The certificate is
+// self-signed, so the phone shows a warning once; that is expected.
+const forPhone = process.env.JISR_PHONE === '1';
+
 export default defineConfig({
-  plugins: [offlineFileList()],
+  plugins: [offlineFileList(), ...(forPhone ? [basicSsl()] : [])],
+  preview: { host: forPhone, port: 4173, strictPort: true },
   server: {
     // Allow importing the shared settings in ../config/
     fs: { allow: ['..'] },

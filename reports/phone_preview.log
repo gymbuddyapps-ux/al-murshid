@@ -1,0 +1,7 @@
+
+> jisr@0.1.0 preview:phone
+> cross-env JISR_PHONE=1 vite preview
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttps://localhost:[1m4173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttps://169.254.156.38:[1m4173[22m/[39m  [2mEthernet 3[22m
+  [32m➜[39m  [1mNetwork[22m: [36mhttps://192.168.1.13:[1m4173[22m/[39m    [2mWi-Fi[22m

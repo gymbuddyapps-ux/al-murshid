@@ -8,5 +8,5 @@
       <path d="M12 50 C12 28 52 28 52 50" />
     </g>
   </symbol>
-  <use href="#bridge" color="#8E1B1F" />
+  <use href="#bridge" color="#c8102e" />
 </svg>

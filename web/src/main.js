@@ -1,4 +1,4 @@
-// Jisr: the main program of the app.
+// Al-Murshid (المرشد): the main program of the app.
 //
 // Two parts: "التعرّف" (recognition, shown as a conversation) and "تعلّم الإشارات" (learning).
 //
@@ -443,7 +443,7 @@ el.speakButton.addEventListener('click', sendSentence);
 el.replayButton.addEventListener('click', () => say(lastSpoken));
 // "جرّب الصوت": say a test sentence and list what the browser offers.
 el.testVoiceButton.addEventListener('click', () => {
-  say('مرحباً، أنا جسر');
+  say('مرحباً، أنا المرشد');
   const voices = arabicVoices();
   el.voiceList.textContent = voices.length
     ? `الأصوات العربية المتاحة: ${voices.map((v) => v.name).join('، ')}`

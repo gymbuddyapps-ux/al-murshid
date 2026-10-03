@@ -1,4 +1,7 @@
-# جسر (Jisr)
+# المرشد (Al-Murshid)
+
+Project code name: **jisr** (the folder, package and code identifiers keep that name; the app's
+name shown to users is المرشد, "the guide").
 
 A small web app that turns isolated Arabic sign language words into Arabic text and speech,
 so a deaf or mute person can be understood by hearing people. Everything runs inside the phone's

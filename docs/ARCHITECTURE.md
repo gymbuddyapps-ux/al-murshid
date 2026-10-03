@@ -1,6 +1,6 @@
 # Architecture
 
-How a sign travels through Jisr, from the camera to a spoken Arabic sentence.
+How a sign travels through Al-Murshid (المرشد, code name jisr), from the camera to a spoken Arabic sentence.
 Everything in the diagram runs inside the phone's browser. Nothing is sent to the internet.
 
 ```mermaid

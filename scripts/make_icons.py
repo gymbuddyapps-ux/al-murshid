@@ -1,4 +1,4 @@
-"""Draw the app icons (PNG) from the same bridge shape as web/public/icons/logo.svg.
+"""Draw the app icons (PNG) from the same star shape as web/public/icons/logo.svg.
 
 Usage:  python scripts/make_icons.py
 """
@@ -11,20 +11,8 @@ RED = (200, 16, 46)       # #c8102e, Omani red
 WHITE = (255, 255, 255)
 
 
-def bridge_points(steps=40):
-    """The arch of the logo: the curve 'M12 50 C12 28 52 28 52 50' on a 64x64 grid."""
-    p0, p1, p2, p3 = (12, 50), (12, 28), (52, 28), (52, 50)
-    points = []
-    for i in range(steps + 1):
-        t = i / steps
-        x = (1 - t) ** 3 * p0[0] + 3 * (1 - t) ** 2 * t * p1[0] + 3 * (1 - t) * t ** 2 * p2[0] + t ** 3 * p3[0]
-        y = (1 - t) ** 3 * p0[1] + 3 * (1 - t) ** 2 * t * p1[1] + 3 * (1 - t) * t ** 2 * p2[1] + t ** 3 * p3[1]
-        points.append((x, y))
-    return points
-
-
 def draw_icon(size, logo_fraction):
-    """White bridge on a red square. `logo_fraction` is how much of the icon the logo fills."""
+    """White eight-pointed star on a red square. `logo_fraction` is how much of the icon the logo fills."""
     image = Image.new("RGB", (size, size), RED)
     draw = ImageDraw.Draw(image)
     scale = size * logo_fraction / 64
@@ -33,18 +21,14 @@ def draw_icon(size, logo_fraction):
     def at(point):
         return (offset + point[0] * scale, offset + point[1] * scale)
 
-    width = max(2, round(5 * scale))
-    lines = [
-        [(6, 22), (58, 22)],          # deck
-        [(12, 22), (12, 50)],         # left pier
-        [(52, 22), (52, 50)],         # right pier
-        bridge_points(),              # arch
-    ]
-    for line in lines:
-        draw.line([at(p) for p in line], fill=WHITE, width=width, joint="curve")
-        for p in (line[0], line[-1]):                      # round line ends
-            x, y = at(p)
-            draw.ellipse([x - width / 2, y - width / 2, x + width / 2, y + width / 2], fill=WHITE)
+    width = max(2, round(4 * scale))
+    star = [(32, 6), (37, 27), (58, 32), (37, 37), (32, 58), (27, 37), (6, 32), (27, 27), (32, 6)]
+    draw.line([at(p) for p in star], fill=WHITE, width=width, joint="curve")
+    for a, b in [((14, 14), (29, 29)), ((50, 14), (35, 29)), ((50, 50), (35, 35)), ((14, 50), (29, 35))]:
+        draw.line([at(a), at(b)], fill=WHITE, width=width)
+    cx, cy = at((32, 32))
+    r = 3.5 * scale
+    draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=WHITE)
     return image
 
 

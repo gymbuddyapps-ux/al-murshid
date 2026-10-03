@@ -439,3 +439,5 @@ do not publish. Steps taken, all decided on validation data only:
   types a reply that appears as a large-text bubble; the history is kept in the browser's local storage on the
   device and can be cleared (`web/src/chat.js`, 6 unit tests). Settings and tips moved into a collapsible panel.
 - Offline test still passes with the videos precached (74 files). Nothing is published.
+
+**Rename (owner's request).** The app is now called **المرشد** (Al-Murshid, "the guide") with a new logo: an eight-pointed guide star, matching the carved-door pattern of the theme. The code name, folder and identifiers stay `jisr`.

@@ -1,6 +1,6 @@
 # Credits and licenses
 
-Jisr is built on public datasets, open-source libraries and open fonts. Thank you to their authors.
+Al-Murshid (المرشد, code name jisr) is built on public datasets, open-source libraries and open fonts. Thank you to their authors.
 
 ## Dataset
 
@@ -41,7 +41,7 @@ Arabic words sign language video dataset (Zenodo 10.5281/zenodo.8035320, CC BY 4
 
 | Font | Use | License |
 |---|---|---|
-| Reem Kufi, by the Reem Kufi Project Authors (Khaled Hosny and contributors) | The name "جسر" and the large sentence | SIL Open Font License 1.1 |
+| Reem Kufi, by the Reem Kufi Project Authors (Khaled Hosny and contributors) | The name "المرشد" and the large sentence | SIL Open Font License 1.1 |
 | Tajawal, by Boutros Fonts (via Google Fonts) | All other text | SIL Open Font License 1.1 |
 
 Both fonts are packaged by Fontsource (`@fontsource/reem-kufi`, `@fontsource/tajawal`).
@@ -51,4 +51,4 @@ The full license texts are in `web/node_modules/@fontsource/*/LICENSE` after `np
 
 The colors are inspired by the colors of the flag of Oman, in calm tones. The background pattern is
 an original drawing of eight-pointed stars, inspired by Omani carved doors and silverwork.
-The bridge logo is an original drawing. No national emblem, coat of arms or flag is used.
+The logo, an eight-pointed guide star, is an original drawing. No national emblem, coat of arms or flag is used.

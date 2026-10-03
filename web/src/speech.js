@@ -46,6 +46,10 @@ export function speechStatus() {
   return voice.localService ? 'device' : 'browser';
 }
 
+// What happened the last time we tried to speak (for the voice test): 'started', 'ended',
+// or 'error: <reason>'. Mobile browsers refuse to speak until the user has tapped the page once.
+export let lastSpeechEvent = 'nothing yet';
+
 // Say the text. `rate` is the speed: 1 is normal, below 1 is slower.
 // Returns the speechStatus() value that applied.
 export function speak(text, rate = 1) {
@@ -55,12 +59,25 @@ export function speak(text, rate = 1) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = 'ar-SA';
   utterance.rate = rate;
+  utterance.onstart = () => (lastSpeechEvent = 'started');
+  utterance.onend = () => (lastSpeechEvent = 'ended');
+  utterance.onerror = (event) => (lastSpeechEvent = `error: ${event.error}`);
 
   const [voice] = arabicVoices();
   if (voice) {
     utterance.voice = voice;
     utterance.lang = voice.lang;
   }
+  lastSpeechEvent = 'asked';
   window.speechSynthesis.speak(utterance);
   return speechStatus();
+}
+
+// A short report of what the browser offers, for the voice test in the settings.
+export function voiceReport() {
+  if (!('speechSynthesis' in window)) return 'هذا المتصفح لا يدعم النطق.';
+  const all = window.speechSynthesis.getVoices();
+  const arabic = arabicVoices();
+  const names = arabic.length ? arabic.map((v) => `${v.name} (${v.lang})`).join('، ') : 'لا شيء';
+  return `الأصوات العربية: ${names}. كل الأصوات: ${all.length}. آخر محاولة نطق: ${lastSpeechEvent}.`;
 }

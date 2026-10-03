@@ -20,7 +20,7 @@ import { LandmarkDetector } from './landmarks.js';
 import { fillLearnPage } from './learn.js';
 import { drawSkeleton } from './overlay.js';
 import { Segmenter, isHandRaised } from './segmenter.js';
-import { arabicVoices, speak, speechStatus, waitForVoices } from './speech.js';
+import { speak, speechStatus, voiceReport, waitForVoices } from './speech.js';
 
 // Automatic tests open the app with "?e2e=1". In that mode the app never waits for a tap,
 // never speaks, and uses the CPU so results match the Python code (unless "&gpu=1" is
@@ -59,6 +59,8 @@ const el = {
   skeletonToggle: $('skeleton-toggle'),
   signGrid: $('sign-grid'),
   testVoiceButton: $('test-voice-button'),
+  enableSound: $('enable-sound'),
+  enableSoundButton: $('enable-sound-button'),
   voiceList: $('voice-list'),
 };
 
@@ -78,6 +80,7 @@ const chat = createChat(TEST_MODE ? null : safeLocalStorage());
 let mode = 'watching';
 let lastVideoTime = -1;
 let hideCandidatesTimer = null;
+let soundEnabled = false; // becomes true after the first tap on the page (phones need it to speak)
 
 // Results of every classified sign, readable by the automatic tests.
 window.__jisr = { results: [], ready: false, framesProcessed: 0, delegate: null, trace: [] };
@@ -441,13 +444,19 @@ el.clearButton.addEventListener('click', () => {
 });
 el.speakButton.addEventListener('click', sendSentence);
 el.replayButton.addEventListener('click', () => say(lastSpoken));
-// "جرّب الصوت": say a test sentence and list what the browser offers.
+// "جرّب الصوت": say a test sentence and report what the browser offers and what happened.
 el.testVoiceButton.addEventListener('click', () => {
   say('مرحباً، أنا المرشد');
-  const voices = arabicVoices();
-  el.voiceList.textContent = voices.length
-    ? `الأصوات العربية المتاحة: ${voices.map((v) => v.name).join('، ')}`
-    : 'لا يذكر المتصفح أي صوت عربي.';
+  el.voiceList.textContent = voiceReport();
+  setTimeout(() => (el.voiceList.textContent = voiceReport()), 1500);
+});
+
+// Phones refuse to speak until the page has been tapped once. This button is that tap:
+// it says a short greeting and then disappears.
+el.enableSoundButton.addEventListener('click', () => {
+  say('تم تفعيل الصوت');
+  el.enableSound.hidden = true;
+  soundEnabled = true;
 });
 el.clearChatButton.addEventListener('click', () => {
   chat.clear();
@@ -461,6 +470,15 @@ el.replyForm.addEventListener('submit', (event) => {
     renderChat();
   }
 });
+
+document.addEventListener(
+  'pointerdown',
+  () => {
+    soundEnabled = true;
+    el.enableSound.hidden = true;
+  },
+  { once: true },
+);
 
 renderSentence();
 renderChat();

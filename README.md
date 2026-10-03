@@ -103,7 +103,13 @@ Requirements: Python 3.13, a Kaggle account, about 30 GB of free disk space, and
 
 All random seeds are fixed (`config/training.json`), so a rerun gives the same model.
 
-## Deploy (prepared, not published)
+## Live site
+
+Published with GitHub Pages at **https://gymbuddyapps-ux.github.io/al-murshid/** (built by
+`.github/workflows/pages.yml` on every push to `main`). HTTPS, so the camera works on phones, and the app
+installs to the home screen and works offline after the first visit.
+
+## Deploy elsewhere
 
 The app is a static site. `vercel.json` and `netlify.toml` at the repository root are ready:
 
@@ -112,8 +118,7 @@ The app is a static site. `vercel.json` and `netlify.toml` at the repository roo
 - **GitHub Pages:** run `cd web && npm run build` and publish the `web/dist` folder (the app
   expects to live at the root of the site).
 
-Camera access needs HTTPS, which all three provide. Nothing has been published; do that only when
-you are ready to share the address.
+Camera access needs HTTPS, which all three provide. The app uses relative paths, so it works at a domain root or under a sub-path.
 
 ## Documents
 

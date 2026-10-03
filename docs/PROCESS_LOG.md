@@ -441,3 +441,11 @@ do not publish. Steps taken, all decided on validation data only:
 - Offline test still passes with the videos precached (74 files). Nothing is published.
 
 **Rename (owner's request).** The app is now called **المرشد** (Al-Murshid, "the guide") with a new logo: an eight-pointed guide star, matching the carved-door pattern of the theme. The code name, folder and identifiers stay `jisr`.
+
+## Phase 9: Published (owner's request, 2026-10-03)
+
+The owner tested the phone build, confirmed speech works after the one-tap sound activation, and asked to deploy.
+All app paths were made relative (`base: './'` in Vite, relative URLs in the service worker, manifest and code),
+checked locally under a sub-path, and the repository was pushed to GitHub as a public repository with a
+GitHub Pages workflow: **https://gymbuddyapps-ux.github.io/al-murshid/**. The learning page's 46 short clips
+derived from KArSL are therefore public, with the dataset citation on the page and in `CREDITS.md`.

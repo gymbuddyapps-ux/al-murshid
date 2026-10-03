@@ -12,14 +12,14 @@ export class LandmarkDetector {
   // faster, and falls back to the normal processor (CPU) if that fails.
   // `preferGpu = false` is used by the automatic tests so results match Python.
   static async create(preferGpu = true) {
-    const fileset = await FilesetResolver.forVisionTasks('/mediapipe/wasm');
+    const fileset = await FilesetResolver.forVisionTasks('mediapipe/wasm');
     const delegates = preferGpu ? ['GPU', 'CPU'] : ['CPU'];
     let lastError = null;
 
     for (const delegate of delegates) {
       try {
         const hand = await HandLandmarker.createFromOptions(fileset, {
-          baseOptions: { modelAssetPath: '/mediapipe/hand_landmarker.task', delegate },
+          baseOptions: { modelAssetPath: 'mediapipe/hand_landmarker.task', delegate },
           runningMode: 'VIDEO',
           numHands: extraction.num_hands,
           minHandDetectionConfidence: extraction.min_hand_detection_confidence,
@@ -27,7 +27,7 @@ export class LandmarkDetector {
           minTrackingConfidence: extraction.min_tracking_confidence,
         });
         const pose = await PoseLandmarker.createFromOptions(fileset, {
-          baseOptions: { modelAssetPath: '/mediapipe/pose_landmarker_lite.task', delegate },
+          baseOptions: { modelAssetPath: 'mediapipe/pose_landmarker_lite.task', delegate },
           runningMode: 'VIDEO',
           numPoses: extraction.num_poses,
           minPoseDetectionConfidence: extraction.min_pose_detection_confidence,

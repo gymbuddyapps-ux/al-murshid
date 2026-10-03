@@ -36,7 +36,7 @@ self.addEventListener('fetch', (event) => {
   // Opening the app (a page navigation) always gets the main page.
   // ignoreVary: some servers add a "Vary" header that would otherwise stop
   // module scripts from matching their cached copy.
-  const key = event.request.mode === 'navigate' ? '/index.html' : event.request;
+  const key = event.request.mode === 'navigate' ? './index.html' : event.request;
   event.respondWith(
     caches
       .match(key, { ignoreSearch: true, ignoreVary: true })

@@ -21,8 +21,8 @@ function offlineFileList() {
     closeBundle() {
       const dist = join(import.meta.dirname, 'dist');
       const files = listFiles(dist)
-        .map((path) => '/' + relative(dist, path).replaceAll('\\', '/'))
-        .filter((url) => url !== '/sw.js');
+        .map((path) => './' + relative(dist, path).replaceAll('\\', '/'))
+        .filter((url) => url !== './sw.js');
       // The version changes whenever any file changes, so phones pick up new builds.
       const swPath = join(dist, 'sw.js');
       const swSource = readFileSync(swPath, 'utf-8');
@@ -45,6 +45,8 @@ function offlineFileList() {
 const forPhone = process.env.JISR_PHONE === '1';
 
 export default defineConfig({
+  // Relative paths, so the site works at the root of a domain or under a sub-path (GitHub Pages).
+  base: './',
   plugins: [offlineFileList(), ...(forPhone ? [basicSsl()] : [])],
   preview: { host: forPhone, port: 4173, strictPort: true },
   server: {

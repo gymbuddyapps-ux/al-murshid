@@ -485,7 +485,7 @@ renderChat();
 
 // Save the app on the device so it works without internet (only in the built app).
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('./sw.js');
 }
 
 // The camera opens as soon as the page opens.

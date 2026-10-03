@@ -13,8 +13,8 @@ ort.env.wasm.numThreads = 1;
 
 export class SignClassifier {
   static async create() {
-    const info = await (await fetch('/model/labels.json')).json();
-    const session = await ort.InferenceSession.create('/model/jisr_model.onnx', {
+    const info = await (await fetch('model/labels.json')).json();
+    const session = await ort.InferenceSession.create('model/jisr_model.onnx', {
       executionProviders: ['wasm'],
     });
     return new SignClassifier(session, info);

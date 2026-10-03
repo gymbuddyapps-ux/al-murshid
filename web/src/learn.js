@@ -4,7 +4,7 @@
 export async function fillLearnPage(grid) {
   let data;
   try {
-    data = await (await fetch('/signs/signs.json')).json();
+    data = await (await fetch('signs/signs.json')).json();
   } catch {
     grid.textContent = 'تعذّر تحميل مقاطع الإشارات.';
     return;
@@ -28,7 +28,7 @@ export async function fillLearnPage(grid) {
       for (const clip of sign.videos) {
         const figure = document.createElement('figure');
         const video = document.createElement('video');
-        video.src = `/signs/${clip.file}`;
+        video.src = `signs/${clip.file}`;
         video.muted = true;
         video.loop = true;
         video.playsInline = true;

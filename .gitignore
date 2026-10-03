@@ -40,3 +40,6 @@ web/playwright-report/
 Thumbs.db
 .DS_Store
 reports/lighthouse.report.html
+
+# The learning page videos are part of the app (small, derived from KArSL with citation)
+!web/public/signs/*.mp4

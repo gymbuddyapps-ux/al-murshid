@@ -1,0 +1,16 @@
+=== extract v2 09:03:07
+4499 clips to process with 5 workers
+finished: {'done': 4499}
+=== features 10:13:24
+23 clips= 151 kept= 151 hand-frames= 62.9% trimmed= 1.0%  {'1': 51, '2': 50, '3': 50}
+24 clips= 900 kept= 895 hand-frames= 96.1% trimmed= 0.3%  {'1': 300, '2': 300, '3': 295}
+kept 4494 of 4499 clips (trimmed 0.7% of frames) -> data\features\karsl_v2.npz
+=== train 10:14:20
+validate on signer 1: CNN top-1 0.829 top-3 0.951 | kNN-DTW top-1 0.706
+validate on signer 2: CNN top-1 0.818 top-3 0.933 | kNN-DTW top-1 0.694
+validation mean: {'cnn_top1': 0.8237079525635358, 'cnn_top3': 0.9421038023868998, 'knn_dtw_top1': 0.6999527143018678} -> chosen: cnn
+saved models/jisr_model.onnx (362016 bytes), 2816 training clips, 607 s
+=== evaluate 10:24:30
+held-out signer 3: top-1 0.8411  top-3 0.9391 on 1183 vocabulary clips (targets met: False)
+temperature 0.65, threshold 0.85: acceptance 0.809, accuracy on accepted 0.888, unknown signs rejected 1.0
+PIPELINE V2 DONE 10:24:34

@@ -6,7 +6,7 @@
     2
   ],
   "test_signer": 3,
-  "max_epochs": 80,
+  "max_epochs": 120,
   "batch_size": 64,
   "learning_rate": 0.002,
   "weight_decay": 0.0005,
@@ -19,12 +19,13 @@
   ],
   "augmentation": {
     "mirror_chance": 0.5,
-    "max_rotation_degrees": 12,
-    "max_scale_change": 0.15,
-    "max_time_cut": 0.15,
-    "drop_frame_chance": 0.1,
-    "drop_hand_chance": 0.05,
-    "jitter": 0.02
+    "max_rotation_degrees": 15,
+    "max_scale_change": 0.2,
+    "max_time_cut": 0.2,
+    "drop_frame_chance": 0.15,
+    "drop_hand_chance": 0.08,
+    "jitter": 0.03
   },
-  "balance_classes": true
+  "balance_classes": true,
+  "_sweep_note": "Chosen from reports/sweep.json (validation signers only): current 86.6/97.7, wider 86.2/96.7, longer+stronger augmentation 87.7/96.7 (top-1/top-3); the best top-1 was taken."
 }

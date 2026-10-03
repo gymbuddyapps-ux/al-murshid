@@ -6,6 +6,7 @@
 //   - Only then is the whole clip given to the model. We never classify continuously.
 //
 // The numbers (how many frames, how many milliseconds) are in config/segmenter.json.
+import { LEFT_SHOULDER, RIGHT_SHOULDER } from './features.js';
 
 // Is at least one hand raised in this frame?
 //
@@ -13,12 +14,13 @@
 // The line is `raiseLine` shoulder-widths under the shoulders, so it works for
 // any distance from the camera.
 //
-// frame:  { pose: 6 [x, y] points or null, hands: list of hands (21 [x, y, z] points each) }
+// frame:  { pose: 9 [x, y] points or null, hands: list of hands (21 [x, y, z] points each) }
 // aspect: picture width / picture height
 export function isHandRaised(frame, aspect, raiseLine) {
   if (frame.pose === null || frame.hands.length === 0) return false;
 
-  const [leftShoulder, rightShoulder] = frame.pose;
+  const leftShoulder = frame.pose[LEFT_SHOULDER];
+  const rightShoulder = frame.pose[RIGHT_SHOULDER];
   const shoulderY = (leftShoulder[1] + rightShoulder[1]) / 2;
   const shoulderWidth = Math.sqrt(
     ((leftShoulder[0] - rightShoulder[0]) * aspect) ** 2 + (leftShoulder[1] - rightShoulder[1]) ** 2,

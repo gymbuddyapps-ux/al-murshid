@@ -46,8 +46,8 @@ feels natural. File: `web/src/main.js`.
 
 ### MediaPipe landmarks
 MediaPipe is a free Google library. Two of its models run on every camera frame: the Hand Landmarker
-(21 points per hand) and the Pose Landmarker (we keep 6 points: shoulders, elbows, wrists).
-The face is never analysed. The model files are stored inside the app, so no internet is needed.
+(21 points per hand) and the Pose Landmarker (we keep 9 points: nose, ears, shoulders, elbows, wrists).
+No face-mesh model is used; the nose and ears come from the body-pose model and only serve as reference points. The model files are stored inside the app, so no internet is needed.
 Files: `web/src/landmarks.js` (browser), `jisr/detect.py` (Python).
 
 ### Sign detection
@@ -56,7 +56,7 @@ and ends when the hands have been down for about 0.4 seconds. Only then is the c
 Files: `web/src/segmenter.js`, settings in `config/segmenter.json`.
 
 ### Features
-The landmarks of a clip are turned into a table of 32 frames x 140 numbers. Positions are measured
+The landmarks of a clip are turned into a table of 32 frames x 146 numbers. Positions are measured
 from the middle of the shoulders and divided by the shoulder width, so it does not matter where the
 person stands or how far away they are. The exact rules are in `docs/features.md`, and they are
 written twice: `jisr/features.py` (Python, for training) and `web/src/features.js` (browser).

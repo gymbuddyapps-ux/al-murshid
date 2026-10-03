@@ -12,7 +12,7 @@ from jisr.augment import augment
 from jisr.model import SignCNN
 from jisr.vocab import load_vocab
 
-FEATURES_PATH = Path("data/features/karsl_v1.npz")
+FEATURES_PATH = Path("data/features/karsl_v2.npz")
 TRAINING_CONFIG = Path("config/training.json")
 
 

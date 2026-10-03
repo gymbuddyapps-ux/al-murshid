@@ -7,47 +7,61 @@ const readJson = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url
 const templates = readJson('../../config/templates.json');
 const vocab = readJson('../../config/vocab.json');
 
-describe('composeSentence with the real templates', () => {
-  test('nothing confirmed gives an empty sentence', () => {
-    expect(composeSentence([], templates)).toBe('');
+describe('the demo sentences agreed with the project owner', () => {
+  test('1. greeting the judges and introducing oneself', () => {
+    // the greeting is one sign (KArSL makes both greetings the same way); signing it twice is fine too
+    const words = ['السلام عليكم', 'بنت', 'سعيد', 'طموح', 'مهندس'];
+    expect(composeSentence(words, templates)).toBe(
+      'السلام عليكم وأهلاً وسهلاً بكم، أنا بنت سعيدة وطموحة، أتمنى أن أكون مهندسة',
+    );
   });
 
-  test('medicine + symptom', () => {
-    expect(composeSentence(['دواء', 'صداع'], templates)).toBe('أحتاج إلى دواء للصداع');
-    expect(composeSentence(['مرهم', 'حساسية'], templates)).toBe('أحتاج إلى مرهم للحساسية');
+  test('1b. the greeting signed twice reads the same', () => {
+    expect(composeSentence(['السلام عليكم', 'السلام عليكم', 'بنت', 'سعيد'], templates)).toBe(
+      'السلام عليكم وأهلاً وسهلاً بكم، أنا بنت سعيدة',
+    );
   });
 
-  test('a symptom alone', () => {
-    expect(composeSentence(['حمى'], templates)).toBe('عندي حمى');
+  test('2. explaining the project', () => {
+    const words = ['يفكر', 'يبني', 'مترجم لغة الإشارة', 'ذكي', 'يساعد', 'يدعم', 'ناس', 'إعاقة سمعية'];
+    expect(composeSentence(words, templates)).toBe(
+      'فكرت أن أبني مترجم لغة إشارة ذكياً، يساعد ويدعم الناس من ذوي الإعاقة السمعية',
+    );
   });
 
-  test('two symptoms', () => {
-    expect(composeSentence(['حمى', 'صداع'], templates)).toBe('عندي حمى وصداع');
+  test('3. thanking family and teachers', () => {
+    const words = ['الحمد لله', 'يحب', 'أسرة', 'أب', 'أم', 'معلم', 'شكراً'];
+    expect(composeSentence(words, templates)).toBe('الحمد لله، أنا أحب أسرتي، أبي وأمي ومعلميّ، شكراً لكم');
   });
 
-  test('a medicine alone', () => {
-    expect(composeSentence(['قطارة'], templates)).toBe('أحتاج إلى قطارة');
+  test('4. welcoming a friend', () => {
+    const words = ['السلام عليكم', 'صديق', 'ضيف', 'تفضل'];
+    expect(composeSentence(words, templates)).toBe('أهلاً وسهلاً بصديقي وضيفي، تفضل');
+  });
+});
+
+describe('partial sentences still read well', () => {
+  test('one or two traits', () => {
+    expect(composeSentence(['سعيد'], templates)).toBe('أنا سعيدة');
+    expect(composeSentence(['بنت', 'ذكي'], templates)).toBe('أنا بنت ذكية');
   });
 
-  test('a place becomes a question', () => {
-    expect(composeSentence(['صيدلية'], templates)).toBe('أين الصيدلية؟');
-    expect(composeSentence(['مستشفى'], templates)).toBe('أين المستشفى؟');
+  test('loving one person', () => {
+    expect(composeSentence(['يحب', 'أم'], templates)).toBe('أنا أحب أمي');
+    expect(composeSentence(['يحب', 'صديق', 'معلم'], templates)).toBe('أنا أحب صديقي ومعلمي');
   });
 
-  test('verbs and doctor', () => {
+  test('a person alone', () => {
+    expect(composeSentence(['أب'], templates)).toBe('هذا أبي');
+  });
+
+  test('help alone is a request', () => {
     expect(composeSentence(['يساعد'], templates)).toBe('أحتاج إلى مساعدة');
-    expect(composeSentence(['يشرب'], templates)).toBe('أريد أن أشرب');
-    expect(composeSentence(['طبيب'], templates)).toBe('أحتاج إلى طبيب');
-  });
-
-  test('a full pharmacy sentence', () => {
-    const words = ['السلام عليكم', 'دواء', 'صداع', 'شكراً'];
-    expect(composeSentence(words, templates)).toBe('السلام عليكم، أحتاج إلى دواء للصداع، شكراً');
   });
 
   test('words without a rule are kept as they are', () => {
-    expect(composeSentence(['شكراً'], templates)).toBe('شكراً');
-    expect(composeSentence(['كلمة غير معروفة', 'شكراً'], templates)).toBe('كلمة غير معروفة، شكراً');
+    expect(composeSentence(['الحمد لله'], templates)).toBe('الحمد لله');
+    expect(composeSentence([], templates)).toBe('');
   });
 });
 
@@ -77,5 +91,9 @@ describe('templates only use words from the vocabulary', () => {
         if (!item.startsWith('<')) expect(known.has(item), item).toBe(true);
       }
     }
+  });
+
+  test('every word with forms is in config/vocab.json', () => {
+    for (const word of Object.keys(templates.forms)) expect(known.has(word), word).toBe(true);
   });
 });

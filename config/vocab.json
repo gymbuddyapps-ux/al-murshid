@@ -1,6 +1,6 @@
 {
-  "scenario": "pharmacy",
-  "note": "Chosen in Phase 0 from KArSL-502 only. See docs/vocab_audit.md for the reasons. The list may shrink in Phase 3 if classes are too confusable; any change is recorded in docs/PROCESS_LOG.md.",
+  "scenario": "judges",
+  "note": "Chosen with the project owner on 2026-10-03 for a demo conversation with the competition judges (greeting and introducing oneself, explaining the project, thanking family and teachers). The first version (pharmacy) is kept in reports/pharmacy_v1/. Labels: 'arabic' is the display form; 'karsl_label' is the dataset's own label.",
   "source_dataset": {
     "name": "KArSL-502",
     "citation": "Sidig, Luqman, Mahmoud, Mohandes. KArSL: Arabic Sign Language Database. ACM TALLIP 20(1), 2021.",
@@ -11,142 +11,257 @@
     {
       "id": 0,
       "arabic": "السلام عليكم",
-      "english": "greeting",
+      "english": "greeting (salam / welcome)",
       "source": "KArSL-502",
-      "karsl_sign_id": 290
+      "karsl_sign_id": 290,
+      "karsl_label": "السلام عليكم + أهلا وسهلاً",
+      "karsl_sign_ids": [
+        290,
+        289
+      ],
+      "merged_note": "KArSL makes both greetings with the same hand-to-forehead movement, so they are one class."
     },
     {
       "id": 1,
-      "arabic": "شكراً",
-      "english": "thanks",
+      "arabic": "بنت",
+      "english": "girl",
       "source": "KArSL-502",
-      "karsl_sign_id": 293
+      "karsl_sign_id": 199,
+      "karsl_label": "بنت",
+      "karsl_sign_ids": [
+        199
+      ]
     },
     {
       "id": 2,
-      "arabic": "صيدلية",
-      "english": "pharmacy",
+      "arabic": "سعيد",
+      "english": "happy",
       "source": "KArSL-502",
-      "karsl_sign_id": 100
+      "karsl_sign_id": 238,
+      "karsl_label": "سعيد (مسرور)",
+      "karsl_sign_ids": [
+        238
+      ]
     },
     {
       "id": 3,
-      "arabic": "مستشفى",
-      "english": "hospital",
+      "arabic": "طموح",
+      "english": "ambitious",
       "source": "KArSL-502",
-      "karsl_sign_id": 92
+      "karsl_sign_id": 242,
+      "karsl_label": "طموح",
+      "karsl_sign_ids": [
+        242
+      ]
     },
     {
       "id": 4,
-      "arabic": "طبيب",
-      "english": "doctor",
+      "arabic": "مهندس",
+      "english": "engineer",
       "source": "KArSL-502",
-      "karsl_sign_id": 497
+      "karsl_sign_id": 459,
+      "karsl_label": "مهندس",
+      "karsl_sign_ids": [
+        459
+      ]
     },
     {
       "id": 5,
-      "arabic": "دواء",
-      "english": "medicine",
+      "arabic": "يفكر",
+      "english": "think",
       "source": "KArSL-502",
-      "karsl_sign_id": 132
+      "karsl_sign_id": 181,
+      "karsl_label": "يفكر",
+      "karsl_sign_ids": [
+        181
+      ]
     },
     {
       "id": 6,
-      "arabic": "كبسولة",
-      "english": "capsule",
+      "arabic": "يبني",
+      "english": "build",
       "source": "KArSL-502",
-      "karsl_sign_id": 135
+      "karsl_sign_id": 171,
+      "karsl_label": "يبني",
+      "karsl_sign_ids": [
+        171
+      ]
     },
     {
       "id": 7,
-      "arabic": "دواء شراب",
-      "english": "liquid medicine",
+      "arabic": "مترجم لغة الإشارة",
+      "english": "sign language interpreter",
       "source": "KArSL-502",
-      "karsl_sign_id": 136
+      "karsl_sign_id": 468,
+      "karsl_label": "مترجم لغة الإشارة",
+      "karsl_sign_ids": [
+        468
+      ]
     },
     {
       "id": 8,
-      "arabic": "مرهم",
-      "english": "ointment",
+      "arabic": "ذكي",
+      "english": "intelligent",
       "source": "KArSL-502",
-      "karsl_sign_id": 137
+      "karsl_sign_id": 272,
+      "karsl_label": "ذكي",
+      "karsl_sign_ids": [
+        272
+      ]
     },
     {
       "id": 9,
-      "arabic": "قطارة",
-      "english": "dropper",
-      "source": "KArSL-502",
-      "karsl_sign_id": 138
-    },
-    {
-      "id": 10,
-      "arabic": "صداع",
-      "english": "headache",
-      "source": "KArSL-502",
-      "karsl_sign_id": 115
-    },
-    {
-      "id": 11,
-      "arabic": "ألم",
-      "english": "pain",
-      "source": "KArSL-502",
-      "karsl_sign_id": 116
-    },
-    {
-      "id": 12,
-      "arabic": "حمى",
-      "english": "fever",
-      "source": "KArSL-502",
-      "karsl_sign_id": 117
-    },
-    {
-      "id": 13,
-      "arabic": "زكام",
-      "english": "cold",
-      "source": "KArSL-502",
-      "karsl_sign_id": 113
-    },
-    {
-      "id": 14,
-      "arabic": "حساسية",
-      "english": "allergy",
-      "source": "KArSL-502",
-      "karsl_sign_id": 130
-    },
-    {
-      "id": 15,
-      "arabic": "مغص",
-      "english": "colic",
-      "source": "KArSL-502",
-      "karsl_sign_id": 120
-    },
-    {
-      "id": 16,
-      "arabic": "التهاب",
-      "english": "inflammation",
-      "source": "KArSL-502",
-      "karsl_sign_id": 111
-    },
-    {
-      "id": 17,
-      "arabic": "يأكل",
-      "english": "eat",
-      "source": "KArSL-502",
-      "karsl_sign_id": 160
-    },
-    {
-      "id": 18,
-      "arabic": "يشرب",
-      "english": "drink",
-      "source": "KArSL-502",
-      "karsl_sign_id": 161
-    },
-    {
-      "id": 19,
       "arabic": "يساعد",
       "english": "help",
       "source": "KArSL-502",
-      "karsl_sign_id": 182
+      "karsl_sign_id": 182,
+      "karsl_label": "يساعد",
+      "karsl_sign_ids": [
+        182
+      ]
+    },
+    {
+      "id": 10,
+      "arabic": "يدعم",
+      "english": "support",
+      "source": "KArSL-502",
+      "karsl_sign_id": 184,
+      "karsl_label": "يدعم",
+      "karsl_sign_ids": [
+        184
+      ]
+    },
+    {
+      "id": 11,
+      "arabic": "ناس",
+      "english": "people",
+      "source": "KArSL-502",
+      "karsl_sign_id": 218,
+      "karsl_label": "ناس",
+      "karsl_sign_ids": [
+        218
+      ]
+    },
+    {
+      "id": 12,
+      "arabic": "إعاقة سمعية",
+      "english": "hearing impairment",
+      "source": "KArSL-502",
+      "karsl_sign_id": 155,
+      "karsl_label": "إعاقة سمعية",
+      "karsl_sign_ids": [
+        155
+      ]
+    },
+    {
+      "id": 13,
+      "arabic": "الحمد لله",
+      "english": "thank God",
+      "source": "KArSL-502",
+      "karsl_sign_id": 418,
+      "karsl_label": "الحمد لله",
+      "karsl_sign_ids": [
+        418
+      ]
+    },
+    {
+      "id": 14,
+      "arabic": "يحب",
+      "english": "love",
+      "source": "KArSL-502",
+      "karsl_sign_id": 174,
+      "karsl_label": "يحب",
+      "karsl_sign_ids": [
+        174
+      ]
+    },
+    {
+      "id": 15,
+      "arabic": "أسرة",
+      "english": "family",
+      "source": "KArSL-502",
+      "karsl_sign_id": 192,
+      "karsl_label": "أسرة",
+      "karsl_sign_ids": [
+        192
+      ]
+    },
+    {
+      "id": 16,
+      "arabic": "أب",
+      "english": "father",
+      "source": "KArSL-502",
+      "karsl_sign_id": 195,
+      "karsl_label": "أب",
+      "karsl_sign_ids": [
+        195
+      ]
+    },
+    {
+      "id": 17,
+      "arabic": "أم",
+      "english": "mother",
+      "source": "KArSL-502",
+      "karsl_sign_id": 196,
+      "karsl_label": "أم",
+      "karsl_sign_ids": [
+        196
+      ]
+    },
+    {
+      "id": 18,
+      "arabic": "معلم",
+      "english": "teacher",
+      "source": "KArSL-502",
+      "karsl_sign_id": 491,
+      "karsl_label": "معلم / مدرس",
+      "karsl_sign_ids": [
+        491
+      ]
+    },
+    {
+      "id": 19,
+      "arabic": "شكراً",
+      "english": "thanks",
+      "source": "KArSL-502",
+      "karsl_sign_id": 293,
+      "karsl_label": "شكراً",
+      "karsl_sign_ids": [
+        293
+      ]
+    },
+    {
+      "id": 20,
+      "arabic": "صديق",
+      "english": "friend",
+      "source": "KArSL-502",
+      "karsl_sign_id": 294,
+      "karsl_label": "صديق",
+      "karsl_sign_ids": [
+        294
+      ]
+    },
+    {
+      "id": 21,
+      "arabic": "ضيف",
+      "english": "guest",
+      "source": "KArSL-502",
+      "karsl_sign_id": 295,
+      "karsl_label": "ضيف",
+      "karsl_sign_ids": [
+        295
+      ]
+    },
+    {
+      "id": 22,
+      "arabic": "تفضل",
+      "english": "here you are",
+      "source": "KArSL-502",
+      "karsl_sign_id": 291,
+      "karsl_label": "تفضل",
+      "karsl_sign_ids": [
+        291
+      ]
     }
   ],
   "other_class": {
@@ -160,63 +275,63 @@
       53,
       57,
       61,
+      115,
       123,
-      133,
-      165,
-      181,
-      234,
-      244,
-      249,
-      270,
-      276,
-      281,
-      301,
-      305,
-      314,
-      321,
-      328,
-      335,
-      339,
-      352,
-      368,
-      371,
-      395,
-      405,
-      414,
-      416,
-      418,
-      422,
-      438,
-      439,
-      452,
-      461,
-      473,
+      149,
+      166,
+      228,
+      239,
+      245,
+      266,
+      273,
+      278,
+      302,
+      306,
+      315,
+      322,
+      329,
+      336,
+      340,
+      353,
+      369,
+      372,
+      396,
+      406,
+      415,
+      417,
+      420,
+      424,
+      440,
+      441,
+      454,
+      464,
       477,
-      479
+      481,
+      483
     ],
     "validation_sign_ids": [
-      110,
-      144,
-      178,
-      197,
-      201,
-      211,
-      222,
-      402,
-      433,
-      500
+      108,
+      129,
+      163,
+      186,
+      190,
+      204,
+      215,
+      348,
+      403,
+      435
     ],
     "test_sign_ids": [
       40,
       46,
       73,
-      167,
-      193,
-      253,
-      296,
-      306,
-      347,
-      391
+      151,
+      179,
+      249,
+      297,
+      307,
+      392,
+      473
     ]
   }
 }

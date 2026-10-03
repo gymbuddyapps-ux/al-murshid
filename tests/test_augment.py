@@ -33,9 +33,11 @@ def test_mirror_moves_the_left_hand_to_the_right_slot():
     # x changes sign, y and z stay
     assert np.allclose(mirrored[:, RIGHT_HAND_START], -clip[:, LEFT_HAND_START])
     assert np.allclose(mirrored[:, RIGHT_HAND_START + 1], clip[:, LEFT_HAND_START + 1])
-    # the left shoulder becomes the right shoulder
-    assert np.allclose(mirrored[:, POSE_START + 2], -clip[:, POSE_START])
-    assert np.allclose(mirrored[:, POSE_START + 3], clip[:, POSE_START + 1])
+    # the left shoulder (pose point 3) becomes the right shoulder (pose point 4)
+    assert np.allclose(mirrored[:, POSE_START + 8], -clip[:, POSE_START + 6])
+    assert np.allclose(mirrored[:, POSE_START + 9], clip[:, POSE_START + 7])
+    # the nose (pose point 0) stays in place, only its x changes sign
+    assert np.allclose(mirrored[:, POSE_START], -clip[:, POSE_START])
 
 
 def test_rotate_and_scale_keep_a_missing_hand_at_zero():

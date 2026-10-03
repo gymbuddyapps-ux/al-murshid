@@ -1,0 +1,21 @@
+=== train (measured model) 17:37:02
+validate on signer 1: CNN top-1 0.861 top-3 0.972 | kNN-DTW top-1 0.706
+validate on signer 2: CNN top-1 0.892 top-3 0.962 | kNN-DTW top-1 0.694
+validation mean: {'cnn_top1': 0.876565139475677, 'cnn_top3': 0.966915087906854, 'knn_dtw_top1': 0.6999527143018678} -> chosen: cnn
+saved models/jisr_model_measured.onnx (360988 bytes), 2816 training clips from signers [1, 2], 1225 s
+=== evaluate 17:57:34
+held-out signer 3: top-1 0.9045  top-3 0.9442 on 1183 vocabulary clips (targets met: False)
+temperature 0.6, threshold 0.85: acceptance 0.868, accuracy on accepted 0.949, unknown signs rejected 0.9
+=== train shipped model (all signers) 17:57:41
+saved models/jisr_model.onnx (360988 bytes), 4194 training clips from signers [1, 2, 3], 597 s
+=== build 18:07:42
+service worker: 27 files, version ebf4c303a482
+MODEL READY 18:07:51
+=== e2e set 18:07:51
+parity: 48 clips
+e2e: 240 clips in 24 videos
+=== browser tests 18:26:08
+e2e: 240 clips, top-word agreement 95.4%, not detected 10, extra 1
+parity: 48 clips, within limit 95.8%, mean difference 0.00492, same answer 100.0%
+[32m  3 passed[39m[2m (30.6m)[22m
+ALL DONE 18:57:02

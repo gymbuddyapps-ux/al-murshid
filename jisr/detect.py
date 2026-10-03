@@ -12,9 +12,10 @@ import numpy as np
 EXTRACTION = json.loads(Path("config/extraction.json").read_text(encoding="utf-8"))
 FRAME_MS = 1000 // EXTRACTION["dataset_fps"]      # 40 ms between frames at 25 frames per second
 
-# MediaPipe pose indexes for: left shoulder, right shoulder, left elbow, right elbow,
-# left wrist, right wrist (see docs/features.md).
-POSE_INDEXES = [11, 12, 13, 14, 15, 16]
+# MediaPipe pose indexes used by the features (see docs/features.md): nose, left ear, right ear,
+# left shoulder, right shoulder, left elbow, right elbow, left wrist, right wrist.
+POSE_INDEXES = [0, 7, 8, 11, 12, 13, 14, 15, 16]
+ALL_POSE_POINTS = 33
 
 
 def make_landmarkers():
@@ -45,7 +46,7 @@ def detect_clip(images):
 
     `images` is a list of pictures in OpenCV's BGR format (None for an unreadable picture).
     Returns (pose, hands, hand_count):
-        pose        (T, 6, 2)      x, y of shoulders, elbows, wrists; NaN where no pose was found
+        pose        (T, 33, 2)     x, y of every MediaPipe pose landmark; NaN where no pose was found
         hands       (T, 2, 21, 3)  up to two hands in MediaPipe's order; NaN where missing
         hand_count  (T,)           how many hands MediaPipe found in each frame
     """
@@ -53,7 +54,7 @@ def detect_clip(images):
     mp, hand_landmarker, pose_landmarker = make_landmarkers()
 
     total = len(images)
-    pose = np.full((total, 6, 2), np.nan, dtype=np.float32)
+    pose = np.full((total, ALL_POSE_POINTS, 2), np.nan, dtype=np.float32)
     hands = np.full((total, 2, 21, 3), np.nan, dtype=np.float32)
     hand_count = np.zeros(total, dtype=np.int8)
 
@@ -66,8 +67,8 @@ def detect_clip(images):
         pose_result = pose_landmarker.detect_for_video(image, timestamp)
         if pose_result.pose_landmarks:
             body = pose_result.pose_landmarks[0]
-            for k, index in enumerate(POSE_INDEXES):
-                pose[t, k] = (body[index].x, body[index].y)
+            for k in range(ALL_POSE_POINTS):
+                pose[t, k] = (body[k].x, body[k].y)
 
         hand_result = hand_landmarker.detect_for_video(image, timestamp)
         found = hand_result.hand_landmarks[:2]
@@ -87,11 +88,13 @@ def read_image(path):
 
 
 def to_frames(pose, hands, hand_count):
-    """Turn the arrays from detect_clip() into the list of frames that jisr/features.py expects."""
+    """Turn the arrays from detect_clip() into the list of frames that jisr/features.py expects.
+    Only the pose landmarks listed in POSE_INDEXES are kept, in that order."""
     frames = []
     for t in range(len(hand_count)):
+        subset = pose[t][POSE_INDEXES]
         frames.append({
-            "pose": None if np.isnan(pose[t]).any() else pose[t],
+            "pose": None if np.isnan(subset).any() else subset,
             "hands": [hands[t, h] for h in range(int(hand_count[t]))],
             "time": t * FRAME_MS,
         })

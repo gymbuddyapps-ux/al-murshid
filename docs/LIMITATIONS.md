@@ -17,13 +17,19 @@ Jisr is a student demo. Read this before using it with real people.
   language dictionary, recorded in Saudi Arabia. Signs used in Oman, or by a particular community,
   may be different for the same word.
 
-## Three words work badly for a new signer
+## Words that work badly for a new signer
 
-On the held-out test signer, the app accepted **كبسولة** (capsule) in 0% of clips (the model answered
-"other sign" every time), **شكراً** (thanks) in 10% (the rest were answered "other sign" or confused with
-ألم, pain) and **دواء** (medicine) in 59% (the rest "other sign"). For that signer the app says "unclear"
-instead of offering these words. The other 17 words were accepted in 96% to 100% of clips
-(`reports/metrics.json`, per-class table in `docs/REPORT.md`). Expect these three words to be unreliable.
+On the held-out test signer (`reports/metrics.json`), 18 of the 23 words are recognized in 90% or more of
+the clips. The rest:
+
+- **شكراً** is read as **ذكي** in every clip of that signer: in KArSL both signs touch the forehead and
+  open outwards, and signer 3 makes them the same way. The app will often show ذكي when the student signs
+  شكراً; she can tap the alternative, or end with الحمد لله instead.
+- **بنت، يفكر، أم، إعاقة سمعية** are recognized in only about half of signer 3's clips, because he performs
+  them differently in one of his two recording sessions. The gallery shows signers 1 and 3 side by side; the
+  student should copy signer 1.
+- **أهلاً وسهلاً** and **السلام عليكم** are the same hand-to-forehead gesture in KArSL, so the app has one
+  greeting class and always says both: «السلام عليكم وأهلاً وسهلاً بكم».
 
 ## Where the accuracy numbers come from, and what they do not cover
 

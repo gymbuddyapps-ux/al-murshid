@@ -1,8 +1,8 @@
 """Turn the raw landmarks into model inputs (Phase 1, part 2).
 
-Input:   data/landmarks/<sign id>/<sample name>.npz     (from scripts/extract_landmarks.py)
-Output:  data/features/karsl_v1.npz
-             X        (N, 32, 140)  features, see docs/features.md
+Input:   data/landmarks_v2/<sign id>/<sample name>.npz     (from scripts/extract_landmarks.py)
+Output:  data/features/karsl_v2.npz
+             X        (N, 32, 146)  features, see docs/features.md
              y        (N,)          class id from config/vocab.json; the last id is "other sign"
              signer   (N,)          signer id (1, 2 or 3)
              sign_id  (N,)          KArSL sign id of the clip
@@ -20,10 +20,10 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from jisr.detect import to_frames  # noqa: E402
 from jisr.features import clip_to_features, fill_missing_pose, median, shoulder_width, trim_range  # noqa: E402
-from jisr.vocab import load_vocab, other_sign_ids  # noqa: E402
+from jisr.vocab import class_sign_ids, load_vocab, other_sign_ids  # noqa: E402
 
-LANDMARKS_DIR = Path("data/landmarks")
-OUT_PATH = Path("data/features/karsl_v1.npz")
+LANDMARKS_DIR = Path("data/landmarks_v2")
+OUT_PATH = Path("data/features/karsl_v2.npz")
 REPORT_PATH = Path("reports/extraction_report.json")
 
 SEGMENTER = json.loads(Path("config/segmenter.json").read_text(encoding="utf-8"))
@@ -85,7 +85,7 @@ def main():
     other_id = len(vocab["classes"])            # "other sign" gets the id after the last word
 
     # (class id, name for the report, KArSL sign id) for every sign folder we use
-    sources = [(c["id"], c["arabic"], c["karsl_sign_id"]) for c in vocab["classes"]]
+    sources = [(c["id"], c["arabic"], i) for c in vocab["classes"] for i in class_sign_ids(c)]
     sources += [(other_id, vocab["other_class"]["label"], i) for i in other_sign_ids(vocab)]
 
     X, y, signer, sign_ids, sample = [], [], [], [], []

@@ -1,10 +1,10 @@
 """Run MediaPipe on every clip and save the raw landmarks (Phase 1, part 1).
 
 Input:   data/raw/karsl/frames/<sign id>/<sample name>/*.jpg
-Output:  data/landmarks/<sign id>/<sample name>.npz     (one small file per clip)
+Output:  data/landmarks_v2/<sign id>/<sample name>.npz     (one small file per clip)
 
 Each output file holds, for a clip of T frames:
-    pose        (T, 6, 2)      x, y of shoulders, elbows, wrists; NaN where no pose was found
+    pose        (T, 33, 2)     x, y of every MediaPipe pose landmark; NaN where no pose was found
     hands       (T, 2, 21, 3)  up to two hands in MediaPipe's order; NaN where missing
     hand_count  (T,)           how many hands MediaPipe found in each frame
     width, height              picture size in pixels
@@ -24,10 +24,10 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from jisr.detect import detect_clip, read_image  # noqa: E402
-from jisr.vocab import load_vocab, other_sign_ids  # noqa: E402
+from jisr.vocab import load_vocab, other_sign_ids, vocab_sign_ids  # noqa: E402
 
 FRAMES_DIR = Path("data/raw/karsl/frames")
-OUT_DIR = Path("data/landmarks")
+OUT_DIR = Path("data/landmarks_v2")   # v2: all 33 pose points, hand thresholds 0.3
 
 
 def extract_clip(clip_dir):
@@ -56,8 +56,12 @@ def choose_clips():
     other_ids = {f"{i:04d}" for i in other_sign_ids(vocab)}
     per_signer = vocab.get("other_class", {}).get("clips_per_sign_per_signer", 0)
 
+    vocab_ids = {f"{i:04d}" for i in vocab_sign_ids(vocab)}
+
     chosen = []
     for sign_dir in sorted(p for p in FRAMES_DIR.glob("*") if p.is_dir()):
+        if sign_dir.name not in vocab_ids and sign_dir.name not in other_ids:
+            continue  # frames of a sign from an earlier vocabulary: not needed now
         clips = sorted(p for p in sign_dir.glob("*") if p.is_dir())
         if sign_dir.name in other_ids:
             # Sample names look like 03_01_0092_(date)_c : the second part is the signer.

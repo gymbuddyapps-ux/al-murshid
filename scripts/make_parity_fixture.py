@@ -26,9 +26,9 @@ def random_clip(rng, num_frames, pose_missing_chance, hand_chances, wrist_step):
     small steps give slow wrists (little trimming), large steps give fast wrists."""
     frames = []
     time = 0.0
-    pose_now = rng.uniform(0.3, 0.7, size=(6, 2))
+    pose_now = rng.uniform(0.3, 0.7, size=(9, 2))
     for _ in range(num_frames):
-        pose_now = pose_now + rng.uniform(-wrist_step, wrist_step, size=(6, 2))
+        pose_now = pose_now + rng.uniform(-wrist_step, wrist_step, size=(9, 2))
         pose = None
         if rng.random() >= pose_missing_chance:
             pose = pose_now.round(6).tolist()

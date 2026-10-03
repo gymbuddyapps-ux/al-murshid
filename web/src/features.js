@@ -1,30 +1,30 @@
-// Turn the landmarks of one clip into the model's input (32 frames x 140 numbers).
+// Turn the landmarks of one clip into the model's input (32 frames x 146 numbers).
 //
 // This file follows docs/features.md step by step and must behave exactly like the
 // Python version (jisr/features.py). A test compares the two.
 
 export const NUM_FRAMES = 32; // every clip is resampled to this many frames
 export const HAND_POINTS = 21; // landmarks per hand
-export const POSE_POINTS = 6; // shoulders, elbows, wrists
-export const FEATURE_SIZE = 2 * HAND_POINTS * 3 + POSE_POINTS * 2 + 2; // = 140
+export const POSE_POINTS = 9; // nose, ears, shoulders, elbows, wrists
+export const FEATURE_SIZE = 2 * HAND_POINTS * 3 + POSE_POINTS * 2 + 2; // = 146
 const MIN_FRAMES_AFTER_TRIM = 4; // trimming never leaves fewer frames than this
 
-// MediaPipe pose indexes for: left shoulder, right shoulder, left elbow, right elbow,
-// left wrist, right wrist.
-export const POSE_INDEXES = [11, 12, 13, 14, 15, 16];
+// MediaPipe pose indexes for: nose, left ear, right ear, left shoulder, right shoulder,
+// left elbow, right elbow, left wrist, right wrist.
+export const POSE_INDEXES = [0, 7, 8, 11, 12, 13, 14, 15, 16];
 
-// Positions inside our 6-point pose list
-const LEFT_SHOULDER = 0;
-const RIGHT_SHOULDER = 1;
-const LEFT_WRIST = 4;
-const RIGHT_WRIST = 5;
+// Positions inside our 9-point pose list
+export const LEFT_SHOULDER = 3;
+export const RIGHT_SHOULDER = 4;
+const LEFT_WRIST = 7;
+const RIGHT_WRIST = 8;
 
 // Where each part lives inside the 140-number vector
 const LEFT_HAND_START = 0;
 const RIGHT_HAND_START = 63;
 const POSE_START = 126;
-const LEFT_FLAG = 138;
-const RIGHT_FLAG = 139;
+const LEFT_FLAG = 144;
+const RIGHT_FLAG = 145;
 
 // Middle value of a list (average of the two middle values for an even count).
 export function median(values) {
@@ -34,7 +34,7 @@ export function median(values) {
   return (ordered[n / 2 - 1] + ordered[n / 2]) / 2;
 }
 
-// Step 2. `poses` has one entry per frame: a list of 6 [x, y] points, or null.
+// Step 2. `poses` has one entry per frame: a list of 9 [x, y] points, or null.
 // Returns a list with no null, or null if the clip has no pose at all.
 export function fillMissingPose(poses) {
   if (poses.every((p) => p === null)) return null;
@@ -133,7 +133,7 @@ export function assignHands(hands, pose) {
 // Build the feature array of one clip.
 //
 // `frames` has one object per video frame:
-//    { pose: list of 6 [x, y] points as given by MediaPipe, or null,
+//    { pose: list of 9 [x, y] points as given by MediaPipe, or null,
 //      hands: list of 0-2 hands, each a list of 21 [x, y, z] points,
 //      time: time of the frame in milliseconds (only needed when trimming) }
 // `aspect` is picture width / picture height.
@@ -172,7 +172,7 @@ export function clipToFeatures(frames, aspect, trim = null) {
   const width = median(poses.map(shoulderWidth));
   if (width < 1e-6) return null;
 
-  // Steps 5 and 6: one 140-number vector per frame.
+  // Steps 5 and 6: one 146-number vector per frame.
   const vectors = poses.map((pose, t) => {
     const vector = new Float64Array(FEATURE_SIZE);
     const [left, right] = assignHands(allHands[t], pose);

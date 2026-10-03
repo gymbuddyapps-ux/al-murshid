@@ -25,7 +25,7 @@ EXCLUDED = {134, 496, 498, 499}      # sick, pharmacist, nurse, orderly
 
 def main():
     vocab = json.loads(VOCAB.read_text(encoding="utf-8"))
-    used = {c["karsl_sign_id"] for c in vocab["classes"]}
+    used = {i for c in vocab["classes"] for i in c.get("karsl_sign_ids", [c["karsl_sign_id"]])}
     pool = [i for i in range(1, 503) if i not in used and i not in EXCLUDED]
 
     picked = random.Random(SEED).sample(pool, 60)

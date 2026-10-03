@@ -68,7 +68,7 @@ def main():
     add(f"- **Signer IDs exist**: {len(summary['signer_ids'])} signers "
         f"(IDs {', '.join(str(s) for s in summary['signer_ids'])}). "
         "This allows leave-one-signer-out evaluation in Phase 3.")
-    add(f"- **{len(vocab['classes'])} classes were chosen** (section 5) and saved in `config/vocab.json`.")
+    add(f"- **{len(vocab['classes'])} classes are in the current vocabulary** (section 5, `config/vocab.json`).")
     add("")
     add("## 2. What happened with each source")
     add("")
@@ -138,33 +138,29 @@ def main():
     add("")
     add("## 5. Chosen vocabulary")
     add("")
-    add("Scenario: **at the pharmacy**. Example: \"السلام عليكم\" + \"دواء\" + \"صداع\" + \"شكراً\".")
+    add(f"Scenario: **{vocab['scenario']}**. {vocab.get('note', '')}")
     add("")
-    add("Why these classes:")
+    add("The first vocabulary (Phase 0) was a pharmacy scenario of 20 words; it was replaced on 2026-10-03 by the "
+        "project owner's demo script (see `docs/PROCESS_LOG.md`, Phase 7). The pharmacy list is kept in "
+        "`reports/pharmacy_v1/vocab.json`.")
     add("")
-    add("- Each label is a single clear word in the official label sheet (Arabic and English agree).")
-    add("- Each has about 150 samples from all 3 signers (the brief asks for at least about 40).")
-    add("- Together they cover greeting, the place, the product and the symptom.")
+    add("Why these classes: each has about 150 samples from all 3 signers (the brief asks for at least about 40), "
+        "and together they tell the sentences of the demo. Two KArSL greetings were merged into one class because "
+        "they are the same gesture.")
     add("")
     add("| id | Arabic | English | Source | KArSL SignID | Chapter | Videos | Signers | Videos per signer (1 / 2 / 3) |")
     add("|---|---|---|---|---|---|---|---|---|")
     for c in vocab["classes"]:
-        r = by_id[c["karsl_sign_id"]]
-        assert r["arabic"] == c["arabic"], (r["arabic"], c["arabic"])
-        per = r["videos_per_signer"]
-        add(f"| {c['id']} | {c['arabic']} | {c['english']} | {c['source']} | {c['karsl_sign_id']} | "
-            f"{r['chapter']} | {r['videos']} | {r['signers']} | "
-            f"{per.get('1', 0)} / {per.get('2', 0)} / {per.get('3', 0)} |")
+        ids = c.get("karsl_sign_ids", [c["karsl_sign_id"]])
+        rows = [by_id[i] for i in ids]
+        per = {s: sum(r["videos_per_signer"].get(s, 0) for r in rows) for s in ("1", "2", "3")}
+        add(f"| {c['id']} | {c['arabic']} | {c['english']} | {c['source']} | {' + '.join(str(i) for i in ids)} | "
+            f"{rows[0]['chapter']} | {sum(r['videos'] for r in rows)} | {max(r['signers'] for r in rows)} | "
+            f"{per['1']} / {per['2']} / {per['3']} |")
     add("")
-    add("Classes considered and left out:")
-    add("")
-    add("- **Numbers and letters:** static hand shapes that look very similar to each other (for example 2 and 3). "
-        "Too easy to confuse for a first version.")
-    add("- **\"مريض / مرض\"** and other labels with two words separated by a slash: the label does not say "
-        "which of the two meanings the sign has, so they are excluded (rule: do not guess label meaning).")
-    add("- **\"صيدلي\" (pharmacist):** likely very close to \"صيدلية\" (pharmacy).")
-    add("")
-    add("The list may still shrink in Phase 3 if the confusion matrix shows pairs the model cannot separate.")
+    add("Labels with a slash or brackets in the sheet (for example \"سعيد (مسرور)\", \"معلم / مدرس\") are "
+        "synonyms of one meaning and are shown by their first word; genuinely two-meaning labels were avoided. "
+        "Numbers and letters were left out (static hand shapes that look alike).")
     add("")
     add("## 6. Every class in every source")
     add("")

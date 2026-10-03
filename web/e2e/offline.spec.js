@@ -18,7 +18,7 @@ test('the app works offline after the first visit', async () => {
 
   // Cut the network and open the app again.
   await page.context().setOffline(true);
-  await page.goto('http://localhost:4173/?e2e=1');
+  await page.goto('http://localhost:4174/?e2e=1');
   await page.waitForFunction(() => window.__jisr?.ready, null, { timeout: 120000 });
   const status = await page.textContent('#status');
   const manifest = await page.evaluate(() =>

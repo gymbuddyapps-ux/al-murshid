@@ -20,7 +20,7 @@ import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from jisr.vocab import load_vocab, other_sign_ids  # noqa: E402
+from jisr.vocab import load_vocab, other_sign_ids, vocab_sign_ids  # noqa: E402
 
 ZIP_PATH = Path("data/raw/karsl/mirror_502/karsl-502.zip")
 OUT_DIR = Path("data/raw/karsl/frames")
@@ -64,7 +64,7 @@ def read_entry_header(f):
 
 def main():
     vocab = load_vocab()
-    wanted = {f"{c['karsl_sign_id']:04d}" for c in vocab["classes"]}
+    wanted = {f"{i:04d}" for i in vocab_sign_ids(vocab)}
     # Also the signs of the "other sign" class (see scripts/choose_other_signs.py).
     wanted |= {f"{i:04d}" for i in other_sign_ids(vocab)}
 

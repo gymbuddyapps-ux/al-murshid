@@ -17,7 +17,7 @@ export async function openApp(videoFile = null, headless = true, gpu = false) {
   page.on('pageerror', (error) => errors.push(error.message));
 
   // "?e2e=1" starts the camera without a tap and does not wait for confirmations.
-  await page.goto(`http://localhost:4173/?e2e=1${gpu ? '&gpu=1' : ''}`);
+  await page.goto(`http://localhost:4174/?e2e=1${gpu ? '&gpu=1' : ''}`);
   await page.waitForFunction(() => window.__jisr?.ready, null, { timeout: 120000 });
   return { browser, page, errors };
 }

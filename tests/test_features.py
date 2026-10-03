@@ -9,6 +9,9 @@ from jisr.features import (FEATURE_SIZE, LEFT_FLAG, LEFT_HAND_START, NUM_FRAMES,
 def make_pose(shift_x=0.0, shift_y=0.0, scale=1.0):
     """A simple upright body. Signer's left is on the picture's right side."""
     base = np.array([
+        [0.5, 0.2],   # nose
+        [0.55, 0.2],  # left ear
+        [0.45, 0.2],  # right ear
         [0.6, 0.4],   # left shoulder
         [0.4, 0.4],   # right shoulder
         [0.65, 0.6],  # left elbow
@@ -31,7 +34,7 @@ def make_clip(num_frames=10, shift_x=0.0, shift_y=0.0, scale=1.0):
     frames = []
     for _ in range(num_frames):
         pose = make_pose(shift_x, shift_y, scale)
-        hand = make_hand(pose[4][0], pose[4][1], scale)     # a hand at the left wrist
+        hand = make_hand(pose[7][0], pose[7][1], scale)     # a hand at the left wrist
         frames.append({"pose": pose, "hands": [hand]})
     return frames
 
@@ -56,8 +59,8 @@ def test_distance_from_camera_does_not_matter():
 
 def test_shoulders_are_one_unit_apart():
     features = clip_to_features(make_clip(), aspect=1.0)
-    left_shoulder = features[0, POSE_START:POSE_START + 2]
-    right_shoulder = features[0, POSE_START + 2:POSE_START + 4]
+    left_shoulder = features[0, POSE_START + 6:POSE_START + 8]      # pose point 3
+    right_shoulder = features[0, POSE_START + 8:POSE_START + 10]    # pose point 4
     assert np.isclose(np.linalg.norm(left_shoulder - right_shoulder), 1.0, atol=1e-5)
     assert np.allclose(left_shoulder + right_shoulder, 0.0, atol=1e-5)   # midpoint is the origin
 
@@ -73,8 +76,8 @@ def test_missing_hand_is_zeros_with_flag():
 
 def test_hand_goes_to_nearest_wrist():
     pose = make_pose()
-    near_left = make_hand(pose[4][0], pose[4][1])
-    near_right = make_hand(pose[5][0], pose[5][1])
+    near_left = make_hand(pose[7][0], pose[7][1])
+    near_right = make_hand(pose[8][0], pose[8][1])
     assert assign_hands([near_left], pose)[0] is near_left
     assert assign_hands([near_right], pose)[1] is near_right
     # Two hands, given in the "wrong" order, are still put in the correct slots.
@@ -116,7 +119,8 @@ def test_resample_picks_evenly_spaced_frames():
 
 def wrist_poses(wrist_y_values):
     """Poses whose left wrist follows the given heights; everything else stays still."""
-    return [np.array([[0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, y], [0.3, 0.9]])
+    head = [[0.5, 0.2], [0.55, 0.2], [0.45, 0.2]]
+    return [np.array(head + [[0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, y], [0.3, 0.9]])
             for y in wrist_y_values]
 
 

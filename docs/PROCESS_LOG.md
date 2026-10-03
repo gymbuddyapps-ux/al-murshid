@@ -354,3 +354,78 @@ node scripts/measure-speed.mjs          # frames per second in the four browser 
 - `docs/ARCHITECTURE.md`, `docs/LIMITATIONS.md`, `CREDITS.md`, `README.md` and this log were written by hand;
   their numbers were copied from `reports/` and are repeated in `docs/REPORT.md`.
 - Deployment is prepared (`vercel.json`, `netlify.toml`, instructions in `README.md`) and **not published**.
+
+## Phase 7: New vocabulary for the competition demo (2026-10-03, after the owner's review)
+
+**Why.** The project owner tested the pharmacy app and chose a different purpose for the demo: a
+conversation with the competition judges (greeting, introducing oneself, explaining the project, thanking
+family and teachers). He chose 24 KArSL signs and wrote the four target sentences; the templates in
+`config/templates.json` produce exactly those sentences (tests in `web/tests/composer.test.js`).
+The pharmacy results are kept in `reports/pharmacy_v1/`.
+
+**App changes made at the same time** (owner's requests): the camera opens as soon as the page opens;
+the best word is added automatically and spoken at once (both are toggles; the manual top-3 choice is
+still available); the speech code accepts any Arabic voice (device voices first); Omani red and green theme.
+
+**Pipeline.** Unpacking the 21 new signs, MediaPipe on ~3,400 new clips (resumed once after the laptop ran
+out of memory with 7 workers; 5 workers since), features, training, evaluation. The extractor was also fixed
+to process only the current vocabulary's signs (it had picked up every sign folder on disk).
+
+**Run 1 (feature version 1, 6 pose points).** Held-out signer 3: top-1 81.5%, top-3 92.8% on 1,183 clips.
+Targets not met. The confusion matrix showed one pattern: signs made next to the face collapse into each
+other (أهلاً وسهلاً read as السلام عليكم in 49 of 50 clips, شكراً as ذكي in 44 of 50, and بنت، يفكر،
+الحمد لله drifting to السلام عليكم), and MediaPipe lost the hand in front of the face
+(hand found in only 56% of frames for تفضل, 78% for ذكي, 86% for شكراً).
+
+**Feature fix (version 2).** As the brief asks before dropping classes, the features were improved:
+the nose and both ears from the pose model were added as reference points (9 pose points, 146 numbers
+per frame; still no face-mesh model), and the hand-detection thresholds were lowered from 0.5 to 0.3.
+The landmark files now store all 33 pose points so later feature changes need no re-extraction.
+`docs/features.md` is version 2; Python and JavaScript were updated together and the shared fixture
+still matches (49 JS tests, 25 Python tests).
+
+**Run 2 (feature version 2).** Held-out signer 3: **top-1 84.1%, top-3 93.9%**; with rejection: 80.9%
+accepted, 88.8% accuracy on accepted, 100% of unknown signs rejected. Better, but still below the targets.
+The remaining errors are the same pairs. Looking at the frames explains why: in KArSL, **أهلاً وسهلاً and
+السلام عليكم are made with the same hand-to-forehead movement**, and **شكراً and ذكي both touch the
+forehead/temple and open outwards**; signer 3 also performs بنت، يفكر، أب، أم، إعاقة سمعية differently
+from signers 1 and 2 in half of his clips (exactly 25 of 50 wrong each time, i.e. one of his two recording
+sessions). Without the face or the hand's orientation, these cannot be separated by the model.
+
+**What the honest numbers mean for the demo.** 16 of 24 words are recognized in 92–100% of the held-out
+signer's clips; the weak ones are أهلاً وسهلاً، شكراً، بنت، يفكر، أب، أم، إعاقة سمعية (and ذكي/طموح are
+often rejected as unclear at the chosen threshold). The next allowed step is to merge or drop the pairs
+that the dataset itself does not distinguish; that changes the demo sentences, so it is the owner's decision
+and is recorded below when taken.
+
+**Owner's decision (same day).** Keep all four sentences; make the model as accurate as the data allows;
+do not publish. Steps taken, all decided on validation data only:
+
+1. **Greeting merged.** السلام عليكم and أهلاً وسهلاً became one class (23 classes). The composer says
+   «السلام عليكم وأهلاً وسهلاً بكم» for one greeting sign or for two in a row, so sentences 1 and 4 keep
+   their text. شكراً and ذكي were both kept because the sentences need them.
+2. **Settings sweep on the validation signers** (`scripts/sweep.py`, `reports/sweep.json`): current settings
+   86.6% / 97.7%, a wider model 86.2% / 96.7%, 120 epochs with stronger augmentation **87.7% / 96.7%**
+   (top-1 / top-3). The last one was chosen for its top-1 and written to `config/training.json`.
+3. **Final measured model** (signers 1 and 2, 120 epochs): validation 87.7% / 96.7%, baseline kNN-DTW 70.0%.
+   **Held-out signer 3: top-1 90.5%, top-3 94.4%** on 1,183 clips; with the threshold (0.85, temperature 0.6)
+   86.8% of clips accepted, 94.9% accuracy on accepted, 90% of unknown signs rejected. The top-1 target is
+   met; top-3 misses its 97% target because of شكراً (never in the top 3 for this signer, always ذكي) and بنت.
+   18 of 23 words have recall of 90% or more.
+4. **Shipped model.** A second model with the same recipe was trained on all three signers
+   (`scripts/train.py --skip-validation --final-signers all`, `models/jisr_model.onnx`), because more signers
+   should help with a new person. Its accuracy cannot be measured (no fourth signer); the measured model is
+   kept as `models/jisr_model_measured.*` and its numbers are the ones reported.
+
+**Browser tests on the final model** (shipped model, held-out signer 3 clips; `reports/parity_report.json`,
+`reports/e2e_report.json`):
+
+- Feature parity: 48 clips, mean feature difference 0.0049 shoulder widths (median per clip 0.0019),
+  95.8% of clips within the 0.02 limit, **same model answer in 100%**.
+- Fake-camera end to end: 240 clips in 24 videos, **browser top word agrees with Python in 95.4%**
+  (target 95%: met), same accept/unclear decision 95.8%, 10 clips not detected, 1 extra detection,
+  12.3 frames per second on the laptop's GPU. Browser top word equals the true word in 91.7% of clips
+  (Python 95.8%); both are optimistic here because the shipped model has seen signer 3.
+- Offline test: passes. Unit tests: 25 Python, 50 JavaScript.
+
+`docs/REPORT.md` was regenerated from these files. Deployment stays prepared and unpublished, as agreed.

@@ -1,11 +1,13 @@
 # جسر (Jisr)
 
 A small web app that turns isolated Arabic sign language words into Arabic text and speech,
-so a deaf or mute person can talk to a pharmacist. Everything runs inside the phone's browser;
-no video or data leaves the device.
+so a deaf or mute person can be understood by hearing people. Everything runs inside the phone's
+browser; no video or data leaves the device.
 
-- Scenario: at the pharmacy (greeting, place, medicine, symptom, thanks).
-- Vocabulary: 20 words from the KArSL dataset, see `config/vocab.json` and `docs/vocab_audit.md`.
+- Scenario: a student introduces herself and her project to the competition judges
+  (greeting, feelings, family, jobs, the project itself, thanks). An earlier pharmacy version is
+  kept in `reports/pharmacy_v1/` and described in `docs/PROCESS_LOG.md`.
+- Vocabulary: 24 words from the KArSL dataset, see `config/vocab.json` and `docs/vocab_audit.md`.
 - Honest accuracy numbers, measured on a signer the model never saw: `docs/REPORT.md`.
 - What it cannot do: `docs/LIMITATIONS.md`.
 

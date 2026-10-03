@@ -11,9 +11,9 @@ const HAND_LINES = [
   [0, 17],
 ];
 
-// Our 6 pose points: 0-1 shoulders, 2-3 elbows, 4-5 wrists.
+// Our 9 pose points: 0 nose, 1-2 ears, 3-4 shoulders, 5-6 elbows, 7-8 wrists.
 const POSE_LINES = [
-  [0, 1], [0, 2], [2, 4], [1, 3], [3, 5],
+  [1, 0], [0, 2], [3, 4], [3, 5], [5, 7], [4, 6], [6, 8],
 ];
 
 function drawLines(context, points, lines, width, height) {

@@ -1,4 +1,8 @@
-# Feature specification (version 1)
+# Feature specification (version 2)
+
+Version 2 (2026-10-03) added the nose and the two ears to the pose points, so that signs made next to
+the face (chin, cheek, temple, forehead) can be told apart, and lowered the hand-detection thresholds
+to 0.3 so hands in front of the face are kept. Version 1 had 6 pose points and 140 numbers per frame.
 
 This is the single source of truth for how a video clip becomes numbers for the model.
 The Python code (`jisr/features.py`) and the browser code (`web/src/features.js`) must both
@@ -13,16 +17,21 @@ follow it exactly. A test compares the two (Phase 5, "feature parity test").
 
 ## Inputs, per frame
 
-From the MediaPipe **Pose Landmarker** (lite model), 6 landmarks, in this order:
+From the MediaPipe **Pose Landmarker** (lite model), 9 landmarks, in this order:
 
 | Position in our list | MediaPipe index | Body part |
 |---|---|---|
-| 0 | 11 | left shoulder |
-| 1 | 12 | right shoulder |
-| 2 | 13 | left elbow |
-| 3 | 14 | right elbow |
-| 4 | 15 | left wrist |
-| 5 | 16 | right wrist |
+| 0 | 0 | nose |
+| 1 | 7 | left ear |
+| 2 | 8 | right ear |
+| 3 | 11 | left shoulder |
+| 4 | 12 | right shoulder |
+| 5 | 13 | left elbow |
+| 6 | 14 | right elbow |
+| 7 | 15 | left wrist |
+| 8 | 16 | right wrist |
+
+The nose and ears come from the pose model, not from a face model; no face mesh is used.
 
 "Left" and "right" always mean the signer's own left and right.
 
@@ -119,15 +128,15 @@ in `X`, `Y` units from step 1:
   Use the pairing with the smaller total. A tie uses A = left, B = right.
 - More than two hands are never requested (`num_hands = 2`).
 
-## Step 6: the feature vector of one frame (140 numbers)
+## Step 6: the feature vector of one frame (146 numbers)
 
 | Positions | Content |
 |---|---|
 | 0 to 62 | left hand: 21 landmarks, each `x', y', z'` (all zeros if no left hand) |
 | 63 to 125 | right hand: 21 landmarks, each `x', y', z'` (all zeros if no right hand) |
-| 126 to 137 | pose: the 6 landmarks from the table above, each `x', y'` |
-| 138 | 1 if a left hand was detected in this frame, otherwise 0 |
-| 139 | 1 if a right hand was detected in this frame, otherwise 0 |
+| 126 to 143 | pose: the 9 landmarks from the table above, each `x', y'` |
+| 144 | 1 if a left hand was detected in this frame, otherwise 0 |
+| 145 | 1 if a right hand was detected in this frame, otherwise 0 |
 
 ## Step 7: fixed length of 32 frames
 
@@ -140,7 +149,7 @@ for i in 0 .. 31:
 ```
 
 If `T` is 1, the single frame is repeated 32 times.
-Result: an array of shape `32 x 140`, stored as 32-bit floating point numbers.
+Result: an array of shape `32 x 146`, stored as 32-bit floating point numbers.
 
 ## A clip is dropped when
 
@@ -158,4 +167,5 @@ Dropped clips are counted per class in `reports/extraction_report.json`.
 | Running mode | VIDEO |
 | `num_hands` | 2 |
 | `num_poses` | 1 |
-| Confidence thresholds | see `config/extraction.json` |
+| Hand detection / presence confidence | 0.3 (version 2; was 0.5) |
+| Other thresholds | see `config/extraction.json` |

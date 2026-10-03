@@ -68,7 +68,8 @@ describe('Segmenter', () => {
 
 describe('isHandRaised', () => {
   // shoulders at y = 0.4, 0.2 apart; the line is one shoulder-width lower, at y = 0.6
-  const pose = [[0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0, 0], [0, 0]];
+  // nose, ears, then shoulders (index 3 and 4), elbows, wrists
+  const pose = [[0.5, 0.2], [0.55, 0.2], [0.45, 0.2], [0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0, 0], [0, 0]];
   const handAt = (y) => [[0.5, y, 0]];
 
   test('a hand above the line is raised', () => {
@@ -90,7 +91,7 @@ describe('isHandRaised', () => {
 
   test('the line follows the picture shape', () => {
     // In a picture twice as wide, the same shoulders are 0.1 apart in x fractions.
-    const widePose = [[0.55, 0.4], [0.45, 0.4], [0, 0], [0, 0], [0, 0], [0, 0]];
+    const widePose = [[0.5, 0.2], [0.52, 0.2], [0.48, 0.2], [0.55, 0.4], [0.45, 0.4], [0, 0], [0, 0], [0, 0], [0, 0]];
     expect(isHandRaised({ pose: widePose, hands: [handAt(0.55)] }, 2.0, 1.0)).toBe(true);
     expect(isHandRaised({ pose: widePose, hands: [handAt(0.65)] }, 2.0, 1.0)).toBe(false);
   });

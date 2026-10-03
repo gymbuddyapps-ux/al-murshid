@@ -1,35 +1,300 @@
 {
-  "_comment": "Rules that turn confirmed sign words into a correct Arabic sentence. Read by web/src/composer.js. Rules are tried in order at each position, so longer patterns come first. A pattern item is either an exact word or a group name in angle brackets. In the output, {0} is the first matched word, {1} the second, and {1.for} uses the 'for' form of that word.",
-
+  "_comment": "Rules that turn recognized sign words into a correct Arabic sentence. Read by web/src/composer.js. Rules are tried in order at each position, so longer patterns come first. A pattern item is either an exact word or a group name in angle brackets. In the output, {0} is the first matched word, {1} the second, and {1.form} uses a named form of that word from 'forms'. Sentences follow the demo script agreed with the project owner (a girl introducing herself to the competition judges). The two KArSL greetings (السلام عليكم and أهلاً وسهلاً) are the same gesture, so the app has one greeting class and always says both.",
   "joiner": "، ",
-
   "groups": {
-    "medicine": ["دواء", "كبسولة", "دواء شراب", "مرهم", "قطارة"],
-    "symptom": ["صداع", "ألم", "حمى", "زكام", "حساسية", "مغص", "التهاب"],
-    "place": ["صيدلية", "مستشفى"]
+    "greeting": [
+      "السلام عليكم"
+    ],
+    "trait": [
+      "سعيد",
+      "طموح",
+      "ذكي"
+    ],
+    "job": [
+      "مهندس",
+      "معلم",
+      "مترجم لغة الإشارة"
+    ],
+    "person": [
+      "صديق",
+      "ضيف",
+      "أب",
+      "أم",
+      "معلم",
+      "أسرة",
+      "ناس"
+    ]
   },
-
   "forms": {
-    "صداع": { "for": "للصداع" },
-    "ألم": { "for": "للألم" },
-    "حمى": { "for": "للحمى" },
-    "زكام": { "for": "للزكام" },
-    "حساسية": { "for": "للحساسية" },
-    "مغص": { "for": "للمغص" },
-    "التهاب": { "for": "للالتهاب" },
-    "صيدلية": { "definite": "الصيدلية" },
-    "مستشفى": { "definite": "المستشفى" }
+    "سعيد": {
+      "feminine": "سعيدة"
+    },
+    "طموح": {
+      "feminine": "طموحة"
+    },
+    "ذكي": {
+      "feminine": "ذكية"
+    },
+    "مهندس": {
+      "feminine": "مهندسة"
+    },
+    "معلم": {
+      "feminine": "معلمة",
+      "my": "معلمي",
+      "plural": "معلميّ"
+    },
+    "مترجم لغة الإشارة": {
+      "feminine": "مترجمة لغة إشارة"
+    },
+    "صديق": {
+      "my": "صديقي"
+    },
+    "ضيف": {
+      "my": "ضيفي"
+    },
+    "أب": {
+      "my": "أبي"
+    },
+    "أم": {
+      "my": "أمي"
+    },
+    "أسرة": {
+      "my": "أسرتي"
+    },
+    "ناس": {
+      "definite": "الناس"
+    }
   },
-
   "rules": [
-    { "pattern": ["<medicine>", "<symptom>"], "output": "أحتاج إلى {0} {1.for}" },
-    { "pattern": ["<symptom>", "<symptom>"], "output": "عندي {0} و{1}" },
-    { "pattern": ["<symptom>"], "output": "عندي {0}" },
-    { "pattern": ["<medicine>"], "output": "أحتاج إلى {0}" },
-    { "pattern": ["<place>"], "output": "أين {0.definite}؟" },
-    { "pattern": ["طبيب"], "output": "أحتاج إلى طبيب" },
-    { "pattern": ["يساعد"], "output": "أحتاج إلى مساعدة" },
-    { "pattern": ["يأكل"], "output": "أريد أن آكل" },
-    { "pattern": ["يشرب"], "output": "أريد أن أشرب" }
+    {
+      "pattern": [
+        "السلام عليكم",
+        "السلام عليكم"
+      ],
+      "output": "السلام عليكم وأهلاً وسهلاً بكم"
+    },
+    {
+      "pattern": [
+        "السلام عليكم",
+        "<person>",
+        "<person>",
+        "تفضل"
+      ],
+      "output": "أهلاً وسهلاً ب{1.my} و{2.my}، تفضل"
+    },
+    {
+      "pattern": [
+        "السلام عليكم",
+        "<person>",
+        "<person>"
+      ],
+      "output": "أهلاً وسهلاً ب{1.my} و{2.my}"
+    },
+    {
+      "pattern": [
+        "السلام عليكم",
+        "<person>"
+      ],
+      "output": "أهلاً وسهلاً ب{1.my}"
+    },
+    {
+      "pattern": [
+        "السلام عليكم"
+      ],
+      "output": "السلام عليكم وأهلاً وسهلاً بكم"
+    },
+    {
+      "pattern": [
+        "بنت",
+        "<trait>",
+        "<trait>"
+      ],
+      "output": "أنا بنت {1.feminine} و{2.feminine}"
+    },
+    {
+      "pattern": [
+        "بنت",
+        "<trait>"
+      ],
+      "output": "أنا بنت {1.feminine}"
+    },
+    {
+      "pattern": [
+        "<trait>",
+        "<trait>"
+      ],
+      "output": "أنا {0.feminine} و{1.feminine}"
+    },
+    {
+      "pattern": [
+        "<trait>"
+      ],
+      "output": "أنا {0.feminine}"
+    },
+    {
+      "pattern": [
+        "بنت"
+      ],
+      "output": "أنا بنت"
+    },
+    {
+      "pattern": [
+        "<job>",
+        "ذكي"
+      ],
+      "output": "{0.feminine} ذكية"
+    },
+    {
+      "pattern": [
+        "مهندس"
+      ],
+      "output": "أتمنى أن أكون مهندسة"
+    },
+    {
+      "pattern": [
+        "يفكر",
+        "يبني",
+        "مترجم لغة الإشارة",
+        "ذكي"
+      ],
+      "output": "فكرت أن أبني مترجم لغة إشارة ذكياً"
+    },
+    {
+      "pattern": [
+        "يفكر",
+        "يبني",
+        "مترجم لغة الإشارة"
+      ],
+      "output": "فكرت أن أبني مترجم لغة إشارة"
+    },
+    {
+      "pattern": [
+        "يفكر",
+        "يبني"
+      ],
+      "output": "فكرت أن أبني"
+    },
+    {
+      "pattern": [
+        "يبني",
+        "مترجم لغة الإشارة"
+      ],
+      "output": "أبني مترجم لغة إشارة"
+    },
+    {
+      "pattern": [
+        "مترجم لغة الإشارة",
+        "ذكي"
+      ],
+      "output": "مترجم لغة إشارة ذكي"
+    },
+    {
+      "pattern": [
+        "يساعد",
+        "يدعم",
+        "ناس",
+        "إعاقة سمعية"
+      ],
+      "output": "يساعد ويدعم الناس من ذوي الإعاقة السمعية"
+    },
+    {
+      "pattern": [
+        "يساعد",
+        "ناس",
+        "إعاقة سمعية"
+      ],
+      "output": "يساعد الناس من ذوي الإعاقة السمعية"
+    },
+    {
+      "pattern": [
+        "يساعد",
+        "يدعم"
+      ],
+      "output": "يساعد ويدعم"
+    },
+    {
+      "pattern": [
+        "ناس",
+        "إعاقة سمعية"
+      ],
+      "output": "الناس من ذوي الإعاقة السمعية"
+    },
+    {
+      "pattern": [
+        "إعاقة سمعية"
+      ],
+      "output": "ذوو الإعاقة السمعية"
+    },
+    {
+      "pattern": [
+        "يساعد"
+      ],
+      "output": "أحتاج إلى مساعدة"
+    },
+    {
+      "pattern": [
+        "يفكر"
+      ],
+      "output": "أفكر"
+    },
+    {
+      "pattern": [
+        "يحب",
+        "أسرة",
+        "أب",
+        "أم",
+        "معلم"
+      ],
+      "output": "أنا أحب أسرتي، أبي وأمي ومعلميّ"
+    },
+    {
+      "pattern": [
+        "يحب",
+        "أسرة",
+        "أب",
+        "أم"
+      ],
+      "output": "أنا أحب أسرتي، أبي وأمي"
+    },
+    {
+      "pattern": [
+        "يحب",
+        "<person>",
+        "<person>"
+      ],
+      "output": "أنا أحب {1.my} و{2.my}"
+    },
+    {
+      "pattern": [
+        "يحب",
+        "<person>"
+      ],
+      "output": "أنا أحب {1.my}"
+    },
+    {
+      "pattern": [
+        "يحب"
+      ],
+      "output": "أنا أحب"
+    },
+    {
+      "pattern": [
+        "أب",
+        "أم"
+      ],
+      "output": "أبي وأمي"
+    },
+    {
+      "pattern": [
+        "<person>"
+      ],
+      "output": "هذا {0.my}"
+    },
+    {
+      "pattern": [
+        "شكراً"
+      ],
+      "output": "شكراً لكم"
+    }
   ]
 }

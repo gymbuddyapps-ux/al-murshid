@@ -2,74 +2,74 @@
  "classes": {
   "0": {
    "label": "السلام عليكم",
-   "clips": 152,
-   "kept": 152,
+   "clips": 302,
+   "kept": 302,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 100,
+    "2": 101,
+    "3": 101
+   },
+   "frames": 12043,
+   "frames_with_a_hand": 11296,
+   "frames_trimmed": 478,
+   "frames_with_a_hand_percent": 93.8,
+   "frames_trimmed_percent": 4.0
+  },
+  "1": {
+   "label": "بنت",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 6008,
+   "frames_with_a_hand": 6004,
+   "frames_trimmed": 23,
+   "frames_with_a_hand_percent": 99.9,
+   "frames_trimmed_percent": 0.4
+  },
+  "2": {
+   "label": "سعيد",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 5879,
+   "frames_with_a_hand": 5456,
+   "frames_trimmed": 38,
+   "frames_with_a_hand_percent": 92.8,
+   "frames_trimmed_percent": 0.6
+  },
+  "3": {
+   "label": "طموح",
+   "clips": 151,
+   "kept": 151,
    "dropped_no_hands": 0,
    "dropped_no_pose": 0,
    "kept_per_signer": {
     "1": 50,
     "2": 51,
-    "3": 51
-   },
-   "frames": 6244,
-   "frames_with_a_hand": 5564,
-   "frames_trimmed": 292,
-   "frames_with_a_hand_percent": 89.1,
-   "frames_trimmed_percent": 4.7
-  },
-  "1": {
-   "label": "شكراً",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
     "3": 50
    },
-   "frames": 4841,
-   "frames_with_a_hand": 4156,
-   "frames_trimmed": 72,
-   "frames_with_a_hand_percent": 85.9,
-   "frames_trimmed_percent": 1.5
-  },
-  "2": {
-   "label": "صيدلية",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 6391,
-   "frames_with_a_hand": 6327,
-   "frames_trimmed": 34,
-   "frames_with_a_hand_percent": 99.0,
-   "frames_trimmed_percent": 0.5
-  },
-  "3": {
-   "label": "مستشفى",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 6755,
-   "frames_with_a_hand": 5144,
+   "frames": 7987,
+   "frames_with_a_hand": 7799,
    "frames_trimmed": 14,
-   "frames_with_a_hand_percent": 76.2,
+   "frames_with_a_hand_percent": 97.6,
    "frames_trimmed_percent": 0.2
   },
   "4": {
-   "label": "طبيب",
+   "label": "مهندس",
    "clips": 151,
    "kept": 151,
    "dropped_no_hands": 0,
@@ -79,167 +79,14 @@
     "2": 51,
     "3": 50
    },
-   "frames": 6191,
-   "frames_with_a_hand": 6131,
-   "frames_trimmed": 3,
-   "frames_with_a_hand_percent": 99.0,
-   "frames_trimmed_percent": 0.0
-  },
-  "5": {
-   "label": "دواء",
-   "clips": 153,
-   "kept": 153,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 52,
-    "3": 51
-   },
-   "frames": 6645,
-   "frames_with_a_hand": 6619,
-   "frames_trimmed": 8,
-   "frames_with_a_hand_percent": 99.6,
-   "frames_trimmed_percent": 0.1
-  },
-  "6": {
-   "label": "كبسولة",
-   "clips": 152,
-   "kept": 152,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 51
-   },
-   "frames": 6304,
-   "frames_with_a_hand": 5444,
-   "frames_trimmed": 2,
-   "frames_with_a_hand_percent": 86.4,
-   "frames_trimmed_percent": 0.0
-  },
-  "7": {
-   "label": "دواء شراب",
-   "clips": 152,
-   "kept": 152,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 51
-   },
-   "frames": 6273,
-   "frames_with_a_hand": 6273,
-   "frames_trimmed": 0,
-   "frames_with_a_hand_percent": 100.0,
-   "frames_trimmed_percent": 0.0
-  },
-  "8": {
-   "label": "مرهم",
-   "clips": 153,
-   "kept": 153,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 52,
-    "3": 51
-   },
-   "frames": 9643,
-   "frames_with_a_hand": 9643,
-   "frames_trimmed": 1,
-   "frames_with_a_hand_percent": 100.0,
-   "frames_trimmed_percent": 0.0
-  },
-  "9": {
-   "label": "قطارة",
-   "clips": 152,
-   "kept": 152,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 51
-   },
-   "frames": 6304,
-   "frames_with_a_hand": 6304,
-   "frames_trimmed": 0,
-   "frames_with_a_hand_percent": 100.0,
-   "frames_trimmed_percent": 0.0
-  },
-  "10": {
-   "label": "صداع",
-   "clips": 151,
-   "kept": 151,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 50
-   },
-   "frames": 8223,
-   "frames_with_a_hand": 8223,
-   "frames_trimmed": 16,
-   "frames_with_a_hand_percent": 100.0,
+   "frames": 7889,
+   "frames_with_a_hand": 7395,
+   "frames_trimmed": 15,
+   "frames_with_a_hand_percent": 93.7,
    "frames_trimmed_percent": 0.2
   },
-  "11": {
-   "label": "ألم",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 5704,
-   "frames_with_a_hand": 5704,
-   "frames_trimmed": 8,
-   "frames_with_a_hand_percent": 100.0,
-   "frames_trimmed_percent": 0.1
-  },
-  "12": {
-   "label": "حمى",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 6060,
-   "frames_with_a_hand": 5694,
-   "frames_trimmed": 50,
-   "frames_with_a_hand_percent": 94.0,
-   "frames_trimmed_percent": 0.8
-  },
-  "13": {
-   "label": "زكام",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 6835,
-   "frames_with_a_hand": 6796,
-   "frames_trimmed": 48,
-   "frames_with_a_hand_percent": 99.4,
-   "frames_trimmed_percent": 0.7
-  },
-  "14": {
-   "label": "حساسية",
+  "5": {
+   "label": "يفكر",
    "clips": 153,
    "kept": 153,
    "dropped_no_hands": 0,
@@ -249,14 +96,48 @@
     "2": 51,
     "3": 52
    },
-   "frames": 6907,
-   "frames_with_a_hand": 6907,
+   "frames": 6258,
+   "frames_with_a_hand": 6258,
    "frames_trimmed": 0,
    "frames_with_a_hand_percent": 100.0,
    "frames_trimmed_percent": 0.0
   },
-  "15": {
-   "label": "مغص",
+  "6": {
+   "label": "يبني",
+   "clips": 156,
+   "kept": 156,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 55,
+    "3": 51
+   },
+   "frames": 10028,
+   "frames_with_a_hand": 10026,
+   "frames_trimmed": 1,
+   "frames_with_a_hand_percent": 100.0,
+   "frames_trimmed_percent": 0.0
+  },
+  "7": {
+   "label": "مترجم لغة الإشارة",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 49
+   },
+   "frames": 10475,
+   "frames_with_a_hand": 10178,
+   "frames_trimmed": 3,
+   "frames_with_a_hand_percent": 97.2,
+   "frames_trimmed_percent": 0.0
+  },
+  "8": {
+   "label": "ذكي",
    "clips": 150,
    "kept": 150,
    "dropped_no_hands": 0,
@@ -266,64 +147,13 @@
     "2": 50,
     "3": 50
    },
-   "frames": 7216,
-   "frames_with_a_hand": 6937,
-   "frames_trimmed": 14,
-   "frames_with_a_hand_percent": 96.1,
-   "frames_trimmed_percent": 0.2
+   "frames": 6365,
+   "frames_with_a_hand": 5218,
+   "frames_trimmed": 38,
+   "frames_with_a_hand_percent": 82.0,
+   "frames_trimmed_percent": 0.6
   },
-  "16": {
-   "label": "التهاب",
-   "clips": 150,
-   "kept": 150,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 50,
-    "3": 50
-   },
-   "frames": 7486,
-   "frames_with_a_hand": 7459,
-   "frames_trimmed": 15,
-   "frames_with_a_hand_percent": 99.6,
-   "frames_trimmed_percent": 0.2
-  },
-  "17": {
-   "label": "يأكل",
-   "clips": 152,
-   "kept": 152,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 51
-   },
-   "frames": 6018,
-   "frames_with_a_hand": 6012,
-   "frames_trimmed": 28,
-   "frames_with_a_hand_percent": 99.9,
-   "frames_trimmed_percent": 0.5
-  },
-  "18": {
-   "label": "يشرب",
-   "clips": 152,
-   "kept": 152,
-   "dropped_no_hands": 0,
-   "dropped_no_pose": 0,
-   "kept_per_signer": {
-    "1": 50,
-    "2": 51,
-    "3": 51
-   },
-   "frames": 5427,
-   "frames_with_a_hand": 5409,
-   "frames_trimmed": 98,
-   "frames_with_a_hand_percent": 99.7,
-   "frames_trimmed_percent": 1.8
-  },
-  "19": {
+  "9": {
    "label": "يساعد",
    "clips": 151,
    "kept": 151,
@@ -335,12 +165,233 @@
     "3": 50
    },
    "frames": 5555,
-   "frames_with_a_hand": 4963,
+   "frames_with_a_hand": 5330,
    "frames_trimmed": 5,
-   "frames_with_a_hand_percent": 89.3,
+   "frames_with_a_hand_percent": 95.9,
    "frames_trimmed_percent": 0.1
   },
+  "10": {
+   "label": "يدعم",
+   "clips": 125,
+   "kept": 125,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 25
+   },
+   "frames": 4311,
+   "frames_with_a_hand": 4310,
+   "frames_trimmed": 2,
+   "frames_with_a_hand_percent": 100.0,
+   "frames_trimmed_percent": 0.0
+  },
+  "11": {
+   "label": "ناس",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 5075,
+   "frames_with_a_hand": 5075,
+   "frames_trimmed": 16,
+   "frames_with_a_hand_percent": 100.0,
+   "frames_trimmed_percent": 0.3
+  },
+  "12": {
+   "label": "إعاقة سمعية",
+   "clips": 153,
+   "kept": 153,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 52
+   },
+   "frames": 6598,
+   "frames_with_a_hand": 6598,
+   "frames_trimmed": 3,
+   "frames_with_a_hand_percent": 100.0,
+   "frames_trimmed_percent": 0.0
+  },
+  "13": {
+   "label": "الحمد لله",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 6212,
+   "frames_with_a_hand": 6209,
+   "frames_trimmed": 38,
+   "frames_with_a_hand_percent": 100.0,
+   "frames_trimmed_percent": 0.6
+  },
+  "14": {
+   "label": "يحب",
+   "clips": 151,
+   "kept": 151,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 51
+   },
+   "frames": 5506,
+   "frames_with_a_hand": 5497,
+   "frames_trimmed": 4,
+   "frames_with_a_hand_percent": 99.8,
+   "frames_trimmed_percent": 0.1
+  },
+  "15": {
+   "label": "أسرة",
+   "clips": 152,
+   "kept": 152,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 52
+   },
+   "frames": 5385,
+   "frames_with_a_hand": 5370,
+   "frames_trimmed": 0,
+   "frames_with_a_hand_percent": 99.7,
+   "frames_trimmed_percent": 0.0
+  },
+  "16": {
+   "label": "أب",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 5019,
+   "frames_with_a_hand": 4837,
+   "frames_trimmed": 116,
+   "frames_with_a_hand_percent": 96.4,
+   "frames_trimmed_percent": 2.3
+  },
+  "17": {
+   "label": "أم",
+   "clips": 151,
+   "kept": 151,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "frames": 4902,
+   "frames_with_a_hand": 4863,
+   "frames_trimmed": 36,
+   "frames_with_a_hand_percent": 99.2,
+   "frames_trimmed_percent": 0.7
+  },
+  "18": {
+   "label": "معلم",
+   "clips": 151,
+   "kept": 151,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "frames": 5169,
+   "frames_with_a_hand": 5153,
+   "frames_trimmed": 5,
+   "frames_with_a_hand_percent": 99.7,
+   "frames_trimmed_percent": 0.1
+  },
+  "19": {
+   "label": "شكراً",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 4841,
+   "frames_with_a_hand": 4278,
+   "frames_trimmed": 72,
+   "frames_with_a_hand_percent": 88.4,
+   "frames_trimmed_percent": 1.5
+  },
   "20": {
+   "label": "صديق",
+   "clips": 150,
+   "kept": 150,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 4675,
+   "frames_with_a_hand": 4548,
+   "frames_trimmed": 107,
+   "frames_with_a_hand_percent": 97.3,
+   "frames_trimmed_percent": 2.3
+  },
+  "21": {
+   "label": "ضيف",
+   "clips": 151,
+   "kept": 151,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 50,
+    "2": 51,
+    "3": 50
+   },
+   "frames": 4740,
+   "frames_with_a_hand": 4300,
+   "frames_trimmed": 43,
+   "frames_with_a_hand_percent": 90.7,
+   "frames_trimmed_percent": 0.9
+  },
+  "22": {
+   "label": "تفضل",
+   "clips": 151,
+   "kept": 151,
+   "dropped_no_hands": 0,
+   "dropped_no_pose": 0,
+   "kept_per_signer": {
+    "1": 51,
+    "2": 50,
+    "3": 50
+   },
+   "frames": 4834,
+   "frames_with_a_hand": 3039,
+   "frames_trimmed": 48,
+   "frames_with_a_hand_percent": 62.9,
+   "frames_trimmed_percent": 1.0
+  },
+  "23": {
    "label": "إشارة أخرى",
    "clips": 900,
    "kept": 895,
@@ -351,16 +402,16 @@
     "2": 300,
     "3": 295
    },
-   "frames": 38871,
-   "frames_with_a_hand": 36969,
-   "frames_trimmed": 63,
-   "frames_with_a_hand_percent": 95.1,
-   "frames_trimmed_percent": 0.2
+   "frames": 39223,
+   "frames_with_a_hand": 37691,
+   "frames_trimmed": 116,
+   "frames_with_a_hand_percent": 96.1,
+   "frames_trimmed_percent": 0.3
   }
  },
- "total_clips": 3924,
- "total_kept": 3919,
+ "total_clips": 4499,
+ "total_kept": 4494,
  "total_dropped": 5,
- "frames_with_a_hand_percent": 95.8,
- "frames_trimmed_percent": 0.5
+ "frames_with_a_hand_percent": 95.5,
+ "frames_trimmed_percent": 0.7
 }

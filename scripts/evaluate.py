@@ -92,7 +92,8 @@ def main():
     X_test, y_test = data["X"][test_mask], data["y"][test_mask]
 
     model = SignCNN(num_classes, hidden=tuple(config["hidden"]), dropout=config["dropout"])
-    model.load_state_dict(torch.load("models/jisr_model.pt"))
+    # The measured model: trained on the development signers only (see scripts/train.py).
+    model.load_state_dict(torch.load("models/jisr_model_measured.pt"))
     scores = predict_scores(model, X_test)
     probabilities = softmax(scores, temperature)
 

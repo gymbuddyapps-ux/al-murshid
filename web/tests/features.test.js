@@ -49,8 +49,8 @@ describe('small pieces', () => {
   });
 
   test('a hand goes to the nearest pose wrist', () => {
-    // pose list: shoulders, elbows, then left wrist (index 4) and right wrist (index 5)
-    const pose = [[0.6, 0.4], [0.4, 0.4], [0.65, 0.6], [0.35, 0.6], [0.7, 0.5], [0.3, 0.8]];
+    // pose list: nose, ears, shoulders, elbows, then left wrist (index 7) and right wrist (index 8)
+    const pose = [[0.5, 0.2], [0.55, 0.2], [0.45, 0.2], [0.6, 0.4], [0.4, 0.4], [0.65, 0.6], [0.35, 0.6], [0.7, 0.5], [0.3, 0.8]];
     const nearLeft = [[0.71, 0.5, 0]];
     const nearRight = [[0.31, 0.8, 0]];
     expect(assignHands([nearLeft], pose)).toEqual([nearLeft, null]);
@@ -62,7 +62,8 @@ describe('small pieces', () => {
   test('trimming cuts off a fast raise and a fast lowering', () => {
     // Left wrist (index 4) y per frame: rises fast for 3 frames, stays, then drops fast.
     const wristY = [0.9, 0.8, 0.7, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.7, 0.8];
-    const poses = wristY.map((y) => [[0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, y], [0.3, 0.9]]);
+    const head = [[0.5, 0.2], [0.55, 0.2], [0.45, 0.2]];
+    const poses = wristY.map((y) => [...head, [0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, y], [0.3, 0.9]]);
     const times = wristY.map((_, t) => t * 40);
     // shoulder width 0.2: 0.1 per 40 ms is 12.5 widths per second, far above the limit of 2
     const trim = { trim_speed: 2.0, trim_max_ms: 500 };
@@ -71,7 +72,7 @@ describe('small pieces', () => {
     const still = wristY.map(() => poses[4]);
     expect(trimRange(still, times, 0.2, trim)).toEqual([0, 10]);
     // Trimming stops after trim_max_ms even if the wrist keeps rising.
-    const rising = Array.from({ length: 30 }, (_, t) => [[0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, 2 - t * 0.05], [0.3, 0.9]]);
+    const rising = Array.from({ length: 30 }, (_, t) => [...head, [0.6, 0.4], [0.4, 0.4], [0, 0], [0, 0], [0.7, 2 - t * 0.05], [0.3, 0.9]]);
     const risingTimes = rising.map((_, t) => t * 40);
     expect(trimRange(rising, risingTimes, 0.2, { trim_speed: 2.0, trim_max_ms: 200 })[0]).toBe(5);
   });

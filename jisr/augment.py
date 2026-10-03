@@ -14,12 +14,12 @@ from jisr.features import (FEATURE_SIZE, LEFT_FLAG, LEFT_HAND_START, NUM_FRAMES,
                            RIGHT_FLAG, RIGHT_HAND_START)
 
 HAND_SIZE = 63      # 21 landmarks x 3 numbers
-POSE_SIZE = 12      # 6 landmarks x 2 numbers
+POSE_SIZE = 18      # 9 landmarks x 2 numbers
 
 # Positions of all x values and all y values inside the 140-number vector.
 X_INDEXES = ([LEFT_HAND_START + 3 * k for k in range(21)] +
              [RIGHT_HAND_START + 3 * k for k in range(21)] +
-             [POSE_START + 2 * k for k in range(6)])
+             [POSE_START + 2 * k for k in range(9)])
 Y_INDEXES = [i + 1 for i in X_INDEXES]
 Z_INDEXES = ([LEFT_HAND_START + 3 * k + 2 for k in range(21)] +
              [RIGHT_HAND_START + 3 * k + 2 for k in range(21)])
@@ -37,9 +37,10 @@ def mirror(clip):
     out[:, LEFT_HAND_START:LEFT_HAND_START + HAND_SIZE] = out[:, RIGHT_HAND_START:RIGHT_HAND_START + HAND_SIZE]
     out[:, RIGHT_HAND_START:RIGHT_HAND_START + HAND_SIZE] = left
     out[:, [LEFT_FLAG, RIGHT_FLAG]] = out[:, [RIGHT_FLAG, LEFT_FLAG]]
-    # swap left and right shoulder, elbow, wrist (pose points come in left/right pairs)
-    pose = out[:, POSE_START:POSE_START + POSE_SIZE].reshape(-1, 3, 2, 2)   # pair, side, (x, y)
-    out[:, POSE_START:POSE_START + POSE_SIZE] = pose[:, :, ::-1, :].reshape(-1, POSE_SIZE)
+    # swap left and right ear, shoulder, elbow, wrist (after the nose, pose points come in left/right pairs)
+    pairs_start = POSE_START + 2                                           # skip the nose (x, y)
+    pose = out[:, pairs_start:POSE_START + POSE_SIZE].reshape(-1, 4, 2, 2)  # pair, side, (x, y)
+    out[:, pairs_start:POSE_START + POSE_SIZE] = pose[:, :, ::-1, :].reshape(-1, POSE_SIZE - 2)
     return out
 
 

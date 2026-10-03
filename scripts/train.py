@@ -20,6 +20,7 @@ Usage:  python scripts/train.py [--skip-baseline]
 """
 import argparse
 import json
+import shutil
 import sys
 import time
 from pathlib import Path
@@ -35,12 +36,12 @@ from jisr.training import (knn_dtw_predict, load_config, load_data, predict_scor
 from jisr.vocab import class_labels, load_vocab  # noqa: E402
 
 
-def onnx_check(model, clips):
+def onnx_check(model, clips, onnx_path):
     """Run the saved ONNX file with ONNX Runtime and compare with PyTorch on a few clips.
     Returns the largest difference between the two sets of scores (should be about 0)."""
     import onnxruntime
 
-    session = onnxruntime.InferenceSession("models/jisr_model.onnx")
+    session = onnxruntime.InferenceSession(onnx_path)
     # The ONNX model takes one clip at a time, exactly like the browser.
     from_onnx = np.concatenate([session.run(None, {"features": clip[None]})[0] for clip in clips])
     from_torch = predict_scores(model, clips)
@@ -51,6 +52,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-baseline", action="store_true",
                         help="do not run the slow nearest-neighbour baseline")
+    parser.add_argument("--skip-validation", action="store_true",
+                        help="reuse reports/validation_scores.npz and only train the final model")
+    parser.add_argument("--final-signers", default="dev", choices=["dev", "all"],
+                        help="dev: train the final model on the development signers (the model that is "
+                             "evaluated). all: also use the test signer, for the model shipped in the app "
+                             "(its accuracy on new signers cannot be measured; see docs/REPORT.md)")
     args = parser.parse_args()
 
     config = load_config()
@@ -64,6 +71,10 @@ def main():
 
     report = {"config": config, "labels": labels, "folds": []}
     validation_scores, validation_y, validation_signer = [], [], []
+
+    if args.skip_validation:
+        report = json.loads(Path("reports/training_report.json").read_text(encoding="utf-8"))
+        dev_signers = []          # no validation rounds this time
 
     # ---- 1. Validation rounds ----
     for val_signer in dev_signers:
@@ -100,46 +111,56 @@ def main():
               + (f" | kNN-DTW top-1 {fold['knn_dtw']['top1']:.3f}" if "knn_dtw" in fold else ""),
               flush=True)
 
-    report["validation_mean"] = {
-        "cnn_top1": float(np.mean([f["cnn"]["top1"] for f in report["folds"]])),
-        "cnn_top3": float(np.mean([f["cnn"]["top3"] for f in report["folds"]])),
-    }
-    if not args.skip_baseline:
-        report["validation_mean"]["knn_dtw_top1"] = float(
-            np.mean([f["knn_dtw"]["top1"] for f in report["folds"]]))
-        cnn_wins = report["validation_mean"]["cnn_top1"] >= report["validation_mean"]["knn_dtw_top1"]
-        report["chosen_model"] = "cnn" if cnn_wins else "knn_dtw"
-    else:
-        report["chosen_model"] = "cnn"
-    print("validation mean:", report["validation_mean"], "-> chosen:", report["chosen_model"])
+    if not args.skip_validation:
+        report["validation_mean"] = {
+            "cnn_top1": float(np.mean([f["cnn"]["top1"] for f in report["folds"]])),
+            "cnn_top3": float(np.mean([f["cnn"]["top3"] for f in report["folds"]])),
+        }
+        if not args.skip_baseline:
+            report["validation_mean"]["knn_dtw_top1"] = float(
+                np.mean([f["knn_dtw"]["top1"] for f in report["folds"]]))
+            cnn_wins = report["validation_mean"]["cnn_top1"] >= report["validation_mean"]["knn_dtw_top1"]
+            report["chosen_model"] = "cnn" if cnn_wins else "knn_dtw"
+        else:
+            report["chosen_model"] = "cnn"
+        print("validation mean:", report["validation_mean"], "-> chosen:", report["chosen_model"])
 
-    Path("reports").mkdir(exist_ok=True)
-    np.savez_compressed("reports/validation_scores.npz",
-                        scores=np.concatenate(validation_scores), y=np.concatenate(validation_y),
-                        signer=np.concatenate(validation_signer))
+        Path("reports").mkdir(exist_ok=True)
+        np.savez_compressed("reports/validation_scores.npz",
+                            scores=np.concatenate(validation_scores), y=np.concatenate(validation_y),
+                            signer=np.concatenate(validation_signer))
 
-    # ---- 2. Final model on both development signers ----
-    train_mask, _ = split_masks(data, dev_signers, config["test_signer"], "test")
+    # ---- 2. Final model: on the development signers (evaluated) or on all signers (shipped) ----
+    final_signers = config["dev_signers"] + ([config["test_signer"]] if args.final_signers == "all" else [])
+    train_mask, _ = split_masks(data, final_signers, config["test_signer"], "test")
     model, _ = train_model(data["X"][train_mask], data["y"][train_mask], num_classes, config,
                            config["max_epochs"], config["seed"])
-    report["final_model"] = {
-        "train_signers": dev_signers,
+    key = "final_model" if args.final_signers == "dev" else "shipped_model"
+    report[key] = {
+        "train_signers": final_signers,
         "train_clips": int(train_mask.sum()),
         "epochs": config["max_epochs"],
         "parameters": int(sum(p.numel() for p in model.parameters())),
     }
 
     # ---- 3. Save ----
+    # jisr_model_measured.* is the evaluated model (development signers only).
+    # jisr_model.* is what the app ships: the same file, or the all-signer model when --final-signers all.
     Path("models").mkdir(exist_ok=True)
-    torch.save(model.state_dict(), "models/jisr_model.pt")
-    export_onnx(model, "models/jisr_model.onnx")
-    report["final_model"]["onnx_bytes"] = Path("models/jisr_model.onnx").stat().st_size
-    report["final_model"]["onnx_max_difference"] = onnx_check(model, data["X"][train_mask][:64])
+    stem = "models/jisr_model" if args.final_signers == "all" else "models/jisr_model_measured"
+    torch.save(model.state_dict(), stem + ".pt")
+    export_onnx(model, stem + ".onnx")
+    if args.final_signers == "dev":
+        shutil.copy(stem + ".pt", "models/jisr_model.pt")
+        shutil.copy(stem + ".onnx", "models/jisr_model.onnx")
+        report.pop("shipped_model", None)
+    report[key]["onnx_bytes"] = Path(stem + ".onnx").stat().st_size
+    report[key]["onnx_max_difference"] = onnx_check(model, data["X"][train_mask][:64], stem + ".onnx")
     report["seconds"] = round(time.time() - started)
     Path("reports/training_report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"saved models/jisr_model.onnx ({report['final_model']['onnx_bytes']} bytes), "
-          f"{report['final_model']['train_clips']} training clips, {report['seconds']} s")
+    print(f"saved {stem}.onnx ({report[key]['onnx_bytes']} bytes), {report[key]['train_clips']} training clips "
+          f"from signers {final_signers}, {report['seconds']} s")
 
 
 if __name__ == "__main__":

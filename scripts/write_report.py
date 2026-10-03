@@ -55,7 +55,8 @@ def main():
     for c in vocab["classes"]:
         stats = extraction["classes"][str(c["id"])] if extraction else None
         per = stats["kept_per_signer"] if stats else {}
-        add(f"| {c['id']} | {c['arabic']} | {c['english']} | {c['karsl_sign_id']} | "
+        ids = " + ".join(str(i) for i in c.get("karsl_sign_ids", [c["karsl_sign_id"]]))
+        add(f"| {c['id']} | {c['arabic']} | {c['english']} | {ids} | "
             f"{per.get('1', 0)} / {per.get('2', 0)} / {per.get('3', 0)} |")
     other = vocab["other_class"]
     add("")
@@ -128,6 +129,18 @@ def main():
             f"{training['final_model']['onnx_bytes'] / 1e6:.2f} MB as ONNX). "
             "The baseline (nearest neighbour with dynamic time warping) only knows the vocabulary words.")
         add("")
+        if "shipped_model" in training:
+            sm = training["shipped_model"]
+            add("### Measured model and shipped model")
+            add("")
+            add(f"The numbers in section 5 are for the model trained on signers {training['final_model']['train_signers']} "
+                f"(`models/jisr_model_measured.onnx`). The app ships a second model trained with exactly the same "
+                f"recipe on signers {sm['train_signers']} ({sm['train_clips']} clips, `models/jisr_model.onnx`), because "
+                "more signers usually mean better recognition of a new person. **Its accuracy on new signers cannot be "
+                "measured** (there is no fourth signer), so no number is claimed for it; it should be at least as good "
+                "as the measured model, but that is an expectation, not a measurement. The browser tests in section 6 "
+                "compare the browser with Python on the shipped model.")
+            add("")
 
     # ---- Test ----
     if metrics:

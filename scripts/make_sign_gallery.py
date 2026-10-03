@@ -40,7 +40,7 @@ def main():
     for c in vocab["classes"]:
         gifs = []
         for signer in SIGNERS:
-            clip = clip_for(c["karsl_sign_id"], signer)
+            clip = clip_for(c.get("karsl_sign_ids", [c["karsl_sign_id"]])[0], signer)
             name = f"{c['id']:02d}_{signer}.gif"
             n = make_gif(clip, OUT / name)
             gifs.append(f'<figure><img src="{name}" alt=""><figcaption>الموقّع {int(signer)} · {n} إطاراً</figcaption></figure>')

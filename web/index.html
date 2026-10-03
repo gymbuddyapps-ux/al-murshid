@@ -11,17 +11,22 @@
     <title>جسر</title>
   </head>
   <body>
-    <main id="app" class="app">
-      <header class="topbar">
-        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
-          <use href="/icons/logo.svg#bridge" />
-        </svg>
-        <div class="topbar__text">
-          <span class="topbar__name">جسر</span>
-          <span class="topbar__tagline">إشارتك تصير كلاماً مسموعاً</span>
-        </div>
-      </header>
+    <header class="topbar">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <use href="/icons/logo.svg#bridge" />
+      </svg>
+      <div class="topbar__text">
+        <span class="topbar__name">جسر</span>
+        <span class="topbar__tagline">إشارتك تصير كلاماً مسموعاً</span>
+      </div>
+      <nav class="tabs" aria-label="أقسام الموقع">
+        <a href="#recognize" class="tab" data-view="recognize">التعرّف</a>
+        <a href="#learn" class="tab" data-view="learn">تعلّم الإشارات</a>
+      </nav>
+    </header>
 
+    <!-- ===== Part 1: recognition, as a conversation ===== -->
+    <main id="view-recognize" class="app view">
       <!-- Shown only if the camera could not be opened -->
       <section id="camera-help" class="camera-help" hidden>
         <p id="start-error" class="notice notice--error" role="alert"></p>
@@ -37,18 +42,6 @@
         </div>
         <p id="status" class="status" data-state="loading" role="status">جارٍ فتح الكاميرا</p>
 
-        <details class="tips">
-          <summary>نصائح للتصوير</summary>
-          <ul>
-            <li>أظهر يديك وكتفيك ووجهك داخل الصورة</li>
-            <li>قف على بُعد ذراع من الهاتف</li>
-            <li>اختر مكاناً جيد الإضاءة</li>
-            <li>ارفع يدك، أدِّ الإشارة، ثم أنزل يدك</li>
-          </ul>
-        </details>
-      </section>
-
-      <section class="panel">
         <!-- After each sign: the chosen word and the alternatives -->
         <div id="candidates" class="candidates" hidden>
           <p id="candidates-title" class="candidates__title"></p>
@@ -59,40 +52,72 @@
           </div>
         </div>
 
-        <!-- Confirmed words -->
-        <div class="strip">
+        <!-- The sentence being built right now -->
+        <div class="composing">
           <ul id="chips" class="chips" aria-label="الكلمات"></ul>
-          <button id="clear-button" class="button button--text" type="button" hidden>امسح الكل</button>
+          <p id="sentence" class="sentence sentence--empty" aria-live="polite">
+            الكلمات التي تُتعرَّف تظهر هنا
+          </p>
+          <div class="speech">
+            <button id="speak-button" class="button button--speak" type="button" disabled>انطق وأرسل</button>
+            <button id="clear-button" class="button button--quiet" type="button" disabled>امسح</button>
+          </div>
         </div>
-
-        <!-- The sentence, always in large text so the other person can read it -->
-        <p id="sentence" class="sentence sentence--empty" aria-live="polite">
-          الكلمات التي تُتعرَّف تظهر هنا
-        </p>
         <p id="voice-notice" class="notice" hidden></p>
 
-        <div class="speech">
-          <button id="speak-button" class="button button--speak" type="button" disabled>انطق الجملة</button>
-          <button id="replay-button" class="button button--quiet" type="button" disabled>أعد النطق</button>
-          <fieldset class="speed">
-            <legend>السرعة</legend>
-            <label><input type="radio" name="speed" value="0.7" /><span>بطيء</span></label>
-            <label><input type="radio" name="speed" value="1" checked /><span>عادي</span></label>
-            <label><input type="radio" name="speed" value="1.3" /><span>سريع</span></label>
+        <details class="tips">
+          <summary>الإعدادات ونصائح التصوير</summary>
+          <fieldset class="settings">
+            <legend>الإعدادات</legend>
+            <label class="toggle"><input id="auto-toggle" type="checkbox" checked /><span>اختيار الكلمة الأعلى تلقائياً</span></label>
+            <label class="toggle"><input id="speak-word-toggle" type="checkbox" checked /><span>نطق كل كلمة فور التعرّف عليها</span></label>
+            <label class="toggle"><input id="skeleton-toggle" type="checkbox" checked /><span>إظهار الهيكل على الصورة</span></label>
+            <div class="speed-row">
+              <span class="speed-row__label">سرعة النطق</span>
+              <label><input type="radio" name="speed" value="0.7" /><span>بطيء</span></label>
+              <label><input type="radio" name="speed" value="1" checked /><span>عادي</span></label>
+              <label><input type="radio" name="speed" value="1.3" /><span>سريع</span></label>
+            </div>
           </fieldset>
-        </div>
-
-        <fieldset class="settings">
-          <legend>الإعدادات</legend>
-          <label class="toggle"><input id="auto-toggle" type="checkbox" checked /><span>اختيار الكلمة الأعلى تلقائياً</span></label>
-          <label class="toggle"><input id="speak-word-toggle" type="checkbox" checked /><span>نطق كل كلمة فور التعرّف عليها</span></label>
-          <label class="toggle"><input id="skeleton-toggle" type="checkbox" checked /><span>إظهار الهيكل على الصورة</span></label>
-        </fieldset>
-
-        <p class="privacy">
-          كل شيء يعمل داخل هاتفك. لا تُرسل أي صورة أو بيانات إلى الإنترنت.
-        </p>
+          <ul>
+            <li>أظهر يديك وكتفيك ووجهك داخل الصورة</li>
+            <li>قف على بُعد ذراع من الهاتف</li>
+            <li>اختر مكاناً جيد الإضاءة</li>
+            <li>ارفع يدك، أدِّ الإشارة، ثم أنزل يدك</li>
+          </ul>
+        </details>
       </section>
+
+      <!-- The conversation -->
+      <section class="chat" aria-label="المحادثة">
+        <div class="chat__head">
+          <h2 class="chat__title">المحادثة</h2>
+          <button id="replay-button" class="button button--text" type="button" disabled>أعد النطق</button>
+          <button id="clear-chat-button" class="button button--text" type="button">امسح المحادثة</button>
+        </div>
+        <ol id="messages" class="messages" aria-live="polite">
+          <li class="messages__empty">لا رسائل بعد. ما تقوله بالإشارة يظهر هنا، والشخص الآخر يكتب ردّه في الأسفل.</li>
+        </ol>
+        <form id="reply-form" class="reply">
+          <label for="reply-input" class="reply__label">ردّ الشخص الآخر</label>
+          <input id="reply-input" class="reply__input" type="text" autocomplete="off" placeholder="اكتب ردّك هنا" />
+          <button class="button button--primary" type="submit">أرسل</button>
+        </form>
+        <p class="privacy">كل شيء يعمل داخل هاتفك. لا تُرسل أي صورة أو بيانات إلى الإنترنت.</p>
+      </section>
+    </main>
+
+    <!-- ===== Part 2: learning the signs ===== -->
+    <main id="view-learn" class="learn view" hidden>
+      <h2 class="learn__title">تعلّم الإشارات</h2>
+      <p class="learn__intro">
+        هذه هي الكلمات التي يعرفها جسر. كل كلمة معروضة بمقطعَين من موقّعَين مختلفَين من قاعدة بيانات KArSL،
+        بنصف السرعة. قلّد الحركة أمام الكاميرا: ارفع يدك، أدِّ الإشارة، ثم أنزل يدك.
+      </p>
+      <div id="sign-grid" class="sign-grid"></div>
+      <p class="learn__credit">
+        المقاطع من قاعدة بيانات KArSL: Sidig, Luqman, Mahmoud, Mohandes (2021), KArSL: Arabic Sign Language Database, ACM TALLIP.
+      </p>
     </main>
 
     <script type="module" src="/src/main.js"></script>

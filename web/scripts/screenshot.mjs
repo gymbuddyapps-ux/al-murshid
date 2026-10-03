@@ -33,7 +33,17 @@ for (const [name, viewport] of [
     .catch(() => console.log(`[${name}] app did not become ready`));
   await page.waitForTimeout(1500);
   console.log(`[${name}] status:`, await page.textContent('#status'));
+  // a short conversation, so the chat part can be seen
+  await page.evaluate(() => {
+    const input = document.getElementById('reply-input');
+    input.value = 'وعليكم السلام، أهلاً بك';
+    document.getElementById('reply-form').requestSubmit();
+  });
   await page.screenshot({ path: join(outDir, `${name}-camera.png`), fullPage: true });
+  await page.goto('https://localhost:4173/#learn');
+  await page.waitForSelector('.sign-card video');
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: join(outDir, `${name}-learn.png`), fullPage: false });
   await context.close();
 }
 await browser.close();

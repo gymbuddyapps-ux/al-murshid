@@ -1,18 +1,23 @@
 // Jisr: the main program of the app.
 //
-// The path of one sign through the app:
+// Two parts: "التعرّف" (recognition, shown as a conversation) and "تعلّم الإشارات" (learning).
+//
+// The path of one sign through the recognition part:
 //   camera picture -> landmarks (landmarks.js) -> start/end of the sign (segmenter.js)
-//   -> 32 x 140 numbers (features.js) -> 3 most likely words (classifier.js)
-//   -> the best word is added (or the user picks one) -> sentence (composer.js) -> speech (speech.js)
+//   -> 32 x 146 numbers (features.js) -> 3 most likely words (classifier.js)
+//   -> the best word is added (or the user picks one) -> sentence (composer.js)
+//   -> "انطق وأرسل": spoken (speech.js) and added to the conversation (chat.js)
 //
 // Everything runs on this device. No picture or data is sent anywhere.
 import './style.css';
 import segmenterConfig from '../../config/segmenter.json';
 import templates from '../../config/templates.json';
+import { createChat, formatTime } from './chat.js';
 import { SignClassifier } from './classifier.js';
 import { composeSentence } from './composer.js';
 import { clipToFeatures } from './features.js';
 import { LandmarkDetector } from './landmarks.js';
+import { fillLearnPage } from './learn.js';
 import { drawSkeleton } from './overlay.js';
 import { Segmenter, isHandRaised } from './segmenter.js';
 import { speak, waitForVoices } from './speech.js';
@@ -26,6 +31,8 @@ const PREFER_GPU = !TEST_MODE || QUERY.has('gpu');
 
 const $ = (id) => document.getElementById(id);
 const el = {
+  views: { recognize: $('view-recognize'), learn: $('view-learn') },
+  tabs: [...document.querySelectorAll('.tab')],
   cameraHelp: $('camera-help'),
   startButton: $('start-button'),
   startError: $('start-error'),
@@ -38,33 +45,63 @@ const el = {
   undoButton: $('undo-button'),
   retryButton: $('retry-button'),
   chips: $('chips'),
-  clearButton: $('clear-button'),
   sentence: $('sentence'),
-  voiceNotice: $('voice-notice'),
   speakButton: $('speak-button'),
+  clearButton: $('clear-button'),
+  voiceNotice: $('voice-notice'),
   replayButton: $('replay-button'),
+  clearChatButton: $('clear-chat-button'),
+  messages: $('messages'),
+  replyForm: $('reply-form'),
+  replyInput: $('reply-input'),
   autoToggle: $('auto-toggle'),
   speakWordToggle: $('speak-word-toggle'),
   skeletonToggle: $('skeleton-toggle'),
+  signGrid: $('sign-grid'),
 };
 
 // ---------- What the app remembers ----------
 
-const words = []; // the recognized words, in order
+const words = []; // the words of the sentence being built right now
 let lastSpoken = ''; // the last text that was spoken (for "replay")
 let detector = null; // finds hands and body
 let classifier = null; // recognizes the sign
 const segmenter = new Segmenter(segmenterConfig);
+const chat = createChat(TEST_MODE ? null : safeLocalStorage());
 
 // 'watching'  : looking for a sign
 // 'choosing'  : the model is working, or candidates wait for a tap (manual mode)
 // 'handsDown' : after a sign, wait until the hands are lowered before watching again
+// 'paused'    : the learning page is open
 let mode = 'watching';
 let lastVideoTime = -1;
 let hideCandidatesTimer = null;
 
 // Results of every classified sign, readable by the automatic tests.
 window.__jisr = { results: [], ready: false, framesProcessed: 0, delegate: null, trace: [] };
+
+function safeLocalStorage() {
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
+// ---------- The two parts of the site ----------
+
+function showView(name) {
+  const view = name === 'learn' ? 'learn' : 'recognize';
+  for (const [key, element] of Object.entries(el.views)) element.hidden = key !== view;
+  for (const tab of el.tabs) tab.setAttribute('aria-current', tab.dataset.view === view ? 'page' : 'false');
+  // The camera loop rests while the learning page is open.
+  if (view === 'learn' && mode !== 'choosing') mode = 'paused';
+  if (view === 'recognize' && mode === 'paused') mode = 'handsDown';
+}
+
+window.addEventListener('hashchange', () => showView(location.hash.slice(1)));
+showView(location.hash.slice(1));
+fillLearnPage(el.signGrid);
 
 // ---------- Small display helpers ----------
 
@@ -97,7 +134,7 @@ function say(text) {
   }
 }
 
-// Show the word chips and the composed sentence.
+// Show the word chips and the sentence being built.
 function renderSentence() {
   el.chips.replaceChildren(
     ...words.map((word, index) => {
@@ -117,12 +154,48 @@ function renderSentence() {
     }),
   );
 
-  const sentence = composeSentence(words, templates);
   const empty = words.length === 0;
-  el.sentence.textContent = empty ? 'الكلمات التي تُتعرَّف تظهر هنا' : sentence;
+  el.sentence.textContent = empty ? 'الكلمات التي تُتعرَّف تظهر هنا' : composeSentence(words, templates);
   el.sentence.classList.toggle('sentence--empty', empty);
-  el.clearButton.hidden = empty;
+  el.clearButton.disabled = empty;
   el.speakButton.disabled = empty;
+}
+
+// Show the conversation: the signer's sentences on one side, typed replies on the other.
+function renderChat() {
+  const messages = chat.all();
+  if (messages.length === 0) {
+    el.messages.innerHTML =
+      '<li class="messages__empty">لا رسائل بعد. ما تقوله بالإشارة يظهر هنا، والشخص الآخر يكتب ردّه في الأسفل.</li>';
+    return;
+  }
+  el.messages.replaceChildren(
+    ...messages.map((message) => {
+      const item = document.createElement('li');
+      item.className = `message message--${message.who}`;
+      const text = document.createElement('p');
+      text.className = 'message__text';
+      text.textContent = message.text;
+      const meta = document.createElement('span');
+      meta.className = 'message__meta';
+      meta.textContent = `${message.who === 'signer' ? 'بالإشارة' : 'ردّ'} · ${formatTime(message.time)}`;
+      item.append(text, meta);
+      return item;
+    }),
+  );
+  el.messages.lastElementChild.scrollIntoView({ block: 'nearest' });
+}
+
+// "انطق وأرسل": speak the sentence, put it in the conversation, start a new sentence.
+function sendSentence() {
+  const sentence = composeSentence(words, templates);
+  if (!sentence) return;
+  say(sentence);
+  chat.add('signer', sentence);
+  renderChat();
+  words.length = 0;
+  renderSentence();
+  hideCandidates();
 }
 
 // One large button per candidate word, with its confidence.
@@ -240,7 +313,7 @@ function onFrame() {
   const video = el.video;
   if (video.readyState < 2 || video.currentTime === lastVideoTime) return;
   lastVideoTime = video.currentTime;
-  if (mode === 'choosing') return;
+  if (mode === 'choosing' || mode === 'paused') return;
 
   const now = performance.now();
   const frame = { ...detector.detect(video, now), time: now };
@@ -353,10 +426,23 @@ el.clearButton.addEventListener('click', () => {
   words.length = 0;
   renderSentence();
 });
-el.speakButton.addEventListener('click', () => say(composeSentence(words, templates)));
+el.speakButton.addEventListener('click', sendSentence);
 el.replayButton.addEventListener('click', () => say(lastSpoken));
+el.clearChatButton.addEventListener('click', () => {
+  chat.clear();
+  renderChat();
+});
+// The other person types a reply; it is shown in large text (and never spoken: the signer reads it).
+el.replyForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (chat.add('other', el.replyInput.value)) {
+    el.replyInput.value = '';
+    renderChat();
+  }
+});
 
 renderSentence();
+renderChat();
 
 // Save the app on the device so it works without internet (only in the built app).
 if ('serviceWorker' in navigator && import.meta.env.PROD) {

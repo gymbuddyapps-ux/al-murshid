@@ -128,16 +128,47 @@ body {
   gap: 1rem;
   max-width: 34rem;
   margin: 0 auto;
-  padding: 0.75rem 1rem 2rem;
+  padding: 0 1rem 2rem;
 }
 
 .topbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
-  padding-bottom: 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 1.5rem;
   /* the carved pattern under the top bar */
   background: var(--pattern) bottom / 1rem 1rem repeat-x;
+}
+
+/* The two parts of the site */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-inline-start: auto;
+}
+
+.tab {
+  display: grid;
+  place-items: center;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 2px solid var(--green);
+  border-radius: 2rem;
+  color: var(--green-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tab[aria-current='page'] {
+  background: var(--green);
+  color: var(--white);
+}
+
+.view {
+  padding-top: 0;
 }
 
 .topbar__text {
@@ -490,7 +521,6 @@ body {
     column-gap: 2rem;
   }
 
-  .topbar,
   .camera-help {
     grid-column: 1 / -1;
   }
@@ -515,4 +545,243 @@ body {
       transform: translateY(0.5rem);
     }
   }
+}
+
+
+/* ---------- The sentence being built ---------- */
+
+.composing {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chips:empty {
+  display: none;
+}
+
+.sentence {
+  min-height: 4.5rem;
+  font-size: 2rem;
+}
+
+/* ---------- Conversation ---------- */
+
+.chat {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.chat__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat__title {
+  margin: 0;
+  margin-inline-end: auto;
+  font: 700 1.25rem / 1 var(--font-text);
+  color: var(--green-dark);
+}
+
+.messages {
+  display: grid;
+  gap: 0.75rem;
+  max-height: 60dvh;
+  min-height: 8rem;
+  margin: 0;
+  padding: 1rem;
+  overflow-y: auto;
+  list-style: none;
+  border: 2px solid var(--line);
+  border-radius: 1rem;
+  background: var(--white);
+}
+
+.messages__empty {
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.message {
+  display: grid;
+  gap: 0.25rem;
+  max-width: 85%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+
+/* What the signer said: on the right (the start side in Arabic), red accent */
+.message--signer {
+  justify-self: start;
+  border: 2px solid var(--red);
+  border-start-start-radius: 0.25rem;
+  background: var(--red-tint);
+}
+
+/* The other person's typed reply: on the left, green accent, large so the signer can read it */
+.message--other {
+  justify-self: end;
+  border: 2px solid var(--green);
+  border-start-end-radius: 0.25rem;
+  background: var(--green-tint);
+}
+
+.message__text {
+  margin: 0;
+  font: 700 1.6rem / 1.5 var(--font-text);
+  overflow-wrap: anywhere;
+}
+
+.message__meta {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.reply {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.reply__label {
+  grid-column: 1 / -1;
+  font-weight: 700;
+}
+
+.reply__input {
+  min-height: 3.5rem;
+  padding: 0 1rem;
+  border: 2px solid var(--silver);
+  border-radius: 0.75rem;
+  font: 500 1.25rem var(--font-text);
+}
+
+.reply__input:focus {
+  border-color: var(--green);
+  outline: none;
+}
+
+.speed-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.speed-row__label {
+  font-weight: 700;
+  margin-inline-end: 0.5rem;
+}
+
+.speed-row label {
+  cursor: pointer;
+}
+
+.speed-row input {
+  position: absolute;
+  opacity: 0;
+}
+
+.speed-row span:not(.speed-row__label) {
+  display: grid;
+  place-items: center;
+  min-width: 4.5rem;
+  min-height: 2.75rem;
+  border: 2px solid var(--silver);
+  border-radius: 0.5rem;
+  background: var(--white);
+  font-weight: 500;
+}
+
+.speed-row input:checked + span {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--white);
+}
+
+.tips .settings {
+  margin: 0.5rem 0;
+  border: 0;
+  padding: 0;
+}
+
+/* ---------- Learning page ---------- */
+
+.learn {
+  display: grid;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.learn__title {
+  margin: 0;
+  font: 600 2rem / 1.2 var(--font-display);
+  color: var(--red);
+}
+
+.learn__intro,
+.learn__credit {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+.learn__credit {
+  font-size: 0.85rem;
+}
+
+.sign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+
+.sign-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  border-radius: 1rem;
+  background: var(--white);
+}
+
+.sign-card__title {
+  margin: 0;
+  font: 700 1.5rem / 1.3 var(--font-text);
+}
+
+.sign-card__english {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sign-card__videos {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sign-card__videos figure {
+  flex: 1;
+  margin: 0;
+}
+
+.sign-card__videos video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  background: var(--ink);
+}
+
+.sign-card__videos figcaption {
+  margin-top: 0.25rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  text-align: center;
 }

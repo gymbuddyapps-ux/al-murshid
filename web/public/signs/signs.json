@@ -1,0 +1,466 @@
+{
+ "source": "KArSL: Arabic Sign Language Database (Sidig, Luqman, Mahmoud, Mohandes, 2021)",
+ "signs": [
+  {
+   "id": 0,
+   "arabic": "السلام عليكم",
+   "english": "greeting (salam / welcome)",
+   "karsl_sign_ids": [
+    290,
+    289
+   ],
+   "videos": [
+    {
+     "file": "00_01.mp4",
+     "signer": 1,
+     "frames": 51
+    },
+    {
+     "file": "00_02.mp4",
+     "signer": 2,
+     "frames": 44
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "arabic": "بنت",
+   "english": "girl",
+   "karsl_sign_ids": [
+    199
+   ],
+   "videos": [
+    {
+     "file": "01_01.mp4",
+     "signer": 1,
+     "frames": 48
+    },
+    {
+     "file": "01_02.mp4",
+     "signer": 2,
+     "frames": 45
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "arabic": "سعيد",
+   "english": "happy",
+   "karsl_sign_ids": [
+    238
+   ],
+   "videos": [
+    {
+     "file": "02_01.mp4",
+     "signer": 1,
+     "frames": 79
+    },
+    {
+     "file": "02_02.mp4",
+     "signer": 2,
+     "frames": 45
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "arabic": "طموح",
+   "english": "ambitious",
+   "karsl_sign_ids": [
+    242
+   ],
+   "videos": [
+    {
+     "file": "03_01.mp4",
+     "signer": 1,
+     "frames": 89
+    },
+    {
+     "file": "03_02.mp4",
+     "signer": 2,
+     "frames": 76
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "arabic": "مهندس",
+   "english": "engineer",
+   "karsl_sign_ids": [
+    459
+   ],
+   "videos": [
+    {
+     "file": "04_01.mp4",
+     "signer": 1,
+     "frames": 67
+    },
+    {
+     "file": "04_02.mp4",
+     "signer": 2,
+     "frames": 87
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "arabic": "يفكر",
+   "english": "think",
+   "karsl_sign_ids": [
+    181
+   ],
+   "videos": [
+    {
+     "file": "05_01.mp4",
+     "signer": 1,
+     "frames": 73
+    },
+    {
+     "file": "05_02.mp4",
+     "signer": 2,
+     "frames": 70
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "arabic": "يبني",
+   "english": "build",
+   "karsl_sign_ids": [
+    171
+   ],
+   "videos": [
+    {
+     "file": "06_01.mp4",
+     "signer": 1,
+     "frames": 96
+    },
+    {
+     "file": "06_02.mp4",
+     "signer": 2,
+     "frames": 74
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "arabic": "مترجم لغة الإشارة",
+   "english": "sign language interpreter",
+   "karsl_sign_ids": [
+    468
+   ],
+   "videos": [
+    {
+     "file": "07_01.mp4",
+     "signer": 1,
+     "frames": 77
+    },
+    {
+     "file": "07_02.mp4",
+     "signer": 2,
+     "frames": 100
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "arabic": "ذكي",
+   "english": "intelligent",
+   "karsl_sign_ids": [
+    272
+   ],
+   "videos": [
+    {
+     "file": "08_01.mp4",
+     "signer": 1,
+     "frames": 63
+    },
+    {
+     "file": "08_02.mp4",
+     "signer": 2,
+     "frames": 56
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "arabic": "يساعد",
+   "english": "help",
+   "karsl_sign_ids": [
+    182
+   ],
+   "videos": [
+    {
+     "file": "09_01.mp4",
+     "signer": 1,
+     "frames": 42
+    },
+    {
+     "file": "09_02.mp4",
+     "signer": 2,
+     "frames": 62
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "arabic": "يدعم",
+   "english": "support",
+   "karsl_sign_ids": [
+    184
+   ],
+   "videos": [
+    {
+     "file": "10_01.mp4",
+     "signer": 1,
+     "frames": 53
+    },
+    {
+     "file": "10_02.mp4",
+     "signer": 2,
+     "frames": 35
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "arabic": "ناس",
+   "english": "people",
+   "karsl_sign_ids": [
+    218
+   ],
+   "videos": [
+    {
+     "file": "11_01.mp4",
+     "signer": 1,
+     "frames": 40
+    },
+    {
+     "file": "11_02.mp4",
+     "signer": 2,
+     "frames": 41
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "arabic": "إعاقة سمعية",
+   "english": "hearing impairment",
+   "karsl_sign_ids": [
+    155
+   ],
+   "videos": [
+    {
+     "file": "12_01.mp4",
+     "signer": 1,
+     "frames": 59
+    },
+    {
+     "file": "12_02.mp4",
+     "signer": 2,
+     "frames": 61
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "arabic": "الحمد لله",
+   "english": "thank God",
+   "karsl_sign_ids": [
+    418
+   ],
+   "videos": [
+    {
+     "file": "13_01.mp4",
+     "signer": 1,
+     "frames": 57
+    },
+    {
+     "file": "13_02.mp4",
+     "signer": 2,
+     "frames": 45
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "arabic": "يحب",
+   "english": "love",
+   "karsl_sign_ids": [
+    174
+   ],
+   "videos": [
+    {
+     "file": "14_01.mp4",
+     "signer": 1,
+     "frames": 41
+    },
+    {
+     "file": "14_02.mp4",
+     "signer": 2,
+     "frames": 43
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "arabic": "أسرة",
+   "english": "family",
+   "karsl_sign_ids": [
+    192
+   ],
+   "videos": [
+    {
+     "file": "15_01.mp4",
+     "signer": 1,
+     "frames": 41
+    },
+    {
+     "file": "15_02.mp4",
+     "signer": 2,
+     "frames": 41
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "arabic": "أب",
+   "english": "father",
+   "karsl_sign_ids": [
+    195
+   ],
+   "videos": [
+    {
+     "file": "16_01.mp4",
+     "signer": 1,
+     "frames": 49
+    },
+    {
+     "file": "16_02.mp4",
+     "signer": 2,
+     "frames": 42
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "arabic": "أم",
+   "english": "mother",
+   "karsl_sign_ids": [
+    196
+   ],
+   "videos": [
+    {
+     "file": "17_01.mp4",
+     "signer": 1,
+     "frames": 46
+    },
+    {
+     "file": "17_02.mp4",
+     "signer": 2,
+     "frames": 52
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "arabic": "معلم",
+   "english": "teacher",
+   "karsl_sign_ids": [
+    491
+   ],
+   "videos": [
+    {
+     "file": "18_01.mp4",
+     "signer": 1,
+     "frames": 51
+    },
+    {
+     "file": "18_02.mp4",
+     "signer": 2,
+     "frames": 37
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "arabic": "شكراً",
+   "english": "thanks",
+   "karsl_sign_ids": [
+    293
+   ],
+   "videos": [
+    {
+     "file": "19_01.mp4",
+     "signer": 1,
+     "frames": 42
+    },
+    {
+     "file": "19_02.mp4",
+     "signer": 2,
+     "frames": 37
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "arabic": "صديق",
+   "english": "friend",
+   "karsl_sign_ids": [
+    294
+   ],
+   "videos": [
+    {
+     "file": "20_01.mp4",
+     "signer": 1,
+     "frames": 39
+    },
+    {
+     "file": "20_02.mp4",
+     "signer": 2,
+     "frames": 38
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "arabic": "ضيف",
+   "english": "guest",
+   "karsl_sign_ids": [
+    295
+   ],
+   "videos": [
+    {
+     "file": "21_01.mp4",
+     "signer": 1,
+     "frames": 42
+    },
+    {
+     "file": "21_02.mp4",
+     "signer": 2,
+     "frames": 56
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "arabic": "تفضل",
+   "english": "here you are",
+   "karsl_sign_ids": [
+    291
+   ],
+   "videos": [
+    {
+     "file": "22_01.mp4",
+     "signer": 1,
+     "frames": 41
+    },
+    {
+     "file": "22_02.mp4",
+     "signer": 2,
+     "frames": 35
+    }
+   ]
+  }
+ ]
+}

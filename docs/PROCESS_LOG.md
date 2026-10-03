@@ -429,3 +429,13 @@ do not publish. Steps taken, all decided on validation data only:
 - Offline test: passes. Unit tests: 25 Python, 50 JavaScript.
 
 `docs/REPORT.md` was regenerated from these files. Deployment stays prepared and unpublished, as agreed.
+
+## Phase 8: Learning page and conversation view (owner's request, 2026-10-03)
+
+- The site now has two tabs. **تعلّم الإشارات** shows the 23 words with two short videos each (signers 1 and 2,
+  half speed, 256 px, 2.0 MB in total for 46 MP4 files, made by `scripts/make_sign_videos.py` with ffmpeg). The KArSL
+  citation is printed on the page.
+- **التعرّف** is now a conversation: "انطق وأرسل" speaks the sentence and adds it as a bubble; the hearing person
+  types a reply that appears as a large-text bubble; the history is kept in the browser's local storage on the
+  device and can be cleared (`web/src/chat.js`, 6 unit tests). Settings and tips moved into a collapsible panel.
+- Offline test still passes with the videos precached (74 files). Nothing is published.

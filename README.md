@@ -11,6 +11,13 @@ browser; no video or data leaves the device.
 - Honest accuracy numbers, measured on a signer the model never saw: `docs/REPORT.md`.
 - What it cannot do: `docs/LIMITATIONS.md`.
 
+## What the site has
+
+- **التعرّف**: the camera, automatic word recognition, the sentence being built, and a conversation view:
+  the signer's sentences are spoken and shown as bubbles, the other person types replies in a box.
+- **تعلّم الإشارات**: every word of the vocabulary with two short KArSL videos, to learn and practise.
+  Made by `python scripts/make_sign_videos.py` (needs ffmpeg and the unpacked frames).
+
 ## Folder map
 
 | Folder | What is in it |

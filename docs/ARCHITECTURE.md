@@ -14,7 +14,7 @@ flowchart TD
     F --> H[User taps the correct word]
     H --> I[Sentence strip<br/>confirmed words]
     I --> J[Sentence composer<br/>templates]
-    J --> K[Large Arabic text]
+    J --> K[Conversation<br/>large text + typed replies]
     J --> L[Speech<br/>Arabic voice of the device]
 ```
 
@@ -74,6 +74,18 @@ The model's scores become probabilities. The app shows the 3 most likely words a
 and the user taps the correct one. If the best guess is below the rejection threshold, or the model
 thinks the gesture is not one of our words, the app says "غير واضح، أعد الإشارة" instead of
 guessing. File: `web/src/confidence.js`.
+
+### Two parts of the site
+The header has two tabs. **التعرّف** is the recognition part described here. **تعلّم الإشارات** is a learning
+page that shows every word of the vocabulary with two short videos from the KArSL dataset (made by
+`scripts/make_sign_videos.py` into `web/public/signs/`, with the dataset citation on the page). The camera loop
+rests while the learning page is open. File: `web/src/learn.js`.
+
+### Conversation
+Recognition is shown as a conversation. When the signer presses "انطق وأرسل", the sentence is spoken and
+becomes a message bubble; the hearing person types a reply in the box under the conversation, and it appears
+as a bubble in large text for the signer to read. The history stays in the browser's local storage on the
+device (never sent anywhere) and can be cleared. File: `web/src/chat.js`.
 
 ### Sentence strip
 Confirmed words appear as chips. Each chip can be removed, and one button clears everything.
